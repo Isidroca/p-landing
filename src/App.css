@@ -1,0 +1,86 @@
+.invoice-slider .swiper-slide {
+  display: flex;
+  justify-content: center;
+}
+
+/* Ajuste general para imágenes dentro del slider */
+.invoice-slider img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  display: block;
+  object-fit: contain;
+}
+
+/* En móviles: limitar la altura y asegurarse de que no se desborden */
+@media (max-width: 576px) {
+  .invoice-slider .swiper-slide {
+    padding: 0 10px;
+    /* espacio lateral para evitar que toque los bordes */
+  }
+
+  .invoice-slider img {
+    max-height: 400px;
+  }
+}
+
+/* ==========================================================================
+   MOBILE SCROLLING REPAIR (Silicon Theme Fixes)
+   ========================================================================== */
+
+/* 1. Ensure root elements always allow vertical scrolling and never horizontal */
+html,
+body,
+#root {
+  overflow-x: hidden !important;
+  /* Extremely important to prevent 'stuck' touch gestures */
+  max-width: 100vw !important;
+  width: 100% !important;
+  height: auto !important;
+  /* Prevents 100vh lock on mobile */
+  min-height: 100% !important;
+  margin: 0;
+  padding: 0;
+  position: relative !important;
+}
+
+/* 2. Explicitly force vertical scrollability on mobile browsers */
+body {
+  font-family: 'Outfit', sans-serif !important;
+  overflow-y: auto !important;
+  -webkit-overflow-scrolling: touch !important;
+  /* Native-like smoothness on iOS */
+  touch-action: pan-y !important;
+  /* Allows vertical swipe gestures specifically */
+}
+
+/* 3. Global fixes for potential layout breakers */
+.page-wrapper {
+  overflow: visible !important;
+  /* Silicon theme sometimes defaults to hidden */
+  height: auto !important;
+  width: 100% !important;
+  max-width: 100vw !important;
+}
+
+/* 4. Responsive font sizing for titles to prevent horizontal overflow */
+h1,
+h2,
+h3 {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+
+/* 5. Fix for sticky header that might accidentally lock the body */
+body.navbar-stuck {
+  padding-top: 0 !important;
+  /* Manage padding-top manually if needed, or disable dynamic padding */
+}
+
+/* 6. Ensure images don't break the container on small screens */
+img,
+video {
+  max-width: 100% !important;
+  height: auto !important;
+}
