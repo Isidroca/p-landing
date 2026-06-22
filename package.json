@@ -1,7 +1,7 @@
 {
   "name": "proventa-lp",
   "version": "1.0.0",
-  "homepage": "https://isidroca.github.io/p-landing",
+  "homepage": "https://www.proventa.app",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
