@@ -1,0 +1,26 @@
+{
+  "short_name": "ProVenta",
+  "name": "ProVenta - Software de Facturación, Inventario y Tienda en Línea en RD",
+  "description": "Sistema de facturación y ventas para tu negocio, con un diseño moderno y fácil de usar.",
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff",
+  "icons": [
+  {
+    "src": "/assets/favicon/favicon-32x32.png",
+    "sizes": "32x32",
+    "type": "image/png"
+  },
+  {
+    "src": "/assets/favicon/android-chrome-192x192.png",
+    "type": "image/png",
+    "sizes": "192x192"
+  },
+  {
+    "src": "/assets/favicon/android-chrome-512x512.png",
+    "type": "image/png",
+    "sizes": "512x512"
+  }
+]
+}
