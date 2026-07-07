@@ -42,7 +42,7 @@ const Header = ({ dark = true }) => {
                                 </button>
                                 <ul className="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdown">
                                     <li><Link className="dropdown-item" to="/funcionalidades/teclas-rapidas">Teclas Rápidas (POS)</Link></li>
-                                    <li><Link className="dropdown-item" to="/funcionalidades/android">Versión Android</Link></li>
+                                    <li><Link className="dropdown-item" to="/android">Versión Android</Link></li>
                                     <li><Link className="dropdown-item" to="/funcionalidades/facturacion-electronica">Facturación Electrónica</Link></li>
                                     <li><hr className="dropdown-divider" /></li>
                                     <li><a className="dropdown-item" href="/#modulos">Todos los módulos</a></li>

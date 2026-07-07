@@ -126,7 +126,7 @@ const Footer = () => {
                     </span>
                     <a
                         className="nav-link d-inline-block p-0"
-                        href="https://www.linkedin.com/in/isidro-calderon-abreu/"
+                        href="https://www.isidrocalderon.com"
                         target="_blank"
                         rel="noreferrer"
                     >

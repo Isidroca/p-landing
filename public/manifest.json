@@ -8,17 +8,17 @@
   "background_color": "#ffffff",
   "icons": [
   {
-    "src": "/assets/favicon/favicon-32x32.png",
+    "src": "assets/favicon/favicon-32x32.png",
     "sizes": "32x32",
     "type": "image/png"
   },
   {
-    "src": "/assets/favicon/android-chrome-192x192.png",
+    "src": "assets/favicon/android-chrome-192x192.png",
     "type": "image/png",
     "sizes": "192x192"
   },
   {
-    "src": "/assets/favicon/android-chrome-512x512.png",
+    "src": "assets/favicon/android-chrome-512x512.png",
     "type": "image/png",
     "sizes": "512x512"
   }
