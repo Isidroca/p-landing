@@ -73,7 +73,7 @@ function Index() {
           content="ProVenta es un software de facturación y punto de venta (POS) en la nube para negocios en República Dominicana. Factura rápido, controla inventario y vende en línea con facilidad. Prueba gratis."
         />
         <meta name="author" content="Isidro Calderon Abreu" />
-        <link rel="canonical" href="https://www.proventa.app" />
+        <link rel="canonical" href="https://proventa.app/" />
       </Helmet>
 
       <div className="App">
