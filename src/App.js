@@ -3,6 +3,7 @@ import { Routes, Route, BrowserRouter } from "react-router-dom";
 import Index from "./pages";
 import Install from "./pages/Install";
 import Privacy from "./pages/privacy";
+import PrivacyMeta from "./pages/privacyMeta";
 import Android from "./pages/Android";
 import TeclasRapidas from "./pages/TeclasRapidas";
 import Planes from "./pages/Planes";
@@ -30,6 +31,7 @@ function App() {
           <Route path="/blog/:slug" element={<BlogPost />} />
           <Route path="/registro" element={<Register />} />
           <Route path="/privacidad" element={<Privacy />} />
+          <Route path="/privacidad-meta" element={<PrivacyMeta />} />
           <Route path="/funcionalidades/facturacion-electronica" element={<FacturacionElectronica />} />
         </Route>
       </Routes>
