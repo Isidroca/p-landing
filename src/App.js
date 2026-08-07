@@ -11,6 +11,7 @@ import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
 import Register from "./pages/Register";
 import FacturacionElectronica from "./pages/FacturacionElectronica";
+import OrdenesCompra from "./pages/OrdenesCompra";
 import ScrollToTop from "./hooks/ScrollToTop";
 function App() {
 
@@ -33,6 +34,7 @@ function App() {
           <Route path="/privacidad" element={<Privacy />} />
           <Route path="/privacidad-meta" element={<PrivacyMeta />} />
           <Route path="/funcionalidades/facturacion-electronica" element={<FacturacionElectronica />} />
+          <Route path="/funcionalidades/ordenes-de-compra" element={<OrdenesCompra />} />
         </Route>
       </Routes>
     </BrowserRouter>

@@ -44,6 +44,7 @@ const Header = ({ dark = true }) => {
                                     <li><Link className="dropdown-item" to="/funcionalidades/teclas-rapidas">Teclas Rápidas (POS)</Link></li>
                                     <li><Link className="dropdown-item" to="/android">Versión Android</Link></li>
                                     <li><Link className="dropdown-item" to="/funcionalidades/facturacion-electronica">Facturación Electrónica</Link></li>
+                                    <li><Link className="dropdown-item" to="/funcionalidades/ordenes-de-compra">Órdenes de Compra</Link></li>
                                     <li><hr className="dropdown-divider" /></li>
                                     <li><a className="dropdown-item" href="/#modulos">Todos los módulos</a></li>
                                 </ul>
