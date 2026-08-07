@@ -77,4 +77,10 @@
   <changefreq>monthly</changefreq>
   <priority>0.8</priority>
 </url>
+<url>
+  <loc>https://proventa.app/funcionalidades/ordenes-de-compra</loc>
+  <lastmod>2026-08-06T12:00:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+</url>
 </urlset>
