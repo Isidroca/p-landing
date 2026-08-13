@@ -73,7 +73,7 @@ function Index() {
           content="ProVenta es un software de facturación y punto de venta (POS) en la nube para negocios en República Dominicana. Factura rápido, controla inventario y vende en línea con facilidad. Prueba gratis."
         />
         <meta name="author" content="Isidro Calderon Abreu" />
-        <link rel="canonical" href="https://proventa.app/" />
+        <link rel="canonical" href="https://www.proventa.app/" />
       </Helmet>
 
       <div className="App">
@@ -334,7 +334,213 @@ function Index() {
             </div>
           </section>
 
-          <section className="container pb-5 mb-md-0 mb-lg-0 mb-xl-0">
+          {/* Featured functionality shortcuts */}
+          <section
+            className="position-relative overflow-hidden py-5"
+            aria-labelledby="featured-functions-title"
+            style={{
+              background: "linear-gradient(180deg, #0b0f19 0%, #111827 52%, #0b0f19 100%)",
+              borderTop: "1px solid rgba(255,255,255,.06)",
+              borderBottom: "1px solid rgba(255,255,255,.06)",
+            }}
+          >
+            <div
+              className="position-absolute rounded-circle"
+              style={{ width: 420, height: 420, top: -220, left: -130, background: "rgba(37,99,235,.16)", filter: "blur(90px)" }}
+            ></div>
+            <div
+              className="position-absolute rounded-circle"
+              style={{ width: 380, height: 380, right: -140, bottom: -210, background: "rgba(16,185,129,.13)", filter: "blur(90px)" }}
+            ></div>
+
+            <div className="container position-relative py-lg-4" style={{ zIndex: 2 }}>
+              <div className="row align-items-end mb-5 gy-3">
+                <div className="col-lg-8">
+                  <span
+                    className="badge rounded-pill px-3 py-2 mb-3"
+                    style={{ color: "#93c5fd", background: "rgba(59,130,246,.12)", border: "1px solid rgba(96,165,250,.22)" }}
+                  >
+                    MUCHO MÁS QUE FACTURACIÓN
+                  </span>
+                  <h2 id="featured-functions-title" className="display-5 fw-bold text-white mb-3">
+                    Cuatro formas de llevar tu negocio al siguiente nivel
+                  </h2>
+                  <p className="fs-lg text-light opacity-60 mb-0" style={{ maxWidth: 720 }}>
+                    Descubre las herramientas que hacen de ProVenta un sistema completo: vende más rápido,
+                    organiza tus compras y prepárate para administrar tu taller como nunca antes.
+                  </p>
+                </div>
+                <div className="col-lg-4 text-lg-end">
+                  <span className="text-light opacity-50 small">
+                    Selecciona una función para conocerla <i className="bx bx-right-arrow-alt ms-1"></i>
+                  </span>
+                </div>
+              </div>
+
+              <div className="row g-4">
+                <div className="col-md-6">
+                  <article className="proventa-feature-card proventa-auto-card h-100 rounded-4 overflow-hidden position-relative">
+                    <div className="proventa-feature-glow"></div>
+                    <div className="position-relative h-100 p-4 p-xl-5 d-flex flex-column" style={{ zIndex: 2 }}>
+                      <div className="d-flex justify-content-between align-items-start mb-5">
+                        <div className="proventa-feature-icon"><i className="bx bx-car"></i></div>
+                        <span className="badge rounded-pill px-3 py-2 text-dark" style={{ background: "#fbbf24" }}>
+                          PRÓXIMAMENTE
+                        </span>
+                      </div>
+                      <div className="mt-auto">
+                        <small className="d-block text-uppercase fw-bold mb-2" style={{ color: "#fcd34d", letterSpacing: ".12em" }}>La próxima evolución</small>
+                        <h3 className="display-6 text-white fw-bold mb-3">ProVenta Auto</h3>
+                        <p className="text-light opacity-70 mb-4" style={{ maxWidth: 520 }}>
+                          Una nueva experiencia creada para talleres y negocios automotrices. Mantén tus servicios,
+                          vehículos, clientes y operación conectados en un solo lugar.
+                        </p>
+                        <Link to="/proventa-auto/" className="proventa-feature-link">
+                          Conocer ProVenta Auto <i className="bx bx-right-arrow-alt"></i>
+                        </Link>
+                      </div>
+                    </div>
+                  </article>
+                </div>
+
+                <div className="col-md-6">
+                  <article className="proventa-feature-card purchase-card h-100 rounded-4 overflow-hidden position-relative">
+                    <div className="proventa-feature-glow"></div>
+                    <div className="position-relative h-100 p-4 p-xl-5 d-flex flex-column" style={{ zIndex: 2 }}>
+                      <div className="d-flex justify-content-between align-items-start mb-5">
+                        <div className="proventa-feature-icon"><i className="bx bx-cart-alt"></i></div>
+                        <span className="badge rounded-pill px-3 py-2" style={{ color: "#6ee7b7", background: "rgba(16,185,129,.13)", border: "1px solid rgba(52,211,153,.25)" }}>
+                          NUEVO
+                        </span>
+                      </div>
+                      <div className="mt-auto">
+                        <small className="d-block text-uppercase fw-bold mb-2" style={{ color: "#6ee7b7", letterSpacing: ".12em" }}>Compra con control</small>
+                        <h3 className="display-6 text-white fw-bold mb-3">Órdenes de Compra</h3>
+                        <p className="text-light opacity-70 mb-4" style={{ maxWidth: 520 }}>
+                          Crea órdenes en peso, dólar o yuan, genera PDF, recibe mercancía por partes y conecta
+                          inventario, costos, cuentas por pagar y abonos.
+                        </p>
+                        <Link to="/funcionalidades/ordenes-de-compra/" className="proventa-feature-link">
+                          Explorar Órdenes de Compra <i className="bx bx-right-arrow-alt"></i>
+                        </Link>
+                      </div>
+                    </div>
+                  </article>
+                </div>
+
+                <div className="col-md-6">
+                  <article className="proventa-feature-card shortcuts-card h-100 rounded-4 overflow-hidden position-relative">
+                    <div className="proventa-feature-glow"></div>
+                    <div className="position-relative h-100 p-4 p-xl-5 d-flex flex-column" style={{ zIndex: 2 }}>
+                      <div className="d-flex justify-content-between align-items-start mb-4">
+                        <div className="proventa-feature-icon"><i className="bx bx-grid-alt"></i></div>
+                        <span className="proventa-card-number">03</span>
+                      </div>
+                      <div className="mt-auto">
+                        <small className="d-block text-uppercase fw-bold mb-2" style={{ color: "#c4b5fd", letterSpacing: ".12em" }}>Cada segundo cuenta</small>
+                        <h3 className="h1 text-white fw-bold mb-3">Teclas Rápidas</h3>
+                        <p className="text-light opacity-70 mb-4">
+                          Convierte tus productos frecuentes en botones visuales y factura con un toque. Ideal para
+                          colmados, cafeterías y negocios de alta rotación.
+                        </p>
+                        <Link to="/funcionalidades/teclas-rapidas/" className="proventa-feature-link">
+                          Descubrir Teclas Rápidas <i className="bx bx-right-arrow-alt"></i>
+                        </Link>
+                      </div>
+                    </div>
+                  </article>
+                </div>
+
+                <div className="col-md-6">
+                  <article className="proventa-feature-card pos-card h-100 rounded-4 overflow-hidden position-relative">
+                    <div className="proventa-feature-glow"></div>
+                    <div className="position-relative h-100 p-4 p-xl-5 d-flex flex-column" style={{ zIndex: 2 }}>
+                      <div className="d-flex justify-content-between align-items-start mb-4">
+                        <div className="proventa-feature-icon"><i className="bx bx-store-alt"></i></div>
+                        <span className="proventa-card-number">04</span>
+                      </div>
+                      <div className="mt-auto">
+                        <small className="d-block text-uppercase fw-bold mb-2" style={{ color: "#7dd3fc", letterSpacing: ".12em" }}>Vende sin detenerte</small>
+                        <h3 className="h1 text-white fw-bold mb-3">Punto de Venta POS</h3>
+                        <p className="text-light opacity-70 mb-4">
+                          Facturación ágil, códigos de barras, inventario en tiempo real y una operación pensada para
+                          atender más clientes con velocidad y precisión.
+                        </p>
+                        <a href="#pos-inteligente" className="proventa-feature-link">
+                          Conocer el POS <i className="bx bx-down-arrow-alt"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </article>
+                </div>
+              </div>
+            </div>
+
+            <style>{`
+              .proventa-feature-card {
+                min-height: 390px;
+                background: rgba(255,255,255,.035);
+                border: 1px solid rgba(255,255,255,.09);
+                box-shadow: 0 24px 70px rgba(0,0,0,.22);
+                transition: transform .3s ease, border-color .3s ease, box-shadow .3s ease;
+              }
+              .proventa-feature-card:hover {
+                transform: translateY(-8px);
+                border-color: rgba(255,255,255,.2);
+                box-shadow: 0 32px 90px rgba(0,0,0,.36);
+              }
+              .proventa-feature-glow {
+                position: absolute;
+                width: 270px;
+                height: 270px;
+                top: -145px;
+                right: -105px;
+                border-radius: 50%;
+                filter: blur(45px);
+                opacity: .48;
+                transition: opacity .3s ease, transform .3s ease;
+              }
+              .proventa-feature-card:hover .proventa-feature-glow { opacity: .75; transform: scale(1.15); }
+              .proventa-auto-card { background: linear-gradient(145deg,rgba(120,53,15,.32),rgba(255,255,255,.025) 60%); }
+              .proventa-auto-card .proventa-feature-glow { background: #f59e0b; }
+              .purchase-card { background: linear-gradient(145deg,rgba(6,78,59,.38),rgba(255,255,255,.025) 60%); }
+              .purchase-card .proventa-feature-glow { background: #10b981; }
+              .shortcuts-card { background: linear-gradient(145deg,rgba(76,29,149,.31),rgba(255,255,255,.025) 60%); }
+              .shortcuts-card .proventa-feature-glow { background: #8b5cf6; }
+              .pos-card { background: linear-gradient(145deg,rgba(7,89,133,.34),rgba(255,255,255,.025) 60%); }
+              .pos-card .proventa-feature-glow { background: #0ea5e9; }
+              .proventa-feature-icon {
+                width: 64px;
+                height: 64px;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 18px;
+                color: #fff;
+                font-size: 2rem;
+                background: rgba(255,255,255,.1);
+                border: 1px solid rgba(255,255,255,.13);
+                backdrop-filter: blur(10px);
+              }
+              .proventa-card-number { color: rgba(255,255,255,.15); font-size: 2.5rem; font-weight: 800; line-height: 1; }
+              .proventa-feature-link {
+                display: inline-flex;
+                align-items: center;
+                gap: .5rem;
+                color: #fff;
+                font-weight: 700;
+                text-decoration: none;
+              }
+              .proventa-feature-link i { font-size: 1.45rem; transition: transform .25s ease; }
+              .proventa-feature-link:hover { color: #fff; }
+              .proventa-feature-link:hover i { transform: translateX(6px); }
+              @media (max-width: 767.98px) {
+                .proventa-feature-card { min-height: 350px; }
+              }
+            `}</style>
+          </section>
+
+          <section id="pos-inteligente" className="container pb-5 pt-5 mb-md-0 mb-lg-0 mb-xl-0">
             <div className="row align-items-center pt-2 pb-3">
               <div className="col-md-6 col-xl-5 text-center text-md-start mb-5 mb-md-0">
                 <h2 className="h1 pb-2 pb-lg-3">POS Inteligente</h2>

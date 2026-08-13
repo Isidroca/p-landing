@@ -2,4 +2,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://proventa.app/sitemap.xml
+Sitemap: https://www.proventa.app/sitemap.xml

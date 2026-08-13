@@ -18,6 +18,7 @@ const TeclasRapidas = () => {
                     name="keywords"
                     content="Teclas rápidas POS, Facturación rápida RD, Software para colmados, Punto de venta touch, ProVenta funcionalidades"
                 />
+                <link rel="canonical" href="https://www.proventa.app/funcionalidades/teclas-rapidas/" />
             </Helmet>
 
             <div className="bg-dark text-light min-vh-100 d-flex flex-column">

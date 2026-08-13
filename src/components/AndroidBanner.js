@@ -93,7 +93,7 @@ const AndroidBanner = () => {
             `}</style>
 
             <div className="container position-relative" style={{ zIndex: 2 }}>
-                <Link to="/funcionalidades/facturacion-electronica">
+                <Link to="/funcionalidades/facturacion-electronica/">
                     <div className="row align-items-center justify-content-center gy-2 text-center text-lg-start">
 
                         {/* Icon + labels */}

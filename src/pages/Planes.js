@@ -54,6 +54,7 @@ const Planes = () => {
                     name="description"
                     content="Conoce nuestros planes de facturación e inventario. Precios transparentes y sin sorpresas para negocios en República Dominicana."
                 />
+                <link rel="canonical" href="https://www.proventa.app/planes/" />
             </Helmet>
 
             <div className="bg-dark text-light min-vh-100 d-flex flex-column">

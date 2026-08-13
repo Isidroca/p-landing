@@ -41,19 +41,19 @@ const Header = ({ dark = true }) => {
                                     Funcionalidades
                                 </button>
                                 <ul className="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdown">
-                                    <li><Link className="dropdown-item" to="/funcionalidades/teclas-rapidas">Teclas Rápidas (POS)</Link></li>
-                                    <li><Link className="dropdown-item" to="/android">Versión Android</Link></li>
-                                    <li><Link className="dropdown-item" to="/funcionalidades/facturacion-electronica">Facturación Electrónica</Link></li>
-                                    <li><Link className="dropdown-item" to="/funcionalidades/ordenes-de-compra">Órdenes de Compra</Link></li>
+                                    <li><Link className="dropdown-item" to="/funcionalidades/teclas-rapidas/">Teclas Rápidas (POS)</Link></li>
+                                    <li><Link className="dropdown-item" to="/android/">Versión Android</Link></li>
+                                    <li><Link className="dropdown-item" to="/funcionalidades/facturacion-electronica/">Facturación Electrónica</Link></li>
+                                    <li><Link className="dropdown-item" to="/funcionalidades/ordenes-de-compra/">Órdenes de Compra</Link></li>
                                     <li><hr className="dropdown-divider" /></li>
                                     <li><a className="dropdown-item" href="/#modulos">Todos los módulos</a></li>
                                 </ul>
                             </li>
                             {/* <li className="nav-item">
-                                <Link className="nav-link" to="/planes">Planes</Link>
+                                <Link className="nav-link" to="/planes/">Planes</Link>
                             </li> */}
                             <li className="nav-item">
-                                <Link className="nav-link" to="/blog">Blog</Link>
+                                <Link className="nav-link" to="/blog/">Blog</Link>
                             </li>
                         </ul>
 
@@ -61,7 +61,7 @@ const Header = ({ dark = true }) => {
                             <a href="https://wa.me/18097874963" className="btn btn-primary w-100 mb-2">
                                 <i className="bx bxl-whatsapp fs-4 me-2"></i> (809) 787-4963
                             </a>
-                            <Link to="/como-instalar-proventa" className="btn btn-outline-light w-100">
+                            <Link to="/como-instalar-proventa/" className="btn btn-outline-light w-100">
                                 ¿Cómo instalar?
                             </Link>
                         </div>
@@ -83,7 +83,7 @@ const Header = ({ dark = true }) => {
                 {/* Desktop Buttons */}
                 <div className="d-none d-lg-flex align-items-center gap-2">
                     <Link
-                        to="/como-instalar-proventa"
+                        to="/como-instalar-proventa/"
                         className="btn btn-outline-light btn-sm fs-sm rounded"
                     >
                         ¿Cómo instalar?

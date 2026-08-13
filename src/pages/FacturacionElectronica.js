@@ -80,7 +80,7 @@ const FacturacionElectronica = () => {
           name="keywords"
           content="facturación electrónica República Dominicana, e-CF DGII, comprobantes fiscales electrónicos, NCF electrónico, software facturación electrónica RD"
         />
-        <link rel="canonical" href="https://www.proventa.app/facturacion-electronica" />
+        <link rel="canonical" href="https://www.proventa.app/funcionalidades/facturacion-electronica/" />
       </Helmet>
 
       <div className="bg-dark text-light min-vh-100 d-flex flex-column">

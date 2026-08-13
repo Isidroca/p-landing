@@ -45,7 +45,7 @@ const Install = () => {
           content="Sigue nuestra guía detallada para instalar ProVenta en tu PC con Windows. Configura tu sistema de facturación y POS en pocos minutos."
         />
         <meta name="author" content="Isidro Calderon Abreu" />
-        <link rel="canonical" href="https://proventa.app/como-instalar-proventa" />
+        <link rel="canonical" href="https://www.proventa.app/como-instalar-proventa/" />
       </Helmet>
 
       <div className="bg-dark text-light min-vh-100 d-flex flex-column">
@@ -241,7 +241,7 @@ const Install = () => {
                 {/* Next Steps */}
                 <div className="mt-5 text-center">
                   <h3 className="h4 fw-bold mb-4">¿Ya instalaste? Sigue con el registro</h3>
-                  <a href="/registro" className="btn btn-primary btn-lg px-5">
+                  <a href="/registro/" className="btn btn-primary btn-lg px-5">
                     Ir al Registro <i className="bx bx-right-arrow-alt ms-2"></i>
                   </a>
                 </div>

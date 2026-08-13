@@ -21,6 +21,7 @@ const BlogPost = () => {
             <Helmet>
                 <title>{post.title} | Blog ProVenta</title>
                 <meta name="description" content={post.excerpt} />
+                <link rel="canonical" href={`https://www.proventa.app/blog/${post.slug}/`} />
             </Helmet>
 
             <div className="bg-dark text-light min-vh-100 d-flex flex-column">
@@ -31,7 +32,7 @@ const BlogPost = () => {
                     <div className="container pt-2 pt-md-4">
                         <nav aria-label="breadcrumb">
                             <ol className="breadcrumb mb-4">
-                                <li className="breadcrumb-item"><Link to="/blog" className="text-light opacity-50">Blog</Link></li>
+                                <li className="breadcrumb-item"><Link to="/blog/" className="text-light opacity-50">Blog</Link></li>
                                 <li className="breadcrumb-item active text-white" aria-current="page">{post.category}</li>
                             </ol>
                         </nav>

@@ -19,6 +19,7 @@ const Android = () => {
           name="keywords"
           content="Facturación móvil RD, Sistema para colmados, impresora térmica Bluetooth, App de facturación, POS Android, Software de ventas República Dominicana"
         />
+        <link rel="canonical" href="https://www.proventa.app/android/" />
       </Helmet>
 
       <div className="bg-dark text-light min-vh-100 d-flex flex-column">

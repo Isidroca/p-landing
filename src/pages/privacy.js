@@ -18,7 +18,7 @@ const Privacy = () => {
           content="Conoce cómo ProVenta protege tus datos. Información detallada sobre el tratamiento de datos sensibles y privacidad para usuarios en República Dominicana."
         />
         <meta name="author" content="Isidro Calderon Abreu" />
-        <link rel="canonical" href="https://proventa.app/privacidad" />
+        <link rel="canonical" href="https://www.proventa.app/privacidad/" />
       </Helmet>
 
       <div className="bg-dark text-light min-vh-100 d-flex flex-column">

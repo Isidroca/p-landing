@@ -76,7 +76,7 @@ const Footer = () => {
                                     </li>
                                     <li>
                                         <a
-                                            href="lahmedominicana@gmail.com "
+                                            href="mailto:lahmedominicana@gmail.com"
                                             className="nav-link fs-lg fw-normal px-0 py-1"
                                         >
                                             <i className="bx bx-envelope fs-4 me-2"></i>
@@ -85,7 +85,7 @@ const Footer = () => {
                                     </li>
                                     <li>
                                         <Link
-                                            to="/privacidad"
+                                            to="/privacidad/"
                                             className="nav-link fs-lg fw-normal px-0 py-1"
                                         >
                                             <i className="bx bx-shield-quarter fs-4 me-2"></i>

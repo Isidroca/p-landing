@@ -17,7 +17,7 @@ const Register = () => {
                     content="Aprende a registrar tu empresa y configurar tu cuenta en ProVenta. Guía paso a paso para comenzar a facturar y gestionar tu inventario."
                 />
                 <meta name="author" content="Isidro Calderon Abreu" />
-                <link rel="canonical" href="https://proventa.app/registro" />
+                <link rel="canonical" href="https://www.proventa.app/registro/" />
             </Helmet>
 
             <div className="bg-dark text-light min-vh-100 d-flex flex-column">

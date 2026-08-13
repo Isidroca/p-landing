@@ -18,6 +18,7 @@ const Blog = () => {
                     name="description"
                     content="Aprende sobre facturación, inventario y cómo hacer crecer tu negocio con los consejos de expertos en el Blog de ProVenta."
                 />
+                <link rel="canonical" href="https://www.proventa.app/blog/" />
             </Helmet>
 
             <div className="bg-dark text-light min-vh-100 d-flex flex-column">
@@ -40,7 +41,7 @@ const Blog = () => {
                             {posts.map((post) => (
                                 <div key={post.slug} className="col-lg-4 col-md-6">
                                     <article className="card h-100 bg-white border-0 shadow-sm overflow-hidden hover-lift d-flex flex-column">
-                                        <Link to={`/blog/${post.slug}`} className="text-decoration-none h-100 d-flex flex-column">
+                                        <Link to={`/blog/${post.slug}/`} className="text-decoration-none h-100 d-flex flex-column">
 
                                             {/* Contenedor de Imagen con Ratio Controlado */}
                                             <div className="position-relative overflow-hidden" style={{ minHeight: "220px", maxHeight: "220px" }}>
