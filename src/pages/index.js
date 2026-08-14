@@ -5,12 +5,13 @@ import { HelmetProvider } from "react-helmet-async";
 import { RWebShare } from "react-web-share";
 import WhatsAppButton from "../components/buttons/whats-app-button";
 import InvoiceSlider from "../components/buttons/general/invoice-slider";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import AndroidBanner from "../components/AndroidBanner";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 
 function Index() {
+  const navigate = useNavigate();
   const helmetContext = {};
   const [version, setVersion] = useState("");
   const [appUrl, setAppUrl] = useState(
@@ -379,17 +380,17 @@ function Index() {
 
               <div className="row g-4">
                 <div className="col-md-6">
-                  <article className="proventa-feature-card proventa-auto-card h-100 rounded-4 overflow-hidden position-relative">
+                  <article className="proventa-feature-card proventa-auto-card h-100 rounded-4 overflow-hidden position-relative" role="link" tabIndex="0" aria-label="Conocer ProVenta Auto" onClick={(event) => { if (!event.target.closest("a")) navigate("/proventa-auto/"); }} onKeyDown={(event) => { if (event.key === "Enter" || event.key === " ") { event.preventDefault(); navigate("/proventa-auto/"); } }}>
                     <div className="proventa-feature-glow"></div>
                     <div className="position-relative h-100 p-4 p-xl-5 d-flex flex-column" style={{ zIndex: 2 }}>
                       <div className="d-flex justify-content-between align-items-start mb-5">
                         <div className="proventa-feature-icon"><i className="bx bx-car"></i></div>
                         <span className="badge rounded-pill px-3 py-2 text-dark" style={{ background: "#fbbf24" }}>
-                          PRÓXIMAMENTE
+                          NUEVO
                         </span>
                       </div>
                       <div className="mt-auto">
-                        <small className="d-block text-uppercase fw-bold mb-2" style={{ color: "#fcd34d", letterSpacing: ".12em" }}>La próxima evolución</small>
+                        <small className="d-block text-uppercase fw-bold mb-2" style={{ color: "#fcd34d", letterSpacing: ".12em" }}>Gestión especializada para talleres</small>
                         <h3 className="display-6 text-white fw-bold mb-3">ProVenta Auto</h3>
                         <p className="text-light opacity-70 mb-4" style={{ maxWidth: 520 }}>
                           Una nueva experiencia creada para talleres y negocios automotrices. Mantén tus servicios,
@@ -404,7 +405,7 @@ function Index() {
                 </div>
 
                 <div className="col-md-6">
-                  <article className="proventa-feature-card purchase-card h-100 rounded-4 overflow-hidden position-relative">
+                  <article className="proventa-feature-card purchase-card h-100 rounded-4 overflow-hidden position-relative" role="link" tabIndex="0" aria-label="Explorar Órdenes de Compra" onClick={(event) => { if (!event.target.closest("a")) navigate("/funcionalidades/ordenes-de-compra/"); }} onKeyDown={(event) => { if (event.key === "Enter" || event.key === " ") { event.preventDefault(); navigate("/funcionalidades/ordenes-de-compra/"); } }}>
                     <div className="proventa-feature-glow"></div>
                     <div className="position-relative h-100 p-4 p-xl-5 d-flex flex-column" style={{ zIndex: 2 }}>
                       <div className="d-flex justify-content-between align-items-start mb-5">
@@ -429,7 +430,7 @@ function Index() {
                 </div>
 
                 <div className="col-md-6">
-                  <article className="proventa-feature-card shortcuts-card h-100 rounded-4 overflow-hidden position-relative">
+                  <article className="proventa-feature-card shortcuts-card h-100 rounded-4 overflow-hidden position-relative" role="link" tabIndex="0" aria-label="Descubrir Teclas Rápidas" onClick={(event) => { if (!event.target.closest("a")) navigate("/funcionalidades/teclas-rapidas/"); }} onKeyDown={(event) => { if (event.key === "Enter" || event.key === " ") { event.preventDefault(); navigate("/funcionalidades/teclas-rapidas/"); } }}>
                     <div className="proventa-feature-glow"></div>
                     <div className="position-relative h-100 p-4 p-xl-5 d-flex flex-column" style={{ zIndex: 2 }}>
                       <div className="d-flex justify-content-between align-items-start mb-4">
@@ -452,7 +453,7 @@ function Index() {
                 </div>
 
                 <div className="col-md-6">
-                  <article className="proventa-feature-card pos-card h-100 rounded-4 overflow-hidden position-relative">
+                  <article className="proventa-feature-card pos-card h-100 rounded-4 overflow-hidden position-relative" role="link" tabIndex="0" aria-label="Conocer el Punto de Venta POS" onClick={(event) => { if (!event.target.closest("a")) document.getElementById("pos-inteligente")?.scrollIntoView({ behavior: "smooth" }); }} onKeyDown={(event) => { if (event.key === "Enter" || event.key === " ") { event.preventDefault(); document.getElementById("pos-inteligente")?.scrollIntoView({ behavior: "smooth" }); } }}>
                     <div className="proventa-feature-glow"></div>
                     <div className="position-relative h-100 p-4 p-xl-5 d-flex flex-column" style={{ zIndex: 2 }}>
                       <div className="d-flex justify-content-between align-items-start mb-4">
@@ -483,7 +484,9 @@ function Index() {
                 border: 1px solid rgba(255,255,255,.09);
                 box-shadow: 0 24px 70px rgba(0,0,0,.22);
                 transition: transform .3s ease, border-color .3s ease, box-shadow .3s ease;
+                cursor: pointer;
               }
+              .proventa-feature-card:focus-visible { outline: 3px solid #fbbf24; outline-offset: 4px; }
               .proventa-feature-card:hover {
                 transform: translateY(-8px);
                 border-color: rgba(255,255,255,.2);
