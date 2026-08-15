@@ -9,6 +9,8 @@ import { Link, useNavigate } from "react-router-dom";
 import AndroidBanner from "../components/AndroidBanner";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import LandingRedesign from "../components/LandingRedesign";
+import LandingConversion, { faqItems } from "../components/LandingConversion";
 
 function Index() {
   const navigate = useNavigate();
@@ -66,15 +68,20 @@ function Index() {
   return (
     <HelmetProvider context={helmetContext}>
       <Helmet>
-        <title>
-          ProVenta: Software de Facturación y POS en República Dominicana
-        </title>
+        <title>ProVenta | Software de Facturación, POS e Inventario en RD</title>
         <meta
           name="description"
-          content="ProVenta es un software de facturación y punto de venta (POS) en la nube para negocios en República Dominicana. Factura rápido, controla inventario y vende en línea con facilidad. Prueba gratis."
+          content="Software de facturación, POS e inventario para negocios en República Dominicana. Facturación electrónica DGII, multimoneda y aplicación Android."
         />
         <meta name="author" content="Isidro Calderon Abreu" />
         <link rel="canonical" href="https://www.proventa.app/" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="ProVenta | Software de Facturación, POS e Inventario en RD" />
+        <meta property="og:description" content="Facturación electrónica DGII, POS, inventario, compras y aplicación Android para negocios dominicanos." />
+        <meta property="og:url" content="https://www.proventa.app/" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <script type="application/ld+json">{JSON.stringify({"@context":"https://schema.org","@type":"SoftwareApplication",name:"ProVenta",applicationCategory:"BusinessApplication",operatingSystem:"Windows, Android",url:"https://www.proventa.app/",description:"Software de facturación, POS e inventario para negocios en República Dominicana."})}</script>
+        <script type="application/ld+json">{JSON.stringify({"@context":"https://schema.org","@type":"FAQPage",mainEntity:faqItems.map(([question,answer])=>({"@type":"Question",name:question,acceptedAnswer:{"@type":"Answer",text:answer}}))})}</script>
       </Helmet>
 
       <div className="App">
@@ -167,7 +174,7 @@ function Index() {
                     </div>
                     <div className="d-flex align-items-center fs-sm">
                       <i className="bx bx-check-circle text-success me-2 fs-5"></i>
-                      <span>Soporte 24/7</span>
+                      <span>Soporte local en español</span>
                     </div>
                   </div>
                 </div>
@@ -543,7 +550,10 @@ function Index() {
             `}</style>
           </section>
 
-          <section id="pos-inteligente" className="container pb-5 pt-5 mb-md-0 mb-lg-0 mb-xl-0">
+          <LandingRedesign />
+          <LandingConversion onDownload={async (e) => download(e)} />
+
+          <section className="d-none container pb-5 pt-5 mb-md-0 mb-lg-0 mb-xl-0">
             <div className="row align-items-center pt-2 pb-3">
               <div className="col-md-6 col-xl-5 text-center text-md-start mb-5 mb-md-0">
                 <h2 className="h1 pb-2 pb-lg-3">POS Inteligente</h2>
@@ -636,7 +646,7 @@ function Index() {
             </div>
           </section>
 
-          <section className="container pt-0 pt-sm-0 pb-5 mb-md-2 mb-lg-4 mb-xl-5">
+          <section className="d-none container pt-0 pt-sm-0 pb-5 mb-md-2 mb-lg-4 mb-xl-5">
             <div className="row align-items-center mb-2 pb-sm-3 pb-md-4">
               <div className="col-md-5 col-lg-6 col-xl-5 offset-xl-1 order-md-2 text-center text-md-start mb-5 mb-md-0">
                 <h2 className="h1 pb-2 pb-lg-3">Simplifica tu Facturación</h2>
@@ -711,7 +721,7 @@ function Index() {
             </div>
           </section>
 
-          <section className="dark-mode bg-dark pt-5 pb-5 mb-md-2 mb-lg-4 mb-xl-5" id="modulos">
+          <section className="d-none dark-mode bg-dark pt-5 pb-5 mb-md-2 mb-lg-4 mb-xl-5">
             <div className="row justify-content-center mb-5">
               <div className="col-lg-7 text-center">
                 <h2 className="display-4 mb-3">Todo lo que necesitas en un <span className="text-primary">solo lugar</span></h2>
@@ -804,7 +814,7 @@ function Index() {
                       <i className="bx bx-support fs-2"></i>
                     </div>
                     <h3 className="h5 mb-2">Soporte Vitalicio</h3>
-                    <p className="fs-sm text-muted mb-0">Estamos contigo en cada paso, soporte 24/7 en español.</p>
+                    <p className="fs-sm text-muted mb-0">Estamos contigo en cada paso con soporte local en español.</p>
                   </div>
                 </div>
               </div>
@@ -874,7 +884,7 @@ function Index() {
                       <ul className="list-unstyled fs-sm text-light opacity-80 mb-5">
                         <li className="d-flex align-items-center mb-3"><i className="bx bx-check-circle text-primary me-2 fs-5"></i> 5 Ilimitados</li>
                         <li className="d-flex align-items-center mb-3"><i className="bx bx-check-circle text-primary me-2 fs-5"></i> Empleados Ilimitados</li>
-                        <li className="d-flex align-items-center mb-3"><i className="bx bx-check-circle text-primary me-2 fs-5"></i> Soporte 24/7 Prioritario</li>
+                        <li className="d-flex align-items-center mb-3"><i className="bx bx-check-circle text-primary me-2 fs-5"></i> Soporte local en español</li>
                         <li className="d-flex align-items-center mb-3"><i className="bx bx-check-circle text-primary me-2 fs-5"></i> Multisuclursales</li>
                       </ul>
                     </div>
@@ -888,7 +898,7 @@ function Index() {
           </section>
 
           {/* Section: Business Types (Clean Light Mode) */}
-          <section className="bg-white py-5 my-md-2 my-lg-4 my-xl-5 overflow-hidden">
+          <section className="d-none bg-white py-5 my-md-2 my-lg-4 my-xl-5 overflow-hidden">
             <div className="container py-2 py-md-4">
               <div className="row justify-content-center pt-1 pb-1 mb-5">
                 <div className="col-lg-8 col-md-9 text-center">
@@ -955,7 +965,7 @@ function Index() {
               </div>
             </div>
           </section>
-          <section className="position-relative dark-mode bg-dark py-5 my-md-2 my-lg-4 my-xl-0 overflow-hidden">
+          <section className="d-none position-relative dark-mode bg-dark py-5 my-md-2 my-lg-4 my-xl-0 overflow-hidden">
             <div className="container position-relative zindex-2">
               <div className="row justify-content-center pt-1 pb-1 mb-2 mb-md-3 mb-lg-4">
                 <div className="col-lg-8 col-md-10 text-center my-3">
@@ -1037,7 +1047,7 @@ function Index() {
             </div>
           </section>
 
-          <section className="bg-secondary py-5">
+          <section className="d-none bg-secondary py-5">
             <div className="container my-2 py-md-2 py-lg-5">
               <div className="row">
                 <div className="col-xl-4 col-md-5 text-center text-md-start pb-2 pb-md-0 mb-4 mb-md-0">
@@ -1260,7 +1270,7 @@ function Index() {
               </div>
             </div>
           </section>
-          <section className="position-relative dark-mode bg-dark py-5 my-md-2 my-lg-4 my-xl-0">
+          <section className="d-none position-relative dark-mode bg-dark py-5 my-md-2 my-lg-4 my-xl-0">
             <div className="row justify-content-center pt-1 pb-1 mb-2 mb-md-3 mb-lg-4">
               <div className="col-lg-8 col-md-9 text-center my-3">
                 <h2 className="h1 mb-md-4 mb-3 pb-lg-3 pb-2 text-center">
@@ -1276,7 +1286,7 @@ function Index() {
             </div>
             <InvoiceSlider />
           </section>
-          <section className="container py-5 my-md-2 my-lg-4 my-xl-5">
+          <section className="d-none container py-5 my-md-2 my-lg-4 my-xl-5">
             <div className="row justify-content-center pt-1 pb-1 mb-2 mb-md-3 mb-lg-4">
               <div className="col-lg-8 col-md-9 text-center">
                 <h2 className="h1 mb-4">
