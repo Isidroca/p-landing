@@ -23,6 +23,14 @@ const ecosystem = [
   ["bx-money", "Comisiones"], ["bx-target-lock", "Metas"], ["bx-bar-chart-alt-2", "Reportes"],
 ];
 
+const businessTypes = [
+  ["bx-buildings", "Distribuidoras", "Toma pedidos durante las visitas y envíalos directamente a administración."],
+  ["bx-store", "Surtidoras", "Controla la operación comercial de todo tu equipo mientras atiende clientes."],
+  ["bx-package", "Importadoras y mayoristas", "Conecta tus vendedores con productos, inventario, pedidos y facturación."],
+  ["bx-truck", "Suplidores", "Gestiona vendedores que atienden una cartera recurrente de clientes."],
+  ["bx-walk", "Equipos de venta en campo", "Para empresas cuyos vendedores visitan clientes y toman pedidos fuera del establecimiento."],
+];
+
 const demoUrl = "https://wa.me/18097874963?text=Hola%2C%20quiero%20solicitar%20una%20demostraci%C3%B3n%20de%20Fuerza%20de%20Ventas%20con%20ProVenta.";
 
 function ScreenFrame({ src, alt, className = "" }) {
@@ -92,6 +100,11 @@ export default function FuerzaVenta() {
       <section className="fv-dashboard"><div className="container"><div className="fv-heading fv-heading-light"><span>CONTROL PARA ADMINISTRACIÓN</span><h2>Todo tu equipo, en una sola vista</h2><p>Ventas, metas, comisiones, pedidos y evolución diaria para tomar decisiones con datos reales.</p></div><ScreenFrame className="fv-dashboard-screen" src="/assets/img/fuerza-venta/dashboard-fuerza-venta.png" alt="Dashboard de Fuerza de Ventas con ventas del mes, meta mensual, comisiones y progreso por vendedor"/><div className="fv-dashboard-tags"><span>Ventas</span><span>Meta mensual</span><span>% cumplimiento</span><span>Comisiones</span><span>Pedidos</span><span>Conversión</span><span>Evolución</span></div></div></section>
 
       <section className="fv-ecosystem"><div className="container"><div className="row align-items-center g-5"><div className="col-lg-5"><span className="fv-label">TODO CONECTADO</span><h2>No es una aplicación aislada para vendedores.</h2><p className="lead">La Fuerza de Ventas forma parte de ProVenta. La misma información que usa administración, inventario y facturación se conecta con el trabajo de cada vendedor.</p><blockquote>ProVenta conecta la operación que termina produciendo la factura.</blockquote></div><div className="col-lg-7"><div className="fv-ecosystem-flow">{ecosystem.map(([icon,label],i)=><div key={label}><span><i className={`bx ${icon}`}></i>{label}</span>{i<ecosystem.length-1&&<b className="bx bx-down-arrow-alt"></b>}</div>)}</div></div></div></div></section>
+
+      <section className="fv-businesses" aria-labelledby="businesses-title"><div className="container">
+        <div className="fv-heading"><span>HECHO PARA TU OPERACIÓN</span><h2 id="businesses-title">Hecho para empresas que venden fuera del mostrador</h2><p>Si tu equipo visita clientes, toma pedidos y necesita mantenerse conectado con administración, inventario y facturación, Fuerza de Ventas está hecha para tu operación.</p></div>
+        <div className="fv-business-grid">{businessTypes.map(([icon,title,text])=><article key={title}><i className={`bx ${icon}`}></i><div><h3>{title}</h3><p>{text}</p></div></article>)}</div>
+      </div></section>
 
       <section className="fv-final"><div className="container"><div className="fv-final-shell"><span>FUERZA DE VENTAS INCLUIDA CON PROVENTA</span><h2>¿Tienes vendedores tomando pedidos en la calle?</h2><p>Conecta tu equipo comercial con clientes, productos, pedidos, facturación, comisiones y metas desde ProVenta.</p><div className="fv-actions justify-content-center"><a className="btn btn-primary btn-lg" href={demoUrl} target="_blank" rel="noreferrer"><i className="bx bxl-whatsapp"></i> Solicitar una demostración</a><Link className="btn btn-outline-light btn-lg" to="/android/">Ver ProVenta Móvil</Link></div></div></div></section>
       <Footer />
