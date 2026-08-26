@@ -371,11 +371,11 @@ function Index() {
                     MUCHO MÁS QUE FACTURACIÓN
                   </span>
                   <h2 id="featured-functions-title" className="display-5 fw-bold text-white mb-3">
-                    Cuatro formas de llevar tu negocio al siguiente nivel
+                    Cinco formas de llevar tu negocio al siguiente nivel
                   </h2>
                   <p className="fs-lg text-light opacity-60 mb-0" style={{ maxWidth: 720 }}>
-                    Descubre las herramientas que hacen de ProVenta un sistema completo: vende más rápido,
-                    organiza tus compras y prepárate para administrar tu taller como nunca antes.
+                    Descubre las herramientas que hacen de ProVenta un sistema completo: conecta vendedores,
+                    pedidos, compras, inventario, facturación y operaciones especializadas.
                   </p>
                 </div>
                 <div className="col-lg-4 text-lg-end">
@@ -481,6 +481,37 @@ function Index() {
                     </div>
                   </article>
                 </div>
+
+                <div className="col-12">
+                  <article className="proventa-feature-card sales-force-card h-100 rounded-4 overflow-hidden position-relative" role="link" tabIndex="0" aria-label="Conocer Fuerza de Ventas con ProVenta" onClick={(event) => { if (!event.target.closest("a")) navigate("/fuerza-de-venta/"); }} onKeyDown={(event) => { if (event.key === "Enter" || event.key === " ") { event.preventDefault(); navigate("/fuerza-de-venta/"); } }}>
+                    <div className="proventa-feature-glow"></div>
+                    <div className="row g-0 align-items-center position-relative h-100" style={{ zIndex: 2 }}>
+                      <div className="col-lg-6 p-4 p-xl-5">
+                        <div className="d-flex justify-content-between align-items-start mb-5">
+                          <div className="proventa-feature-icon"><i className="bx bx-group"></i></div>
+                          <span className="badge rounded-pill px-3 py-2" style={{ color: "#bfdbfe", background: "rgba(59,130,246,.15)", border: "1px solid rgba(96,165,250,.28)" }}>
+                            INCLUIDA CON PROVENTA
+                          </span>
+                        </div>
+                        <small className="d-block text-uppercase fw-bold mb-2" style={{ color: "#93c5fd", letterSpacing: ".12em" }}>Tu equipo vende. ProVenta conecta todo lo demás.</small>
+                        <h3 className="display-6 text-white fw-bold mb-3">Fuerza de Ventas</h3>
+                        <p className="text-light opacity-70 mb-4" style={{ maxWidth: 560 }}>
+                          Tus vendedores toman pedidos desde el celular; la oficina los recibe para procesar y facturar.
+                          Controla comisiones, metas y resultados sin volver a digitar la venta.
+                        </p>
+                        <Link to="/fuerza-de-venta/" className="proventa-feature-link">
+                          Conocer Fuerza de Ventas <i className="bx bx-right-arrow-alt"></i>
+                        </Link>
+                      </div>
+                      <div className="col-lg-6 align-self-stretch d-flex align-items-end justify-content-end">
+                        <div className="sales-force-preview">
+                          <div className="sales-force-preview-bar"><i></i><i></i><i></i><span>Dashboard de Fuerza de Ventas</span></div>
+                          <img src="/assets/img/fuerza-venta/dashboard-fuerza-venta.png" alt="Dashboard de Fuerza de Ventas de ProVenta con metas, comisiones y pedidos" loading="lazy" />
+                        </div>
+                      </div>
+                    </div>
+                  </article>
+                </div>
               </div>
             </div>
 
@@ -519,6 +550,16 @@ function Index() {
               .shortcuts-card .proventa-feature-glow { background: #8b5cf6; }
               .pos-card { background: linear-gradient(145deg,rgba(7,89,133,.34),rgba(255,255,255,.025) 60%); }
               .pos-card .proventa-feature-glow { background: #0ea5e9; }
+              .sales-force-card { min-height: 430px; background: linear-gradient(125deg,rgba(30,64,175,.46),rgba(12,30,61,.72) 58%,rgba(255,255,255,.025)); }
+              .sales-force-card .proventa-feature-glow { width: 420px; height: 420px; top: -180px; right: 24%; background: #2563eb; }
+              .sales-force-preview { width: 96%; margin: 4rem -2.5rem -2.5rem 0; padding: 7px; border: 1px solid rgba(255,255,255,.15); border-radius: 18px 18px 0 0; background: rgba(255,255,255,.08); box-shadow: 0 28px 70px rgba(0,0,0,.38); transform: rotate(-1deg); transition: transform .35s ease; }
+              .sales-force-card:hover .sales-force-preview { transform: translateY(-8px) rotate(0); }
+              .sales-force-preview-bar { display: flex; align-items: center; gap: 6px; height: 29px; padding: 0 9px; border-radius: 10px 10px 0 0; background: #f8fafc; }
+              .sales-force-preview-bar i { width: 7px; height: 7px; border-radius: 50%; background: #fb7185; }
+              .sales-force-preview-bar i:nth-child(2) { background: #fbbf24; }
+              .sales-force-preview-bar i:nth-child(3) { background: #34d399; }
+              .sales-force-preview-bar span { margin: auto; color: #94a3b8; font-size: .62rem; font-weight: 700; }
+              .sales-force-preview img { display: block; width: 100%; }
               .proventa-feature-icon {
                 width: 64px;
                 height: 64px;
@@ -546,6 +587,8 @@ function Index() {
               .proventa-feature-link:hover i { transform: translateX(6px); }
               @media (max-width: 767.98px) {
                 .proventa-feature-card { min-height: 350px; }
+                .sales-force-card { min-height: auto; }
+                .sales-force-preview { width: calc(100% - 1.5rem); margin: 0 0 -1rem 1.5rem; }
               }
             `}</style>
           </section>
