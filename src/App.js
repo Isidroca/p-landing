@@ -14,6 +14,7 @@ import FacturacionElectronica from "./pages/FacturacionElectronica";
 import OrdenesCompra from "./pages/OrdenesCompra";
 import ProventaAuto from "./pages/ProventaAuto";
 import FuerzaVenta from "./pages/FuerzaVenta";
+import ProventaReparaciones from "./pages/ProventaReparaciones";
 import ScrollToTop from "./hooks/ScrollToTop";
 function App() {
 
@@ -39,6 +40,8 @@ function App() {
           <Route path="/funcionalidades/ordenes-de-compra" element={<OrdenesCompra />} />
           <Route path="/proventa-auto" element={<ProventaAuto />} />
           <Route path="/fuerza-de-venta" element={<FuerzaVenta />} />
+          <Route path="/proventa-reparaciones" element={<ProventaReparaciones />} />
+          <Route path="/reparaciones" element={<ProventaReparaciones />} />
         </Route>
       </Routes>
     </BrowserRouter>
