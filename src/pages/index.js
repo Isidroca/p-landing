@@ -1535,6 +1535,29 @@ function Index() {
               </div>
             </div>
           </section>
+          <section className="container py-5" id="todos-nuestros-modulos" aria-labelledby="all-modules-title">
+            <h2 className="h3 mb-4" id="all-modules-title">Todos nuestros módulos</h2>
+            <div className="row g-4">
+              <div className="col-md-4">
+                <h3 className="h5 mb-2">
+                  <Link to="/proventa-auto/">ProVenta Auto <i className="bx bx-right-arrow-alt" aria-hidden="true"></i></Link>
+                </h3>
+                <p className="text-muted mb-0">Gestiona vehículos, órdenes de trabajo y servicios de tu taller.</p>
+              </div>
+              <div className="col-md-4">
+                <h3 className="h5 mb-2">
+                  <Link to="/proventa-reparaciones/">ProVenta Reparaciones <i className="bx bx-right-arrow-alt" aria-hidden="true"></i></Link>
+                </h3>
+                <p className="text-muted mb-0">Registra equipos y da seguimiento a cada reparación.</p>
+              </div>
+              <div className="col-md-4">
+                <h3 className="h5 mb-2">
+                  <Link to="/fuerza-de-venta/">Fuerza de Ventas <i className="bx bx-right-arrow-alt" aria-hidden="true"></i></Link>
+                </h3>
+                <p className="text-muted mb-0">Conecta los pedidos de tus vendedores con la facturación.</p>
+              </div>
+            </div>
+          </section>
         </main >
 
         <Footer />
