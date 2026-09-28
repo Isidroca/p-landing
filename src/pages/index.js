@@ -412,24 +412,23 @@ function Index() {
                 </div>
 
                 <div className="col-md-6">
-                  <article className="proventa-feature-card purchase-card h-100 rounded-4 overflow-hidden position-relative" role="link" tabIndex="0" aria-label="Explorar Órdenes de Compra" onClick={(event) => { if (!event.target.closest("a")) navigate("/funcionalidades/ordenes-de-compra/"); }} onKeyDown={(event) => { if (event.key === "Enter" || event.key === " ") { event.preventDefault(); navigate("/funcionalidades/ordenes-de-compra/"); } }}>
+                  <article className="proventa-feature-card reparaciones-card h-100 rounded-4 overflow-hidden position-relative" role="link" tabIndex="0" aria-label="Conocer ProVenta Reparaciones" onClick={(event) => { if (!event.target.closest("a")) navigate("/proventa-reparaciones/"); }} onKeyDown={(event) => { if (event.key === "Enter" || event.key === " ") { event.preventDefault(); navigate("/proventa-reparaciones/"); } }}>
                     <div className="proventa-feature-glow"></div>
                     <div className="position-relative h-100 p-4 p-xl-5 d-flex flex-column" style={{ zIndex: 2 }}>
                       <div className="d-flex justify-content-between align-items-start mb-5">
-                        <div className="proventa-feature-icon"><i className="bx bx-cart-alt"></i></div>
-                        <span className="badge rounded-pill px-3 py-2" style={{ color: "#6ee7b7", background: "rgba(16,185,129,.13)", border: "1px solid rgba(52,211,153,.25)" }}>
+                        <div className="proventa-feature-icon"><i className="bx bx-wrench"></i></div>
+                        <span className="badge rounded-pill px-3 py-2 text-dark" style={{ background: "#2dd4bf" }}>
                           NUEVO
                         </span>
                       </div>
                       <div className="mt-auto">
-                        <small className="d-block text-uppercase fw-bold mb-2" style={{ color: "#6ee7b7", letterSpacing: ".12em" }}>Compra con control</small>
-                        <h3 className="display-6 text-white fw-bold mb-3">Órdenes de Compra</h3>
+                        <small className="d-block text-uppercase fw-bold mb-2" style={{ color: "#2dd4bf", letterSpacing: ".12em" }}>Servicio técnico y talleres</small>
+                        <h3 className="display-6 text-white fw-bold mb-3">ProVenta Reparaciones</h3>
                         <p className="text-light opacity-70 mb-4" style={{ maxWidth: 520 }}>
-                          Crea órdenes en peso, dólar o yuan, genera PDF, recibe mercancía por partes y conecta
-                          inventario, costos, cuentas por pagar y abonos.
+                          Controla cada equipo desde la recepción hasta la factura. Modo rápido y avanzado, presupuestos, repuestos, asignación de técnicos y facturación e-CF.
                         </p>
-                        <Link to="/funcionalidades/ordenes-de-compra/" className="proventa-feature-link">
-                          Explorar Órdenes de Compra <i className="bx bx-right-arrow-alt"></i>
+                        <Link to="/proventa-reparaciones/" className="proventa-feature-link">
+                          Conocer ProVenta Reparaciones <i className="bx bx-right-arrow-alt"></i>
                         </Link>
                       </div>
                     </div>
@@ -437,22 +436,23 @@ function Index() {
                 </div>
 
                 <div className="col-md-6">
-                  <article className="proventa-feature-card shortcuts-card h-100 rounded-4 overflow-hidden position-relative" role="link" tabIndex="0" aria-label="Descubrir Teclas Rápidas" onClick={(event) => { if (!event.target.closest("a")) navigate("/funcionalidades/teclas-rapidas/"); }} onKeyDown={(event) => { if (event.key === "Enter" || event.key === " ") { event.preventDefault(); navigate("/funcionalidades/teclas-rapidas/"); } }}>
+                  <article className="proventa-feature-card kiosko-card h-100 rounded-4 overflow-hidden position-relative" role="link" tabIndex="0" aria-label="Conocer ProVenta Kiosko" onClick={(event) => { if (!event.target.closest("a")) navigate("/proventa-kiosko/"); }} onKeyDown={(event) => { if (event.key === "Enter" || event.key === " ") { event.preventDefault(); navigate("/proventa-kiosko/"); } }}>
                     <div className="proventa-feature-glow"></div>
                     <div className="position-relative h-100 p-4 p-xl-5 d-flex flex-column" style={{ zIndex: 2 }}>
                       <div className="d-flex justify-content-between align-items-start mb-4">
-                        <div className="proventa-feature-icon"><i className="bx bx-grid-alt"></i></div>
-                        <span className="proventa-card-number">03</span>
+                        <div className="proventa-feature-icon"><i className="bx bxl-android"></i></div>
+                        <span className="badge rounded-pill px-3 py-2 fw-bold" style={{ color: "#ffffff", background: "#7c3aed" }}>
+                          NUEVO
+                        </span>
                       </div>
                       <div className="mt-auto">
-                        <small className="d-block text-uppercase fw-bold mb-2" style={{ color: "#c4b5fd", letterSpacing: ".12em" }}>Cada segundo cuenta</small>
-                        <h3 className="h1 text-white fw-bold mb-3">Teclas Rápidas</h3>
+                        <small className="d-block text-uppercase fw-bold mb-2" style={{ color: "#c4b5fd", letterSpacing: ".12em" }}>La evolución táctil para tablets</small>
+                        <h3 className="h1 text-white fw-bold mb-3">ProVenta Kiosko</h3>
                         <p className="text-light opacity-70 mb-4">
-                          Convierte tus productos frecuentes en botones visuales y factura con un toque. Ideal para
-                          colmados, cafeterías y negocios de alta rotación.
+                          Convierte una tablet Android en un punto de venta conectado a ProVenta. Toma pedidos, gestiona órdenes abiertas por mesa o barra y factura rápido sin llenar tu negocio de computadoras.
                         </p>
-                        <Link to="/funcionalidades/teclas-rapidas/" className="proventa-feature-link">
-                          Descubrir Teclas Rápidas <i className="bx bx-right-arrow-alt"></i>
+                        <Link to="/proventa-kiosko/" className="proventa-feature-link">
+                          Conocer ProVenta Kiosko <i className="bx bx-right-arrow-alt"></i>
                         </Link>
                       </div>
                     </div>
@@ -546,8 +546,12 @@ function Index() {
               .proventa-auto-card .proventa-feature-glow { background: #f59e0b; }
               .purchase-card { background: linear-gradient(145deg,rgba(6,78,59,.38),rgba(255,255,255,.025) 60%); }
               .purchase-card .proventa-feature-glow { background: #10b981; }
+              .reparaciones-card { background: linear-gradient(145deg,rgba(13,148,136,.36),rgba(255,255,255,.025) 60%); }
+              .reparaciones-card .proventa-feature-glow { background: #14b8a6; }
               .shortcuts-card { background: linear-gradient(145deg,rgba(76,29,149,.31),rgba(255,255,255,.025) 60%); }
               .shortcuts-card .proventa-feature-glow { background: #8b5cf6; }
+              .kiosko-card { background: linear-gradient(145deg,rgba(92,52,219,.36),rgba(255,255,255,.025) 60%); }
+              .kiosko-card .proventa-feature-glow { background: #7c3aed; }
               .pos-card { background: linear-gradient(145deg,rgba(7,89,133,.34),rgba(255,255,255,.025) 60%); }
               .pos-card .proventa-feature-glow { background: #0ea5e9; }
               .sales-force-card { min-height: 430px; background: linear-gradient(125deg,rgba(30,64,175,.46),rgba(12,30,61,.72) 58%,rgba(255,255,255,.025)); }
@@ -1538,23 +1542,29 @@ function Index() {
           <section className="container py-5" id="todos-nuestros-modulos" aria-labelledby="all-modules-title">
             <h2 className="h3 mb-4" id="all-modules-title">Todos nuestros módulos</h2>
             <div className="row g-4">
-              <div className="col-md-4">
+              <div className="col-md-6 col-lg-3">
                 <h3 className="h5 mb-2">
                   <Link to="/proventa-auto/">ProVenta Auto <i className="bx bx-right-arrow-alt" aria-hidden="true"></i></Link>
                 </h3>
                 <p className="text-muted mb-0">Gestiona vehículos, órdenes de trabajo y servicios de tu taller.</p>
               </div>
-              <div className="col-md-4">
+              <div className="col-md-6 col-lg-3">
                 <h3 className="h5 mb-2">
                   <Link to="/proventa-reparaciones/">ProVenta Reparaciones <i className="bx bx-right-arrow-alt" aria-hidden="true"></i></Link>
                 </h3>
                 <p className="text-muted mb-0">Registra equipos y da seguimiento a cada reparación.</p>
               </div>
-              <div className="col-md-4">
+              <div className="col-md-6 col-lg-3">
                 <h3 className="h5 mb-2">
                   <Link to="/fuerza-de-venta/">Fuerza de Ventas <i className="bx bx-right-arrow-alt" aria-hidden="true"></i></Link>
                 </h3>
                 <p className="text-muted mb-0">Conecta los pedidos de tus vendedores con la facturación.</p>
+              </div>
+              <div className="col-md-6 col-lg-3">
+                <h3 className="h5 mb-2">
+                  <Link to="/proventa-kiosko/">ProVenta Kiosko <i className="bx bx-right-arrow-alt" aria-hidden="true"></i></Link>
+                </h3>
+                <p className="text-muted mb-0">POS táctil para tablets Android, órdenes abiertas y facturación rápida.</p>
               </div>
             </div>
           </section>

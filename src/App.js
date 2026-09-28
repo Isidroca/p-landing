@@ -15,6 +15,7 @@ import OrdenesCompra from "./pages/OrdenesCompra";
 import ProventaAuto from "./pages/ProventaAuto";
 import FuerzaVenta from "./pages/FuerzaVenta";
 import ProventaReparaciones from "./pages/ProventaReparaciones";
+import ProventaKiosko from "./pages/ProventaKiosko";
 import ScrollToTop from "./hooks/ScrollToTop";
 function App() {
 
@@ -42,6 +43,8 @@ function App() {
           <Route path="/fuerza-de-venta" element={<FuerzaVenta />} />
           <Route path="/proventa-reparaciones" element={<ProventaReparaciones />} />
           <Route path="/reparaciones" element={<ProventaReparaciones />} />
+          <Route path="/proventa-kiosko" element={<ProventaKiosko />} />
+          <Route path="/kiosko" element={<ProventaKiosko />} />
         </Route>
       </Routes>
     </BrowserRouter>

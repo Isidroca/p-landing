@@ -48,6 +48,7 @@ const Header = ({ dark = true }) => {
                                     <li><Link className="dropdown-item" to="/fuerza-de-venta/">Fuerza de Ventas</Link></li>
                                     <li><Link className="dropdown-item" to="/proventa-auto/">ProVenta Auto</Link></li>
                                     <li><Link className="dropdown-item" to="/proventa-reparaciones/">ProVenta Reparaciones</Link></li>
+                                    <li><Link className="dropdown-item" to="/proventa-kiosko/">ProVenta Kiosko</Link></li>
                                     <li><hr className="dropdown-divider" /></li>
                                     <li><a className="dropdown-item" href="/#modulos">Todos los módulos</a></li>
                                 </ul>
