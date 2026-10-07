@@ -5,6 +5,7 @@ import { HelmetProvider } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import ShareButton from "../components/buttons/share-button";
 
 const demoSteps = [
   ["bx-user-plus", "Crea tu vendedor", "Registra al miembro de tu equipo comercial."],
@@ -108,6 +109,7 @@ export default function FuerzaVenta() {
 
       <section className="fv-final"><div className="container"><div className="fv-final-shell"><span>FUERZA DE VENTAS INCLUIDA CON PROVENTA</span><h2>¿Tienes vendedores tomando pedidos en la calle?</h2><p>Conecta tu equipo comercial con clientes, productos, pedidos, facturación, comisiones y metas desde ProVenta.</p><div className="fv-actions justify-content-center"><a className="btn btn-primary btn-lg" href={demoUrl} target="_blank" rel="noreferrer"><i className="bx bxl-whatsapp"></i> Solicitar una demostración</a><Link className="btn btn-outline-light btn-lg" to="/android/">Ver ProVenta Móvil</Link></div></div></div></section>
       <Footer />
+      <ShareButton />
     </main></div>
   </HelmetProvider>;
 }

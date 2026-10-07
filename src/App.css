@@ -54,6 +54,13 @@ body {
   /* Allows vertical swipe gestures specifically */
 }
 
+/* Hero principal: la interfaz del producto ocupa el espacio protagonista. */
+.home-hero{min-height:900px;padding:145px 0 85px}.home-hero-container{width:min(100%,1560px);padding-inline:clamp(1.25rem,4vw,4.5rem)}.home-hero-product{width:100%;max-width:900px}.home-hero-screen{overflow:hidden;padding:7px;border:1px solid rgba(255,255,255,.17);border-radius:22px;background:rgba(255,255,255,.08);box-shadow:0 45px 110px rgba(0,0,0,.5);backdrop-filter:blur(14px);transform:perspective(1500px) rotateY(-2deg);transition:transform .35s ease}.home-hero-product:hover .home-hero-screen{transform:perspective(1500px) rotateY(0) translateY(-5px)}.home-hero-screenbar{display:flex;align-items:center;gap:7px;height:38px;padding:0 12px;border-radius:15px 15px 0 0;background:#edf1f6}.home-hero-screenbar>span{width:9px;height:9px;border-radius:50%;background:#fb7185}.home-hero-screenbar>span:nth-child(2){background:#fbbf24}.home-hero-screenbar>span:nth-child(3){background:#34d399}.home-hero-screenbar small{margin:auto;color:#64748b;font-weight:700}.home-hero-screenbar i{color:#94a3b8}.home-hero-image{display:block;width:100%;aspect-ratio:1.68/1;object-fit:cover;object-position:top;border-radius:0 0 15px 15px;background:#fff}.home-hero-slider{display:flex;align-items:center;justify-content:center;gap:9px;margin-top:22px}.home-hero-slider button{width:8px;height:8px;padding:0;border:0;border-radius:999px;background:rgba(255,255,255,.3);transition:width .25s ease,background-color .25s ease}.home-hero-slider button.active{width:34px;background:#6366f1}
+.home-hero h1{hyphens:none;word-break:normal;overflow-wrap:normal}
+@media(max-width:1199.98px){.home-hero{min-height:830px}.home-hero-container{padding-inline:2rem}.home-hero h1{font-size:3.5rem}.home-hero .btn{min-width:0!important}}
+@media(max-width:991.98px){.home-hero{min-height:auto;padding:120px 0 75px}.home-hero-container{max-width:820px}.home-hero-product{margin-top:1rem}.home-hero-screen{transform:none}.home-hero-product:hover .home-hero-screen{transform:translateY(-4px)}}
+@media(max-width:575.98px){.home-hero{padding:105px 0 60px}.home-hero-container{padding-inline:1rem}.home-hero h1{font-size:2.65rem;hyphens:none}.home-hero-screen{padding:4px;border-radius:15px}.home-hero-screenbar{height:29px;border-radius:10px 10px 0 0}.home-hero-screenbar small{font-size:.6rem}.home-hero-image{border-radius:0 0 10px 10px}.home-hero-slider{margin-top:15px}}
+
 /* 3. Global fixes for potential layout breakers */
 .page-wrapper {
   overflow: visible !important;

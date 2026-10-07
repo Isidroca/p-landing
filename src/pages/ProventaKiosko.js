@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import WhatsAppButton from "../components/buttons/whats-app-button";
+import ShareButton from "../components/buttons/share-button";
 import "./ProventaKiosko.css";
 
 const whatsappDemoUrl =
@@ -1519,6 +1520,7 @@ const ProventaKiosko = () => {
       </div>
 
       <WhatsAppButton />
+      <ShareButton />
     </React.Fragment>
   );
 };

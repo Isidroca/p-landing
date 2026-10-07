@@ -4,6 +4,7 @@ import { HelmetProvider } from "react-helmet-async";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import WhatsAppButton from "../components/buttons/whats-app-button";
+import ShareButton from "../components/buttons/share-button";
 
 const Planes = () => {
     const helmetContext = {};
@@ -229,6 +230,7 @@ const Planes = () => {
                 <Footer />
             </div>
             <WhatsAppButton />
+            <ShareButton />
         </HelmetProvider>
     );
 };

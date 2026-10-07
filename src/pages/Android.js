@@ -2,6 +2,7 @@ import React from "react";
 import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
 import WhatsAppButton from "../components/buttons/whats-app-button";
+import ShareButton from "../components/buttons/share-button";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 const Android = () => {
@@ -293,6 +294,7 @@ const Android = () => {
         <Footer />
       </div>
       <WhatsAppButton />
+      <ShareButton />
     </React.Fragment>
   );
 };

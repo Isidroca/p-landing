@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import WhatsAppButton from "../components/buttons/whats-app-button";
+import ShareButton from "../components/buttons/share-button";
 import "./ProventaReparaciones.css";
 
 const whatsappUrl = "https://wa.me/18097874963?text=Hola%2C%20quiero%20solicitar%20una%20demostraci%C3%B3n%20de%20ProVenta%20Reparaciones";
@@ -978,6 +979,7 @@ const ProventaReparaciones = () => {
         </main>
         <Footer />
         <WhatsAppButton />
+        <ShareButton />
       </div>
     </React.Fragment>
   );

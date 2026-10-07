@@ -2,7 +2,7 @@ import "../App.css";
 import { useEffect, useState } from "react";
 import { Helmet } from "react-helmet";
 import { HelmetProvider } from "react-helmet-async";
-import { RWebShare } from "react-web-share";
+import ShareButton from "../components/buttons/share-button";
 import WhatsAppButton from "../components/buttons/whats-app-button";
 import InvoiceSlider from "../components/buttons/general/invoice-slider";
 import { Link, useNavigate } from "react-router-dom";
@@ -23,8 +23,10 @@ function Index() {
   const heroImages = [
     "assets/img/post-facturacion-claro.png",
     "assets/img/pantalla_facturacion_claro.png",
-    "assets/img/facturacion_teclas_rapidas_pos.png"
+    "assets/img/facturacion_teclas_rapidas_pos.png",
+    "assets/img/kiosko/kiosko-pos-tablet.png"
   ];
+  const heroImageLabels = ["Panel de facturación", "Punto de venta", "Teclas rápidas", "ProVenta Kiosko"];
   const [currentHeroImage, setCurrentHeroImage] = useState(0);
 
   useEffect(() => {
@@ -88,7 +90,7 @@ function Index() {
         <main className="page-wrapper" id="top">
           <Header />
           <section
-            className="dark-mode bg-dark position-relative overflow-hidden py-4 mb-4"
+            className="home-hero dark-mode bg-dark position-relative overflow-hidden mb-4"
             style={{
               minHeight: "85vh",
               display: "flex",
@@ -108,25 +110,14 @@ function Index() {
               ></div>
             </div>
 
-            <div className="container position-relative zindex-2 pt-5 pb-md-2 pb-lg-4 pb-xl-5">
-              <div className="row align-items-center pt-3 pb-2 py-md-4">
-                <div className="col-xl-6 col-lg-6 pt-lg-5 text-center text-lg-start mb-5 mb-lg-0">
+            <div className="home-hero-container container-fluid position-relative zindex-2">
+              <div className="row align-items-center g-xl-5">
+                <div className="col-xl-5 col-lg-5 text-center text-lg-start mb-5 mb-lg-0">
                   <div className="d-flex align-items-center justify-content-center justify-content-lg-start mb-4 mb-sm-5 animate__animated animate__fadeInDown">
                     <div className="badge bg-primary bg-opacity-10 text-primary border border-primary border-opacity-20 px-3 py-2 rounded-pill me-3">
                       <span className="fw-bold">NUEVO:</span> Facturación Electrónica DGII 🧾
                     </div>
-                    <RWebShare
-                      data={{
-                        text: "ProVenta: Software de Facturación y POS Inteligente en República Dominicana",
-                        url: "https://www.proventa.app",
-                        title: "ProVenta",
-                      }}
-                      onClick={() => console.log("shared successfully!")}
-                    >
-                      <button className="btn btn-icon btn-sm btn-outline-primary rounded-circle border-primary border-opacity-20 bg-primary bg-opacity-10 shadow-sm" title="Compartir ProVenta">
-                        <i className="bx bx-share-alt text-primary"></i>
-                      </button>
-                    </RWebShare>
+                    <ShareButton floating={false} title="ProVenta" text="ProVenta: Software de Facturación y POS Inteligente en República Dominicana" url="https://www.proventa.app/" />
                   </div>
                   <h1 className="display-2 fw-extra-bold pb-2 pb-sm-3 mb-4 animate__animated animate__fadeInUp" style={{ lineHeight: "1.1" }}>
                     Facturación y POS <span className="text-primary text-gradient-blue">Inteligente</span> para tu Negocio
@@ -135,7 +126,7 @@ function Index() {
                     Toma el control total de tu inventario, ventas y clientes con el software más rápido y confiable de República Dominicana. Diseñado para crecer contigo.
                   </p>
 
-                  <div className="d-flex flex-column flex-sm-row justify-content-center justify-content-lg-start gap-3 animate__animated animate__fadeInUp animate__delay-1s">
+                  <div className="d-flex flex-column flex-sm-row flex-wrap justify-content-center justify-content-lg-start gap-3 animate__animated animate__fadeInUp animate__delay-1s">
                     <a
                       id="my_download"
                       href={appUrl}
@@ -161,6 +152,14 @@ function Index() {
                       <i className="bx bxl-android fs-4 me-2 text-success"></i>
                       Versión Android
                     </Link>
+                    <Link
+                      to="/por-que-proventa"
+                      className="btn btn-lg btn-outline-light border-opacity-25 px-4 py-3"
+                      style={{ borderRadius: "12px", minWidth: "200px", backdropFilter: "blur(10px)" }}
+                    >
+                      <i className="bx bx-star fs-4 me-2 text-info"></i>
+                      Por qué elegirnos
+                    </Link>
                   </div>
 
                   <div className="mt-5 pt-2 d-flex flex-wrap justify-content-center justify-content-lg-start gap-4 opacity-70">
@@ -172,15 +171,15 @@ function Index() {
                       <i className="bx bx-check-circle text-success me-2 fs-5"></i>
                       <span>Listo para la DGII</span>
                     </div>
-                    <div className="d-flex align-items-center fs-sm">
+                    <div className="d-flex d-lg-none align-items-center fs-sm">
                       <i className="bx bx-check-circle text-success me-2 fs-5"></i>
                       <span>Soporte local en español</span>
                     </div>
                   </div>
                 </div>
 
-                <div className="col-xl-6 col-lg-6 d-flex justify-content-center animate__animated animate__fadeInRight">
-                  <div className="position-relative">
+                <div className="col-xl-7 col-lg-7 d-flex justify-content-center animate__animated animate__fadeInRight">
+                  <div className="home-hero-product position-relative">
                     {/* Glass Card Backdrop (Increased size and blur) */}
                     <div className="position-absolute top-50 start-50 translate-middle bg-primary opacity-15 rounded-circle"
                       style={{
@@ -190,19 +189,31 @@ function Index() {
                         zIndex: -1
                       }}></div>
 
-                    <img
-                      src={heroImages[currentHeroImage]}
-                      className="rounded-4 shadow-3xl transform-hover transition-all animate__animated animate__fadeIn"
-                      key={currentHeroImage}
-                      alt="ProVenta Dashboard"
-                      style={{
-                        maxHeight: "850px",
-                        width: "100%",
-                        objectFit: "contain",
-                        border: "1px solid rgba(255,255,255,0.1)",
-                        boxShadow: "0 50px 100px -20px rgba(0,0,0,0.5)"
-                      }}
-                    />
+                    <div className="home-hero-screen">
+                      <div className="home-hero-screenbar">
+                        <span></span><span></span><span></span>
+                        <small>{heroImageLabels[currentHeroImage]}</small>
+                        <i className="bx bx-expand-alt"></i>
+                      </div>
+                      <img
+                        src={heroImages[currentHeroImage]}
+                        className="home-hero-image animate__animated animate__fadeIn"
+                        key={currentHeroImage}
+                        alt={`${heroImageLabels[currentHeroImage]} en ProVenta`}
+                      />
+                    </div>
+                    <div className="home-hero-slider" aria-label="Capturas de ProVenta">
+                      {heroImages.map((image, index) => (
+                        <button
+                          type="button"
+                          key={image}
+                          className={index === currentHeroImage ? "active" : ""}
+                          onClick={() => setCurrentHeroImage(index)}
+                          aria-label={`Mostrar ${heroImageLabels[index]}`}
+                          aria-current={index === currentHeroImage ? "true" : undefined}
+                        ></button>
+                      ))}
+                    </div>
 
                     {/* Floating Info Card ocultar por ahora, no se ve bien 
                     <div className=" position-absolute bottom-0 start-0 translate-middle-x mb-5 ms-md-n5 d-none d-md-block animate__animated animate__bounceIn">
@@ -392,9 +403,7 @@ function Index() {
                     <div className="position-relative h-100 p-4 p-xl-5 d-flex flex-column" style={{ zIndex: 2 }}>
                       <div className="d-flex justify-content-between align-items-start mb-5">
                         <div className="proventa-feature-icon"><i className="bx bx-car"></i></div>
-                        <span className="badge rounded-pill px-3 py-2 text-dark" style={{ background: "#fbbf24" }}>
-                          NUEVO
-                        </span>
+                        <span className="proventa-card-number">01</span>
                       </div>
                       <div className="mt-auto">
                         <small className="d-block text-uppercase fw-bold mb-2" style={{ color: "#fcd34d", letterSpacing: ".12em" }}>Gestión especializada para talleres</small>
@@ -417,9 +426,7 @@ function Index() {
                     <div className="position-relative h-100 p-4 p-xl-5 d-flex flex-column" style={{ zIndex: 2 }}>
                       <div className="d-flex justify-content-between align-items-start mb-5">
                         <div className="proventa-feature-icon"><i className="bx bx-wrench"></i></div>
-                        <span className="badge rounded-pill px-3 py-2 text-dark" style={{ background: "#2dd4bf" }}>
-                          NUEVO
-                        </span>
+                        <span className="proventa-card-number">02</span>
                       </div>
                       <div className="mt-auto">
                         <small className="d-block text-uppercase fw-bold mb-2" style={{ color: "#2dd4bf", letterSpacing: ".12em" }}>Servicio técnico y talleres</small>
@@ -441,9 +448,7 @@ function Index() {
                     <div className="position-relative h-100 p-4 p-xl-5 d-flex flex-column" style={{ zIndex: 2 }}>
                       <div className="d-flex justify-content-between align-items-start mb-4">
                         <div className="proventa-feature-icon"><i className="bx bxl-android"></i></div>
-                        <span className="badge rounded-pill px-3 py-2 fw-bold" style={{ color: "#ffffff", background: "#7c3aed" }}>
-                          NUEVO
-                        </span>
+                        <span className="proventa-card-number">03</span>
                       </div>
                       <div className="mt-auto">
                         <small className="d-block text-uppercase fw-bold mb-2" style={{ color: "#c4b5fd", letterSpacing: ".12em" }}>La evolución táctil para tablets</small>
@@ -489,9 +494,7 @@ function Index() {
                       <div className="col-lg-6 p-4 p-xl-5">
                         <div className="d-flex justify-content-between align-items-start mb-5">
                           <div className="proventa-feature-icon"><i className="bx bx-group"></i></div>
-                          <span className="badge rounded-pill px-3 py-2" style={{ color: "#bfdbfe", background: "rgba(59,130,246,.15)", border: "1px solid rgba(96,165,250,.28)" }}>
-                            INCLUIDA CON PROVENTA
-                          </span>
+                          <span className="proventa-card-number">05</span>
                         </div>
                         <small className="d-block text-uppercase fw-bold mb-2" style={{ color: "#93c5fd", letterSpacing: ".12em" }}>Tu equipo vende. ProVenta conecta todo lo demás.</small>
                         <h3 className="display-6 text-white fw-bold mb-3">Fuerza de Ventas</h3>
@@ -1578,3 +1581,7 @@ function Index() {
 }
 
 export default Index;
+
+
+
+

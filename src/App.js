@@ -1,6 +1,7 @@
 import "./App.css";
 import { Routes, Route, BrowserRouter } from "react-router-dom";
 import Index from "./pages";
+import PorqueProventa from "./pages/PorqueProventa";
 import Install from "./pages/Install";
 import Privacy from "./pages/privacy";
 import PrivacyMeta from "./pages/privacyMeta";
@@ -44,6 +45,7 @@ function App() {
           <Route path="/proventa-reparaciones" element={<ProventaReparaciones />} />
           <Route path="/reparaciones" element={<ProventaReparaciones />} />
           <Route path="/proventa-kiosko" element={<ProventaKiosko />} />
+          <Route path="/por-que-proventa" element={<PorqueProventa />} />
           <Route path="/kiosko" element={<ProventaKiosko />} />
         </Route>
       </Routes>
@@ -52,3 +54,4 @@ function App() {
 }
 
 export default App;
+

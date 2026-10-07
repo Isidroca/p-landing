@@ -1,94 +1,78 @@
 import React from "react";
 import { Helmet } from "react-helmet";
-import { Link } from "react-router-dom";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import WhatsAppButton from "../components/buttons/whats-app-button";
+import ShareButton from "../components/buttons/share-button";
+import "./ProventaAuto.css";
 
 const whatsappUrl = "https://wa.me/18097874963?text=Hola%2C%20quiero%20conocer%20m%C3%A1s%20sobre%20ProVenta%20Auto";
 const googlePlayUrl = "https://play.google.com/store/apps/details?id=com.proventa.app";
 
-const features = [
-  ["bx-devices", "Tu taller en cualquier dispositivo", "Trabaja desde móvil, PC o tablet con aplicaciones nativas y mantén la operación sincronizada estés donde estés."],
-  ["bx-task", "Trabajos y mecánicos", "Asigna cada trabajo a un mecánico, consulta su avance y conoce quién es responsable de cada tarea."],
-  ["bx-message-rounded-check", "Presupuestos aprobados sin fricción", "Envía el presupuesto al cliente, registra su aprobación y comienza el trabajo con alcance y costos claros."],
-  ["bxl-whatsapp", "Recordatorios automáticos", "Avisa sobre próximos mantenimientos y vuelve a conectar con tus clientes por WhatsApp o correo electrónico."],
-  ["bx-money", "Comisiones bajo control", "Calcula y registra el pago de comisiones por mecánico, servicio o período con información fácil de revisar."],
-  ["bx-receipt", "NCF y facturación electrónica", "Convierte el servicio aprobado en factura y emite comprobantes fiscales NCF y electrónicos e-CF desde el mismo flujo."],
-  ["bx-car", "Expediente completo del vehículo", "Conecta propietario, vehículo, kilometraje, diagnósticos, fotos, servicios e historial en una sola ficha."],
-  ["bx-package", "Repuestos e inventario", "Reserva las piezas de cada orden, controla costos y existencias y registra lo utilizado en la reparación."],
+const benefits = [
+  ["bx-mobile-alt", "Recepción y órdenes móviles", "Recibe vehículos, consulta órdenes y registra el trabajo desde el celular, justo donde ocurre."],
+  ["bx-scan", "Inspección 360°", "Revisa 18 puntos clave del vehículo y registra qué está bien, qué requiere atención y qué queda pendiente."],
+  ["bx-camera", "Hasta 15 fotos por orden", "Documenta golpes, rayones, piezas y avances con la cámara del celular, sin transferir archivos."],
+  ["bx-wrench", "Trabajo y técnicos", "Asigna mano de obra, repuestos y responsables; conoce el estado y costo estimado de cada orden."],
+  ["bx-history", "Historial del vehículo", "Consulta visitas, kilometraje, reparaciones, facturas y mantenimientos en una sola cronología."],
+  ["bx-calendar-check", "Seguimiento que genera retorno", "Identifica mantenimientos próximos o vencidos y contacta al cliente a tiempo."],
 ];
 
-const steps = [
-  ["01", "Recibe", "Registra al cliente, el vehículo, kilometraje y motivo de visita."],
-  ["02", "Cotiza y aprueba", "Documenta el diagnóstico y consigue la aprobación del presupuesto."],
-  ["03", "Asigna y repara", "Distribuye tareas, repuestos y tiempos entre tus mecánicos."],
-  ["04", "Factura y fideliza", "Emite la factura y programa el próximo recordatorio de mantenimiento."],
-];
-
-const highlights = [
-  ["bx-mobile-alt", "Recepción desde el móvil", "Toma datos, fotos y observaciones junto al vehículo, sin volver a digitarlos en la oficina."],
-  ["bx-line-chart", "Rentabilidad por servicio", "Relaciona mano de obra, repuestos y comisiones para entender mejor el resultado de cada orden."],
-  ["bx-calendar-check", "Agenda que genera retorno", "Convierte el historial y el kilometraje en recordatorios oportunos para atraer al cliente de vuelta."],
+const flow = [
+  ["01", "Recibe junto al vehículo", "Selecciona el cliente y el vehículo, registra kilometraje, combustible, solicitud y observaciones."],
+  ["02", "Documenta con fotos", "Abre la cámara del celular y agrega hasta 15 imágenes directamente a la recepción o la orden."],
+  ["03", "Inspecciona y trabaja", "Completa la inspección 360°, asigna técnicos, agrega mano de obra y reserva los repuestos."],
+  ["04", "Factura y da seguimiento", "Convierte el trabajo en factura y programa el próximo mantenimiento para que el cliente vuelva."],
 ];
 
 const faqs = [
-  ["¿Qué es ProVenta Auto?", "Es la solución de ProVenta para administrar talleres mecánicos y negocios automotrices: vehículos, órdenes, mecánicos, repuestos, presupuestos, comisiones, seguimiento y facturación."],
-  ["¿En qué dispositivos puedo trabajar?", "Puedes trabajar desde móvil, PC o tablet mediante aplicaciones nativas, con la información del taller conectada para tu equipo."],
-  ["¿Puedo enviar recordatorios a mis clientes?", "Sí. Puedes organizar próximos mantenimientos y contactar al cliente por WhatsApp o correo electrónico."],
-  ["¿Permite controlar el trabajo y las comisiones de los mecánicos?", "Sí. Cada servicio puede asignarse a un mecánico y utilizarse como base para registrar y controlar sus comisiones."],
-  ["¿Incluye comprobantes fiscales?", "Sí. ProVenta Auto conecta la orden y el presupuesto aprobado con la facturación, incluyendo NCF y facturación electrónica e-CF."],
+  ["¿Qué es ProVenta Auto?", "Es la solución de ProVenta para administrar talleres y negocios automotrices: recepción de vehículos, órdenes, inspección 360°, técnicos, repuestos, historial, seguimiento y facturación."],
+  ["¿Puedo trabajar la recepción y las órdenes desde el celular?", "Sí. Puedes recibir el vehículo, consultar y trabajar órdenes, tomar fotografías y revisar el historial desde el celular."],
+  ["¿Cuántas fotografías puedo agregar?", "Puedes agregar hasta 15 imágenes por recepción u orden de trabajo, tomadas en el momento con la cámara del celular o seleccionadas desde el dispositivo."],
+  ["¿Qué incluye la inspección 360°?", "Permite revisar 18 puntos del vehículo y clasificarlos como buenos, pendientes o que requieren revisión, dejando un registro claro dentro de la orden."],
+  ["¿Puedo dar seguimiento a próximos mantenimientos?", "Sí. ProVenta Auto reúne los mantenimientos próximos, urgentes y vencidos para que puedas contactar al cliente por teléfono o WhatsApp."],
+  ["¿Incluye facturación electrónica?", "Sí. La orden se conecta con la facturación de ProVenta, incluyendo comprobantes fiscales NCF y facturación electrónica e-CF."],
 ];
 
-const ProventaAuto = () => {
-  const structuredData = {
-    "@context": "https://schema.org", "@type": "SoftwareApplication", name: "ProVenta Auto",
-    applicationCategory: "BusinessApplication", operatingSystem: "Windows, Android, iOS",
-    description: "Software multidispositivo para talleres mecánicos con órdenes de servicio, asignación de mecánicos, comisiones, recordatorios, presupuestos y facturación electrónica.",
-    url: "https://www.proventa.app/proventa-auto/", brand: { "@type": "Brand", name: "ProVenta" },
-    offers: { "@type": "Offer", price: "1800", priceCurrency: "DOP", description: "Planes de ProVenta Auto desde RD$1,800 al mes." },
-  };
-  const faqData = { "@context": "https://schema.org", "@type": "FAQPage", mainEntity: faqs.map(([question, answer]) => ({ "@type": "Question", name: question, acceptedAnswer: { "@type": "Answer", text: answer } })) };
+const Screenshot = ({ src, alt, className = "" }) => <img src={`/assets/img/auto/${src}`} alt={alt} className={`auto-shot ${className}`} loading="lazy" />;
 
-  return <React.Fragment>
+const ProventaAuto = () => {
+  const structuredData = { "@context": "https://schema.org", "@type": "SoftwareApplication", name: "ProVenta Auto", applicationCategory: "BusinessApplication", operatingSystem: "Windows, Android, iOS", description: "Software para talleres con recepción móvil, inspección 360, fotografías, órdenes de trabajo, historial del vehículo, seguimiento y facturación electrónica.", url: "https://www.proventa.app/proventa-auto/", brand: { "@type": "Brand", name: "ProVenta" }, offers: { "@type": "Offer", price: "1800", priceCurrency: "DOP", description: "Planes de ProVenta Auto desde RD$1,800 al mes." } };
+  const faqData = { "@context": "https://schema.org", "@type": "FAQPage", mainEntity: faqs.map(([question, answer]) => ({ "@type": "Question", name: question, acceptedAnswer: { "@type": "Answer", text: answer } })) };
+  return <>
     <Helmet>
-      <title>Software para Talleres Mecánicos | ProVenta Auto</title>
-      <meta name="description" content="Administra tu taller desde móvil, PC o tablet. Controla órdenes, mecánicos, comisiones, recordatorios, presupuestos, inventario y facturación electrónica." />
-      <meta name="keywords" content="software para talleres mecánicos, sistema para taller automotriz, órdenes de servicio, comisiones mecánicos, recordatorios mantenimiento, facturación electrónica, NCF, República Dominicana" />
+      <title>Software para Talleres con Inspección 360° | ProVenta Auto</title>
+      <meta name="description" content="Recibe vehículos y trabaja órdenes desde el celular. Realiza inspecciones 360°, toma hasta 15 fotos y controla técnicos, repuestos, historial y facturación." />
+      <meta name="keywords" content="software para talleres mecánicos, inspección 360 vehículo, recepción móvil taller, orden de trabajo taller, fotos recepción vehículo, República Dominicana" />
       <link rel="canonical" href="https://www.proventa.app/proventa-auto/" />
-      <meta property="og:type" content="website" /><meta property="og:title" content="Software para Talleres Mecánicos | ProVenta Auto" />
-      <meta property="og:description" content="Controla todo tu taller desde móvil, PC o tablet: servicios, equipo, clientes y facturación." /><meta property="og:url" content="https://www.proventa.app/proventa-auto/" />
+      <meta property="og:type" content="website" /><meta property="og:title" content="ProVenta Auto | Tu taller en el celular" />
+      <meta property="og:description" content="Inspección 360°, recepción móvil y hasta 15 fotos por orden de trabajo." />
+      <meta property="og:url" content="https://www.proventa.app/proventa-auto/" /><meta property="og:image" content="https://www.proventa.app/assets/img/auto/inspeccion_360.png" />
       <script type="application/ld+json">{JSON.stringify(structuredData)}</script><script type="application/ld+json">{JSON.stringify(faqData)}</script>
     </Helmet>
-    <div className="bg-dark text-light min-vh-100 d-flex flex-column"><Header /><main>
-      <section className="position-relative overflow-hidden py-5" style={{ marginTop: 80, background: "radial-gradient(ellipse at 15% 35%,rgba(245,158,11,.2),transparent 55%),radial-gradient(ellipse at 88% 15%,rgba(249,115,22,.13),transparent 52%),#0b0f19" }}>
-        <div className="container py-lg-5"><div className="row align-items-center gy-5"><div className="col-lg-6 text-center text-lg-start">
-          <span className="badge rounded-pill px-3 py-2 mb-4 text-dark" style={{ background: "#fbbf24" }}>PROVENTA AUTO</span>
-          <h1 className="display-3 fw-bold text-white mb-4">Tu taller completo, <span style={{ background: "linear-gradient(135deg,#fbbf24,#fb923c)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>siempre contigo</span></h1>
-          <p className="fs-lg text-light opacity-75 mb-3">Administra clientes, vehículos, mecánicos, servicios, repuestos y facturación desde móvil, PC o tablet con aplicaciones nativas.</p>
-          <p className="text-light opacity-60 mb-4">Un solo flujo desde la recepción y aprobación del presupuesto hasta la factura electrónica y el próximo mantenimiento.</p>
-          <div className="d-inline-flex align-items-baseline gap-2 rounded-pill px-4 py-2 mb-4" style={{ background: "rgba(251,191,36,.1)", border: "1px solid rgba(251,191,36,.25)" }}><span className="small text-light opacity-60">Desde</span><strong className="h3 text-warning mb-0">RD$1,800</strong><span className="small text-light opacity-60">al mes</span></div>
-          <div className="d-flex flex-column flex-sm-row flex-wrap gap-3 justify-content-center justify-content-lg-start"><a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="btn btn-lg px-5 py-3 fw-bold rounded-pill text-dark" style={{ background: "linear-gradient(135deg,#fbbf24,#fb923c)" }}><i className="bx bxl-whatsapp me-2" />Solicitar información</a><Link to="/" className="btn btn-lg btn-outline-light border-opacity-25 px-4 py-3 rounded-pill">Conocer ProVenta</Link></div>
-          <div className="d-flex flex-wrap gap-3 mt-4 justify-content-center justify-content-lg-start">{[["bx-mobile-alt","Móvil"],["bx-desktop","PC"],["bx-tab","Tablet"]].map(([icon,label]) => <span className="small fw-semibold text-light opacity-75" key={label}><i className={`bx ${icon} text-warning me-1`} />{label}</span>)}</div>
-        </div><div className="col-lg-6"><div className="rounded-4 p-4 p-lg-5 mx-auto" style={{ maxWidth: 520, background: "rgba(255,255,255,.045)", border: "1px solid rgba(255,255,255,.1)", boxShadow: "0 30px 80px rgba(0,0,0,.35)" }}>
-          <div className="d-flex justify-content-between align-items-start mb-4"><div><small className="text-warning fw-bold">ORDEN #1048</small><h2 className="h4 text-white mt-1 mb-0">Toyota Corolla 2021</h2><small className="opacity-50">A123456 · Carlos Martínez</small></div><span className="badge bg-success rounded-pill">Aprobada</span></div>
-          {[['bx-user-check','Diagnóstico general','Luis · Mecánico'],['bx-package','Cambio de aceite y filtro','Repuestos reservados'],['bx-message-rounded-check','Presupuesto aprobado','Por WhatsApp']].map(([icon,item,detail]) => <div className="d-flex align-items-center gap-3 rounded-3 p-3 mb-2" style={{ background: "rgba(0,0,0,.2)" }} key={item}><i className={`bx ${icon} text-warning fs-4`} /><div><span className="d-block">{item}</span><small className="opacity-50">{detail}</small></div></div>)}
-          <div className="d-flex justify-content-between mt-4 pt-3 border-top border-light border-opacity-10"><small className="opacity-50">Próximo mantenimiento</small><strong className="text-white">15 nov. · Recordatorio listo</strong></div>
-        </div></div></div></div>
-      </section>
+    <div className="auto-page min-vh-100 d-flex flex-column"><Header /><main>
+      <section className="auto-hero"><div className="auto-glow auto-glow-one" /><div className="auto-glow auto-glow-two" /><div className="container position-relative"><div className="row align-items-center gy-5">
+        <div className="col-lg-6 auto-hero-copy text-center text-lg-start"><div className="auto-eyebrow"><i className="bx bx-car" /> PROVENTA AUTO</div><h1>Tu taller completo.<br /><span>También en tu celular.</span></h1><p className="auto-lead">Recibe vehículos, documenta su estado, trabaja cada orden y da seguimiento al próximo mantenimiento desde un solo sistema.</p><div className="auto-hero-points"><span><i className="bx bx-scan" /> Inspección 360°</span><span><i className="bx bx-camera" /> Hasta 15 fotos</span><span><i className="bx bx-mobile-alt" /> Recepción móvil</span></div><div className="auto-actions"><a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="auto-btn auto-btn-primary"><i className="bx bxl-whatsapp" /> Solicitar información</a><a href="#como-funciona" className="auto-btn auto-btn-ghost">Ver cómo funciona <i className="bx bx-down-arrow-alt" /></a></div><p className="auto-price"><span>Planes desde</span> RD$1,800 <span>al mes</span></p></div>
+        <div className="col-lg-6"><div className="auto-hero-visual" aria-label="ProVenta Auto en computadora y celular"><div className="auto-desktop-frame"><div className="auto-window-bar"><span /><span /><span /></div><Screenshot src="ordenes_de_trabajo.png" alt="Órdenes de trabajo de ProVenta Auto en computadora" /></div><div className="auto-phone-frame auto-hero-phone"><div className="auto-phone-speaker" /><Screenshot src="proventa_auto_dashboard_celular.jpeg" alt="Panel de ProVenta Auto en el celular" /></div><div className="auto-floating-note"><i className="bx bx-check-circle" /><div><strong>Orden actualizada</strong><small>Todo el equipo sincronizado</small></div></div></div></div>
+      </div></div></section>
 
-      <section className="container py-5 my-lg-4"><div className="text-center mb-5"><span className="badge rounded-pill px-3 py-2 mb-3 text-warning bg-warning bg-opacity-10">TODO BAJO CONTROL</span><h2 className="display-5 text-white">Herramientas creadas para el ritmo de tu taller</h2><p className="fs-lg opacity-60 mx-auto" style={{ maxWidth: 760 }}>Menos mensajes dispersos, papeles y cálculos manuales. Más visibilidad para el equipo y una experiencia más profesional para cada cliente.</p></div><div className="row g-4">{features.map(([icon,title,text]) => <div className="col-md-6 col-lg-3" key={title}><article className="h-100 p-4 rounded-4 auto-feature-card"><div className="d-inline-flex align-items-center justify-content-center rounded-3 mb-3 text-warning bg-warning bg-opacity-10" style={{ width: 52, height: 52 }}><i className={`bx ${icon} fs-3`} /></div><h3 className="h5 text-white">{title}</h3><p className="opacity-60 mb-0">{text}</p></article></div>)}</div></section>
+      <section className="auto-trust-strip"><div className="container"><div className="row g-3 text-center"><div className="col-6 col-lg-3"><strong>18</strong><span>puntos de inspección</span></div><div className="col-6 col-lg-3"><strong>15</strong><span>fotos por recepción</span></div><div className="col-6 col-lg-3"><strong>1</strong><span>historial por vehículo</span></div><div className="col-6 col-lg-3"><strong>100%</strong><span>móvil y escritorio</span></div></div></div></section>
 
-      <section className="py-5" style={{ background: "rgba(255,255,255,.025)", borderBlock: "1px solid rgba(255,255,255,.06)" }}><div className="container py-lg-4"><div className="text-center mb-5"><span className="badge rounded-pill px-3 py-2 mb-3 text-warning bg-warning bg-opacity-10">FUNCIONES ESPECIALES</span><h2 className="display-5 text-white">Más que administrar: haz crecer el taller</h2></div><div className="row g-4">{highlights.map(([icon,title,text]) => <div className="col-lg-4" key={title}><div className="h-100 p-4 p-xl-5 rounded-4" style={{ background: "linear-gradient(145deg,rgba(120,53,15,.28),rgba(255,255,255,.03))", border: "1px solid rgba(251,191,36,.14)" }}><i className={`bx ${icon} text-warning mb-4`} style={{ fontSize: 42 }} /><h3 className="h4 text-white">{title}</h3><p className="opacity-60 mb-0">{text}</p></div></div>)}</div></div></section>
+      <section className="auto-section" id="como-funciona"><div className="container"><div className="auto-section-heading text-center"><div className="auto-kicker">DE LA RECEPCIÓN A LA ENTREGA</div><h2>Un flujo conectado para cada vehículo</h2><p>La información se captura una sola vez y acompaña al vehículo durante todo el servicio.</p></div><div className="row g-4">{flow.map(([number, title, text]) => <div className="col-sm-6 col-lg-3" key={number}><article className="auto-flow-card"><span>{number}</span><h3>{title}</h3><p>{text}</p></article></div>)}</div></div></section>
 
-      <section className="container py-5 my-lg-4"><div className="text-center mb-5"><h2 className="display-5 text-white">Un flujo conectado para cada servicio</h2><p className="opacity-60">Desde que llega el vehículo hasta que el cliente vuelve.</p></div><div className="row g-4">{steps.map(([number,title,text]) => <div className="col-sm-6 col-lg-3" key={number}><div className="h-100 p-4 rounded-4" style={{ background: "rgba(255,255,255,.035)", border: "1px solid rgba(255,255,255,.07)" }}><span className="text-warning fw-bold">{number}</span><h3 className="h4 text-white mt-3">{title}</h3><p className="opacity-60 mb-0">{text}</p></div></div>)}</div></section>
+      <section className="auto-section auto-section-deep overflow-hidden"><div className="container"><div className="row align-items-center gy-5"><div className="col-lg-5"><div className="auto-kicker">RECEPCIÓN MÓVIL</div><h2>Recibe el vehículo junto al cliente</h2><p className="auto-section-copy">No necesitas volver a la oficina para completar la recepción. Selecciona el cliente y su vehículo, registra la solicitud, el kilometraje, el combustible y cualquier observación desde el celular.</p><ul className="auto-check-list"><li><i className="bx bx-check" /> Datos del cliente y del vehículo en el momento</li><li><i className="bx bx-check" /> Condición exterior y objetos recibidos</li><li><i className="bx bx-check" /> Orden creada sin volver a digitar información</li></ul></div><div className="col-lg-7"><div className="auto-mobile-showcase"><div className="auto-phone-frame auto-phone-back"><Screenshot src="recibir_vehiculo_celular.jpeg" alt="Selección del vehículo durante la recepción móvil" /></div><div className="auto-phone-frame auto-phone-front"><Screenshot src="recibir_vehiculo_tomar_foto_celular.jpeg" alt="Captura de fotos durante la recepción desde el celular" /></div><div className="auto-photo-badge"><span>0/15</span><strong>Fotos de recepción</strong><small>Máximo 5 MB por imagen</small></div></div></div></div></div></section>
 
-      <section className="container py-5"><div className="row justify-content-center"><div className="col-lg-8"><div className="text-center mb-5"><span className="badge rounded-pill px-3 py-2 mb-3 text-warning bg-warning bg-opacity-10">PREGUNTAS FRECUENTES</span><h2 className="display-5 text-white">Conoce ProVenta Auto</h2></div><div className="accordion" id="faqAuto">{faqs.map(([question,answer],index) => <div className="accordion-item border-0 rounded-4 mb-3 overflow-hidden" style={{ background: "rgba(255,255,255,.04)" }} key={question}><h3 className="accordion-header"><button className="accordion-button collapsed shadow-none text-white fw-semibold" style={{ background: "transparent" }} type="button" data-bs-toggle="collapse" data-bs-target={`#auto-faq-${index}`} aria-expanded="false" aria-controls={`auto-faq-${index}`}>{question}</button></h3><div id={`auto-faq-${index}`} className="accordion-collapse collapse" data-bs-parent="#faqAuto"><div className="accordion-body opacity-70 pt-0">{answer}</div></div></div>)}</div></div></div></section>
+      <section className="auto-section auto-inspection-section"><div className="container"><div className="row align-items-center gy-5"><div className="col-lg-7 order-2 order-lg-1"><div className="auto-product-window"><div className="auto-product-label"><i className="bx bx-scan" /> Inspección 360° · Orden OT-2026-000002</div><Screenshot src="inspeccion_360.png" alt="Inspección 360 grados de 18 puntos de un vehículo" /></div></div><div className="col-lg-5 order-1 order-lg-2"><div className="auto-kicker">INSPECCIÓN 360°</div><h2>Revisa cada punto. Deja evidencia clara.</h2><p className="auto-section-copy">La inspección visual guía al técnico por 18 puntos del vehículo. Cada revisión queda identificada y clasificada para que el equipo y el cliente sepan exactamente qué necesita atención.</p><div className="auto-status-list"><div><span className="is-good" /><strong>Bueno</strong><small>Componente revisado y en condición correcta.</small></div><div><span className="is-review" /><strong>Requiere revisión</strong><small>Un punto que merece atención del técnico.</small></div><div><span className="is-pending" /><strong>Pendiente</strong><small>La aplicación muestra qué falta por completar.</small></div></div></div></div></div></section>
 
-      <section className="py-5" style={{ background: "linear-gradient(135deg,#92400e,#c2410c)" }}><div className="container text-center py-4"><i className="bx bx-car text-white mb-3" style={{ fontSize: 60 }} /><h2 className="display-5 fw-bold text-white">Pon tu taller en modo ProVenta</h2><p className="fs-lg text-white opacity-75 mx-auto mb-4" style={{ maxWidth: 680 }}>Organiza el trabajo, mantén al cliente informado y factura con control desde cualquier dispositivo.</p><div className="d-flex flex-column flex-sm-row gap-3 justify-content-center"><a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="btn btn-light btn-lg px-5 py-3 fw-bold rounded-pill text-warning"><i className="bx bxl-whatsapp me-2" />Hablar con un asesor</a><a href={googlePlayUrl} target="_blank" rel="noopener noreferrer" className="btn btn-outline-light btn-lg px-5 py-3 fw-bold rounded-pill"><i className="bx bxl-play-store me-2" />Descargar en Google Play</a></div></div></section>
-    </main><Footer /></div><WhatsAppButton />
-    <style>{`.auto-feature-card{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.075);transition:transform .25s ease,border-color .25s ease}.auto-feature-card:hover{transform:translateY(-5px);border-color:rgba(251,191,36,.3)}`}</style>
-  </React.Fragment>;
+      <section className="auto-section auto-section-deep"><div className="container"><div className="auto-section-heading text-center"><div className="auto-kicker">CONTROL DE LA OPERACIÓN</div><h2>La orden reúne todo el trabajo</h2><p>Diagnóstico, técnicos, mano de obra, repuestos, fotos, inspección y total estimado en un mismo lugar.</p></div><div className="auto-order-stage"><div className="auto-product-window auto-order-window"><Screenshot src="orden_de_trabajo_detalle.png" alt="Detalle de una orden de trabajo en ProVenta Auto" /></div><div className="auto-phone-frame auto-order-phone"><Screenshot src="ordenes_celular.jpeg" alt="Listado de órdenes de trabajo desde el celular" /></div></div><div className="row g-4 auto-benefit-grid">{benefits.map(([icon, title, text]) => <div className="col-md-6 col-lg-4" key={title}><article className="auto-benefit-card"><i className={`bx ${icon}`} /><div><h3>{title}</h3><p>{text}</p></div></article></div>)}</div></div></section>
+
+      <section className="auto-section overflow-hidden"><div className="container"><div className="row align-items-center gy-5"><div className="col-lg-5"><div className="auto-kicker">HISTORIAL Y SEGUIMIENTO</div><h2>Convierte cada visita en la próxima oportunidad</h2><p className="auto-section-copy">Consulta el historial completo del vehículo y organiza mantenimientos próximos, urgentes o vencidos. Cuando llega el momento, contacta al cliente con toda la información a mano.</p><div className="auto-metric-row"><div><strong>Historial</strong><span>por vehículo</span></div><div><strong>Alertas</strong><span>por fecha o kilometraje</span></div></div></div><div className="col-lg-7"><div className="auto-history-collage"><div className="auto-product-window auto-history-desktop"><Screenshot src="historial_vehiculo_mantenimientos_reparaciones.png" alt="Historial completo de mantenimientos y reparaciones" /></div><div className="auto-phone-frame auto-history-phone"><Screenshot src="historial_vehiculo_celular.jpeg" alt="Historial del vehículo en el celular" /></div></div></div></div><div className="auto-followup-window auto-product-window"><Screenshot src="seguimiento_mantenimientos.png" alt="Seguimiento de mantenimientos próximos y vencidos" /></div></div></section>
+
+      <section className="auto-section auto-faq-section"><div className="container"><div className="row justify-content-center"><div className="col-lg-9"><div className="auto-section-heading text-center"><div className="auto-kicker">PREGUNTAS FRECUENTES</div><h2>Conoce ProVenta Auto</h2></div><div className="accordion auto-accordion" id="faqAuto">{faqs.map(([question, answer], index) => <div className="accordion-item" key={question}><h3 className="accordion-header"><button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target={`#auto-faq-${index}`} aria-expanded="false" aria-controls={`auto-faq-${index}`}>{question}</button></h3><div id={`auto-faq-${index}`} className="accordion-collapse collapse" data-bs-parent="#faqAuto"><div className="accordion-body">{answer}</div></div></div>)}</div></div></div></div></section>
+
+      <section className="auto-cta"><div className="container"><div className="auto-cta-card text-center"><div className="auto-cta-icon"><i className="bx bx-car" /></div><h2>Recibe tu próximo vehículo con ProVenta Auto</h2><p>Organiza el taller, documenta cada detalle y mantén a tu equipo conectado desde cualquier dispositivo.</p><div className="auto-actions justify-content-center"><a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="auto-btn auto-btn-primary"><i className="bx bxl-whatsapp" /> Hablar con un asesor</a><a href={googlePlayUrl} target="_blank" rel="noopener noreferrer" className="auto-btn auto-btn-ghost"><i className="bx bxl-play-store" /> Descargar aplicación</a></div></div></div></section>
+    </main><Footer /></div><WhatsAppButton /><ShareButton />
+  </>;
 };
 
 export default ProventaAuto;

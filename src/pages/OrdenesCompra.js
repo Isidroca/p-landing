@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import WhatsAppButton from "../components/buttons/whats-app-button";
+import ShareButton from "../components/buttons/share-button";
 
 const features = [
   ["bx-edit", "#818cf8", "Borradores que puedes retomar", "Crea, revisa y guarda borradores. Reabre una orden pendiente cuando quieras para corregirla, completarla o continuar el proceso."],
@@ -83,6 +84,7 @@ const OrdenesCompra = () => (
       <Footer />
     </div>
     <WhatsAppButton />
+    <ShareButton />
   </React.Fragment>
 );
 

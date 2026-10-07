@@ -11,9 +11,9 @@ const differences = [
 ];
 
 const billingModes = [
-  ["01", "bx-file-blank", "Facturación estándar", "Para cotizaciones, descripciones detalladas y documentos formales.", ["Cotización a factura", "Productos y servicios", "Conduces y multimoneda"]],
-  ["02", "bx-barcode-reader", "Punto de venta POS", "Para cajas que necesitan velocidad, precisión y control continuo.", ["Código de barras", "Cierre de caja", "Inventario en tiempo real"]],
-  ["03", "bx-grid-alt", "Teclas rápidas", "Para vender productos frecuentes sin buscarlos uno por uno.", ["Botones visuales", "Atajos de teclado", "Operación táctil"]],
+  ["01", "bx-file-blank", "Facturación estándar", "Para cotizaciones, descripciones detalladas y documentos formales.", ["Cotización a factura", "Productos y servicios", "Conduces y multimoneda", "Documentos profesionales", "PDF y envío por WhatsApp"]],
+  ["02", "bx-barcode-reader", "Punto de venta POS", "Para cajas que necesitan velocidad, precisión y control continuo.", ["Código de barras", "Cierre de caja", "Inventario en tiempo real", "Pagos integrados con Azul y CardNet", "Cierre automático Verifone"]],
+  ["03", "bx-grid-alt", "Teclas rápidas", "Para vender productos frecuentes sin buscarlos uno por uno.", ["Botones visuales", "Atajos de teclado", "Operación táctil", "Productos con imágenes", "Búsqueda instantánea"]],
 ];
 
 const sectors = [
