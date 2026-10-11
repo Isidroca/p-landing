@@ -420,7 +420,103 @@ const ProventaKiosko = () => {
           </section>
 
           {/* ================================================================
-              3. SECCIÓN: VENTA RÁPIDA Y TÁCTIL
+              3. SECCIÓN: AUTOSERVICIO PARA CLIENTES
+             ================================================================ */}
+          <section className="kiosko-sec-self-service py-5" id="autoservicio">
+            <div className="container py-lg-5 position-relative">
+              <div className="kiosko-self-service-glow kiosko-self-service-glow-one"></div>
+              <div className="kiosko-self-service-glow kiosko-self-service-glow-two"></div>
+
+              <div className="row align-items-center gy-5 position-relative">
+                <div className="col-lg-5">
+                  <span className="kiosko-badge kiosko-badge-self-service mb-3">
+                    <i className="bx bx-star"></i>
+                    Una estación que atiende por ti
+                  </span>
+                  <h2 className="display-5 fw-bold text-white mb-3">
+                    ¿Sabías que con ProVenta Kiosko tus clientes pueden
+                    <span className="kiosko-gradient-text-light"> autoservirse?</span>
+                  </h2>
+                  <p className="kiosko-self-service-lead mb-4">
+                    Coloca una tablet en un punto de autoservicio y permite que cada
+                    cliente explore tus productos, elija lo que desea y envíe su
+                    pedido sin esperar a que un empleado tome la orden.
+                  </p>
+
+                  <div className="kiosko-self-service-points mb-4">
+                    <div className="kiosko-self-service-point">
+                      <i className="bx bx-touch"></i>
+                      <div>
+                        <strong>El cliente hace su pedido</strong>
+                        <span>Selecciona productos y cantidades desde una interfaz táctil y sencilla.</span>
+                      </div>
+                    </div>
+                    <div className="kiosko-self-service-point">
+                      <i className="bx bx-time-five"></i>
+                      <div>
+                        <strong>La orden queda pendiente automáticamente</strong>
+                        <span>El pedido se registra en ProVenta para que tu equipo pueda verlo y procesarlo.</span>
+                      </div>
+                    </div>
+                    <div className="kiosko-self-service-point">
+                      <i className="bx bx-group"></i>
+                      <div>
+                        <strong>Tu personal continúa el flujo</strong>
+                        <span>Prepara, revisa o cobra la orden desde el mismo sistema, sin volver a digitarla.</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <a
+                    href={whatsappDemoUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="kiosko-btn-self-service"
+                  >
+                    <i className="bx bxl-whatsapp fs-5"></i>
+                    Quiero ver el modo autoservicio
+                  </a>
+                </div>
+
+                <div className="col-lg-7">
+                  <div className="kiosko-self-service-visual">
+                    <div className="kiosko-self-service-label">
+                      <span></span>
+                      Modo Cliente activo
+                    </div>
+                    <div className="kiosko-tablet-frame kiosko-self-service-frame">
+                      <img
+                        src="/assets/img/kiosko/kiosko_elejir_modo_facturacion_cliente_o_empleado.png"
+                        alt="Configuración del Modo Cliente de ProVenta Kiosko para crear una estación de autoservicio"
+                        className="img-fluid"
+                        loading="lazy"
+                      />
+                    </div>
+
+                    <div className="kiosko-self-service-flow" aria-label="Flujo del modo autoservicio">
+                      <div>
+                        <i className="bx bx-user"></i>
+                        <span>Cliente elige</span>
+                      </div>
+                      <i className="bx bx-right-arrow-alt kiosko-self-service-arrow"></i>
+                      <div>
+                        <i className="bx bx-receipt"></i>
+                        <span>Orden pendiente</span>
+                      </div>
+                      <i className="bx bx-right-arrow-alt kiosko-self-service-arrow"></i>
+                      <div>
+                        <i className="bx bx-check-circle"></i>
+                        <span>Equipo procesa</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* ================================================================
+              4. SECCIÓN: VENTA RÁPIDA Y TÁCTIL
              ================================================================ */}
           <section className="kiosko-sec-tactile py-5" id="venta-rapida">
             <div className="container py-lg-4">

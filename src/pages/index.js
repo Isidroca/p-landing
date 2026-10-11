@@ -162,7 +162,7 @@ function Index() {
                     </Link>
                   </div>
 
-                  <div className="mt-5 pt-2 d-flex flex-wrap justify-content-center justify-content-lg-start gap-4 opacity-70">
+                  <div className="mt-4 pt-1 d-flex flex-wrap justify-content-center justify-content-lg-start gap-4 opacity-70">
                     <div className="d-flex align-items-center fs-sm">
                       <i className="bx bx-check-circle text-success me-2 fs-5"></i>
                       <span>Prueba Gratis (15 días)</span>
@@ -175,6 +175,17 @@ function Index() {
                       <i className="bx bx-check-circle text-success me-2 fs-5"></i>
                       <span>Soporte local en español</span>
                     </div>
+                  </div>
+                  <div className="mt-3">
+                    <Link
+                      to="/como-instalar-proventa/"
+                      className="d-inline-flex align-items-center gap-2 text-light opacity-60 small"
+                      style={{ textDecoration: "none" }}
+                    >
+                      <i className="bx bx-info-circle fs-6" />
+                      ¿Cómo instalo ProVenta? Ver guía paso a paso
+                      <i className="bx bx-right-arrow-alt" />
+                    </Link>
                   </div>
                 </div>
 

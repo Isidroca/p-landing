@@ -402,6 +402,132 @@ const FacturacionElectronica = () => {
           </div>
         </section>
 
+        {/* ── ACOMPAÑAMIENTO DE CERTIFICACIÓN ── */}
+        <section
+          className="py-5"
+          style={{
+            background: "linear-gradient(135deg,rgba(99,102,241,0.11),rgba(139,92,246,0.04))",
+            borderTop: "1px solid rgba(129,140,248,0.14)",
+            borderBottom: "1px solid rgba(129,140,248,0.14)",
+          }}
+        >
+          <div className="container py-lg-4">
+            <div className="row align-items-center g-5">
+              <div className="col-lg-6">
+                <span
+                  className="badge px-3 py-2 rounded-pill mb-3 fw-bold"
+                  style={{ fontSize: "0.75rem", background: "rgba(129,140,248,0.16)", color: "#a5b4fc", border: "1px solid rgba(129,140,248,0.3)" }}
+                >
+                  TE ACOMPAÑAMOS DE PRINCIPIO A FIN
+                </span>
+                <h2 className="display-5 text-white mb-3 fw-bold">
+                  Te ayudamos a certificar tu empresa ante la DGII
+                </h2>
+                <p className="fs-lg text-light opacity-70 mb-4" style={{ maxWidth: 570 }}>
+                  No tienes que recorrer el proceso solo. Nuestro equipo te orienta en cada etapa para que tu empresa pueda convertirse en emisor electrónico con claridad y confianza.
+                </p>
+
+                <div className="d-flex flex-column gap-3 mb-4">
+                  {[
+                    {
+                      icon: "bx-key",
+                      title: "Compra del certificado digital",
+                      desc: "Te orientamos para elegir, adquirir y preparar el certificado digital que necesitarás para firmar tus e-CF.",
+                    },
+                    {
+                      icon: "bx-edit-alt",
+                      title: "Llenado de formularios",
+                      desc: "Te asistimos con la información y los formularios requeridos durante la solicitud ante la DGII.",
+                    },
+                    {
+                      icon: "bx-badge-check",
+                      title: "Proceso de certificación",
+                      desc: "Te acompañamos en las pruebas, validaciones y pasos necesarios hasta completar la certificación de tu empresa.",
+                    },
+                  ].map((item) => (
+                    <div key={item.title} className="d-flex gap-3 align-items-start">
+                      <div
+                        className="d-flex align-items-center justify-content-center rounded-3 flex-shrink-0"
+                        style={{ width: 46, height: 46, background: "rgba(99,102,241,0.18)", border: "1px solid rgba(129,140,248,0.22)" }}
+                      >
+                        <i className={`bx ${item.icon} fs-4`} style={{ color: "#a5b4fc" }} />
+                      </div>
+                      <div>
+                        <h3 className="h6 text-white mb-1">{item.title}</h3>
+                        <p className="fs-sm text-light opacity-60 mb-0">{item.desc}</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+
+                <a
+                  href="https://wa.me/18097874963?text=Hola%2C%20quiero%20ayuda%20para%20certificar%20mi%20empresa%20como%20emisor%20electr%C3%B3nico%20ante%20la%20DGII."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn btn-lg px-4 py-3 fw-bold rounded-pill text-white"
+                  style={{ background: "linear-gradient(135deg,#6366f1,#8b5cf6)", boxShadow: "0 8px 26px rgba(99,102,241,0.28)" }}
+                >
+                  <i className="bx bxl-whatsapp me-2 fs-5" />
+                  Quiero ayuda con mi certificación
+                </a>
+              </div>
+
+              <div className="col-lg-6">
+                <div
+                  className="rounded-4 p-4 p-md-5 position-relative overflow-hidden"
+                  style={{ background: "rgba(11,15,25,0.76)", border: "1px solid rgba(255,255,255,0.1)", boxShadow: "0 24px 70px rgba(0,0,0,0.24)" }}
+                >
+                  <div
+                    className="position-absolute rounded-circle"
+                    style={{ width: 180, height: 180, top: -90, right: -60, background: "rgba(139,92,246,0.18)", filter: "blur(25px)" }}
+                  />
+                  <div className="position-relative">
+                    <div className="d-flex align-items-center justify-content-between mb-4">
+                      <div>
+                        <p className="text-uppercase mb-1" style={{ color: "#a5b4fc", fontSize: "0.7rem", letterSpacing: "0.1em", fontWeight: 700 }}>
+                          Ruta de certificación
+                        </p>
+                        <h3 className="h4 text-white mb-0">Tu empresa, lista para emitir e-CF</h3>
+                      </div>
+                      <i className="bx bx-certification text-white" style={{ fontSize: "2.5rem", opacity: 0.2 }} />
+                    </div>
+
+                    {[
+                      ["1", "Certificado digital", "Orientación para adquirirlo"],
+                      ["2", "Solicitud ante la DGII", "Asistencia con el formulario"],
+                      ["3", "Pruebas y validación", "Acompañamiento técnico"],
+                      ["4", "Autorización", "Empresa lista para facturar"],
+                    ].map(([number, title, detail], index) => (
+                      <div key={title} className="d-flex gap-3 position-relative">
+                        <div className="d-flex flex-column align-items-center">
+                          <span
+                            className="d-flex align-items-center justify-content-center rounded-circle text-white fw-bold flex-shrink-0"
+                            style={{ width: 36, height: 36, background: index === 3 ? "#10b981" : "linear-gradient(135deg,#6366f1,#8b5cf6)", zIndex: 1 }}
+                          >
+                            {index === 3 ? <i className="bx bx-check fs-5" /> : number}
+                          </span>
+                          {index < 3 && <span style={{ width: 2, minHeight: 38, flex: 1, background: "rgba(129,140,248,0.22)" }} />}
+                        </div>
+                        <div className={index < 3 ? "pb-4" : ""}>
+                          <p className="text-white fw-semibold mb-0">{title}</p>
+                          <p className="fs-sm text-light opacity-50 mb-0">{detail}</p>
+                        </div>
+                      </div>
+                    ))}
+
+                    <div className="rounded-3 mt-4 p-3 d-flex gap-3 align-items-center" style={{ background: "rgba(16,185,129,0.09)", border: "1px solid rgba(16,185,129,0.2)" }}>
+                      <i className="bx bx-support fs-3" style={{ color: "#34d399" }} />
+                      <p className="text-light opacity-75 fs-sm mb-0">
+                        Tendrás acompañamiento humano para entender qué sigue y avanzar en cada etapa.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* ── FAQ ── */}
         <section className="py-5" style={{ background: "rgba(255,255,255,0.02)", borderTop: "1px solid rgba(255,255,255,0.06)" }}>
           <div className="container">
