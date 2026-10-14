@@ -136,7 +136,7 @@ const AndroidBanner = () => {
                                 Emite comprobantes fiscales electrónicos&nbsp;
                                 <strong className="text-white">sin costos adicionales</strong> para suscriptores activos.
                             </p>
-                            <Link to="/facturacion-electronica" className="ecf-cta-btn btn">
+                            <Link to="/funcionalidades/facturacion-electronica" className="ecf-cta-btn btn">
                                 Ver detalles&nbsp;<i className="bx bx-right-arrow-alt align-middle" />
                             </Link>
                         </div>

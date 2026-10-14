@@ -1,0 +1,66 @@
+name: Generate Blog Post
+
+on:
+  schedule:
+    # Martes a las 9am UTC
+    - cron: '0 9 * * 2'
+    # Viernes a las 9am UTC
+    - cron: '0 9 * * 5'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+
+jobs:
+  generate-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Generate blog post
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: node scripts/generate-post.mjs
+
+      - name: Check for changes
+        id: changes
+        run: |
+          git diff --quiet src/data/posts.js scripts/topic-index.json && echo "changed=false" >> $GITHUB_OUTPUT || echo "changed=true" >> $GITHUB_OUTPUT
+
+      - name: Commit and push new post
+        if: steps.changes.outputs.changed == 'true'
+        run: |
+          git config user.name "GitHub Action"
+          git config user.email "action@github.com"
+          git add src/data/posts.js scripts/topic-index.json
+          POST_TITLE=$(node --input-type=module <<'EOF'
+          import { posts } from './src/data/posts.js';
+          process.stdout.write(posts[0].title);
+          EOF
+          )
+          git commit -m "📝 Auto-post: $POST_TITLE"
+          git push
+
+      - name: Build project
+        if: steps.changes.outputs.changed == 'true'
+        run: npm run build
+
+      - name: Deploy to GitHub Pages
+        if: steps.changes.outputs.changed == 'true'
+        run: npx gh-pages -d build -u "GitHub Action <action@github.com>"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

@@ -4,7 +4,7 @@ export const posts = [
     title: "Cómo duplicar tus ventas usando Teclas Rápidas en tu POS",
     excerpt: "La velocidad en el punto de venta es crucial. Descubre cómo las teclas rápidas de ProVenta para Windows y pantallas Touch pueden transformar tu negocio.",
     date: "4 de Marzo, 2026",
-    category: "Productividad",
+    category: "Cómo lo hago",
     image: "/assets/img/facturacion_teclas_rapidas_pos.png",
     content: `
       <p>En el mundo del retail y los servicios, cada segundo cuenta. Un cliente que espera demasiado en fila es un cliente que podría no volver. Por eso, la eficiencia en el punto de venta (POS) no es solo un lujo, es una necesidad competitiva.</p>
@@ -55,8 +55,8 @@ export const posts = [
     title: "Por qué el inventario en tiempo real es el mejor amigo de tu negocio",
     excerpt: "No pierdas ventas por falta de stock. Aprende cómo la sincronización automática te ayuda a mantener tus estantes siempre llenos.",
     date: "1 de Marzo, 2026",
-    category: "Inventario",
-    image: "/assets/img/android/listado_productos_con_imagenes.jpeg",
+    category: "Finanzas",
+    image: "/assets/img/blog/default-finanzas.jpg",
     content: "<p>Contenido próximamente...</p>"
   },
   {
@@ -64,8 +64,8 @@ export const posts = [
     title: "Ventajas de automatizar tus comprobantes fiscales (NCF)",
     excerpt: "Evita multas y simplifica tu contabilidad. La integración con la DGII es más fácil de lo que piensas con las herramientas adecuadas.",
     date: "25 de Febrero, 2026",
-    category: "Legal",
-    image: "/assets/img/android/factura_detalle_android.jpeg",
+    category: "En RD",
+    image: "/assets/img/blog/default-en-rd.jpg",
     content: "<p>Contenido próximamente...</p>"
   }
 ];

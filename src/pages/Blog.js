@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
 import { HelmetProvider } from "react-helmet-async";
@@ -9,6 +9,10 @@ import { posts } from "../data/posts";
 
 const Blog = () => {
     const helmetContext = {};
+    const [activeCategory, setActiveCategory] = useState('Todos');
+
+    const categories = ['Todos', ...new Set(posts.map(p => p.category))];
+    const filteredPosts = activeCategory === 'Todos' ? posts : posts.filter(p => p.category === activeCategory);
 
     return (
         <HelmetProvider context={helmetContext}>
@@ -28,9 +32,24 @@ const Blog = () => {
                 <section className="pt-5 pb-4 pb-lg-5" style={{ marginTop: "80px" }}>
                     <div className="container text-center pt-2 pt-md-4">
                         <h1 className="display-3 text-white mb-3">Blog de ProVenta</h1>
-                        <p className="lead text-light opacity-75 mb-5 mx-auto" style={{ maxWidth: "700px" }}>
+                        <p className="lead text-light opacity-75 mb-4 mx-auto" style={{ maxWidth: "700px" }}>
                             Consejos, guías y novedades para llevar la gestión de tu negocio al siguiente nivel.
                         </p>
+                        <div className="d-flex flex-wrap justify-content-center gap-2 mb-2">
+                            {categories.map(cat => (
+                                <button
+                                    key={cat}
+                                    className={`btn rounded-pill px-4 ${
+                                        activeCategory === cat
+                                            ? 'btn-primary'
+                                            : 'btn-outline-light opacity-75'
+                                    }`}
+                                    onClick={() => setActiveCategory(cat)}
+                                >
+                                    {cat}
+                                </button>
+                            ))}
+                        </div>
                     </div>
                 </section>
 
@@ -38,7 +57,7 @@ const Blog = () => {
                 <section className="pb-5 mb-lg-5">
                     <div className="container">
                         <div className="row g-4 justify-content-center">
-                            {posts.map((post) => (
+                            {filteredPosts.map((post) => (
                                 <div key={post.slug} className="col-lg-4 col-md-6">
                                     <article className="card h-100 bg-white border-0 shadow-sm overflow-hidden hover-lift d-flex flex-column">
                                         <Link to={`/blog/${post.slug}/`} className="text-decoration-none h-100 d-flex flex-column">
