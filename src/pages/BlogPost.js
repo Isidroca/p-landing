@@ -16,12 +16,64 @@ const BlogPost = () => {
         return <Navigate to="/blog" />;
     }
 
+    const metaTitle = post.metaTitle || `${post.title} | Blog ProVenta`;
+    const metaDescription = post.metaDescription || post.excerpt;
+    const keywordsStr = Array.isArray(post.keywords) ? post.keywords.join(", ") : (post.keywords || "");
+    const canonicalUrl = `https://www.proventa.app/blog/${post.slug}/`;
+    const imageUrl = post.image && post.image.startsWith("http") ? post.image : `https://www.proventa.app${post.image}`;
+
+    const schemaData = post.schemaJsonLd || {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": canonicalUrl
+        },
+        "headline": post.title,
+        "description": metaDescription,
+        "image": [imageUrl],
+        "datePublished": post.date,
+        "author": {
+            "@type": "Organization",
+            "name": "Equipo ProVenta",
+            "url": "https://www.proventa.app"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "ProVenta",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://www.proventa.app/assets/img/logo-bg-black.png"
+            }
+        }
+    };
+
     return (
         <HelmetProvider context={helmetContext}>
             <Helmet>
-                <title>{post.title} | Blog ProVenta</title>
-                <meta name="description" content={post.excerpt} />
-                <link rel="canonical" href={`https://www.proventa.app/blog/${post.slug}/`} />
+                <title>{metaTitle}</title>
+                <meta name="description" content={metaDescription} />
+                {keywordsStr && <meta name="keywords" content={keywordsStr} />}
+                <link rel="canonical" href={canonicalUrl} />
+
+                {/* Open Graph / Facebook */}
+                <meta property="og:type" content="article" />
+                <meta property="og:title" content={metaTitle} />
+                <meta property="og:description" content={metaDescription} />
+                <meta property="og:url" content={canonicalUrl} />
+                <meta property="og:image" content={imageUrl} />
+                <meta property="og:site_name" content="ProVenta" />
+
+                {/* Twitter */}
+                <meta name="twitter:card" content="summary_large_image" />
+                <meta name="twitter:title" content={metaTitle} />
+                <meta name="twitter:description" content={metaDescription} />
+                <meta name="twitter:image" content={imageUrl} />
+
+                {/* Google Structured Data JSON-LD */}
+                <script type="application/ld+json">
+                    {JSON.stringify(schemaData)}
+                </script>
             </Helmet>
 
             <div className="bg-dark text-light min-vh-100 d-flex flex-column">

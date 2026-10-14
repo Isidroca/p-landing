@@ -49,29 +49,59 @@ const imageDefault = imageMap[category] || "/assets/img/blog/default-como-lo-hag
 const apiKey = process.env.GEMINI_API_KEY;
 if (!apiKey) throw new Error('GEMINI_API_KEY no está definida');
 
-const prompt = `Eres un experto en negocios y tecnología para pequeñas y medianas empresas en República Dominicana. 
+const prompt = `Eres un experto en SEO, redacción comercial y tecnología para pequeñas y medianas empresas en República Dominicana. 
 Escribe un artículo de blog completo en español (dominicano, natural y amigable) sobre el siguiente tema: "${topic}"
 
-El artículo es para el blog de ProVenta, un software POS (punto de venta) dominicano para Windows y Android.
+El artículo es para el blog de ProVenta, un software POS (punto de venta) dominicano para Windows y Android (https://www.proventa.app).
 Categoría del artículo: "${category}"
 
 Devuelve ÚNICAMENTE un JSON válido con este formato exacto (sin markdown, sin texto extra antes o después):
 {
-  "slug": "slug-del-articulo-aqui",
-  "title": "Título del artículo aquí",
-  "excerpt": "Resumen de 1-2 oraciones para SEO",
+  "slug": "url-amigable-en-minusculas-con-guiones",
+  "title": "Título completo del artículo aquí",
+  "metaTitle": "Título SEO impactante con ProVenta (máx 60 caracteres)",
+  "metaDescription": "Meta descripción atractiva con llamado a la acción (máx 155 caracteres)",
+  "keywords": ["palabra clave 1", "palabra clave 2", "palabra clave 3", "palabra clave 4"],
+  "excerpt": "Resumen claro de 1-2 oraciones del artículo",
   "date": "${dateStr}",
   "category": "${category}",
   "image": "${imageDefault}",
+  "schemaJsonLd": {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.proventa.app/blog/{slug}/"
+    },
+    "headline": "{title}",
+    "description": "{metaDescription}",
+    "image": ["https://www.proventa.app${imageDefault}"],
+    "datePublished": "${dateStr}",
+    "author": {
+      "@type": "Organization",
+      "name": "Equipo ProVenta",
+      "url": "https://www.proventa.app"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "ProVenta",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.proventa.app/assets/img/logo-bg-black.png"
+      }
+    }
+  },
   "content": "<p>Contenido HTML completo aquí...</p>"
 }
 
-El contenido HTML debe:
-- Tener entre 600-900 palabras
-- Incluir etiquetas h3, p, ul/li
-- Mencionar ProVenta naturalmente 2-3 veces
-- Ser útil y práctico para dueños de negocios en RD
-- NO incluir h1 ni h2 (el título ya se muestra fuera del content)`;
+Requisitos del contenido:
+- Slug en minúsculas separado por guiones (sin tildes ni caracteres especiales).
+- metaTitle no debe superar los 60 caracteres.
+- metaDescription no debe superar los 155 caracteres e incluir una llamada a la acción.
+- keywords debe contener entre 3 y 5 palabras clave relevantes para búsquedas en RD.
+- schemaJsonLd debe ser un objeto válido BlogPosting con los datos reales completados.
+- El contenido HTML debe tener entre 600-900 palabras con etiquetas h3, p, ul/li, mencionando ProVenta naturalmente 2-3 veces.
+- NO incluir h1 ni h2 en content.`;
 
 console.log(`🔄 Generando post sobre: "${topic}" (${category})`);
 
@@ -193,13 +223,19 @@ function serializePost(post) {
     .replace(/\\/g, '\\\\')
     .replace(/`/g, '\\`')
     .replace(/\${/g, '\\${');
+  
+  const metaTitle = post.metaTitle ? `,\n    metaTitle: ${JSON.stringify(post.metaTitle)}` : '';
+  const metaDescription = post.metaDescription ? `,\n    metaDescription: ${JSON.stringify(post.metaDescription)}` : '';
+  const keywords = post.keywords ? `,\n    keywords: ${JSON.stringify(post.keywords)}` : '';
+  const schemaJsonLd = post.schemaJsonLd ? `,\n    schemaJsonLd: ${JSON.stringify(post.schemaJsonLd, null, 6).trim()}` : '';
+
   return `  {
     slug: ${JSON.stringify(post.slug)},
-    title: ${JSON.stringify(post.title)},
+    title: ${JSON.stringify(post.title)}${metaTitle}${metaDescription}${keywords},
     excerpt: ${JSON.stringify(post.excerpt)},
     date: ${JSON.stringify(post.date)},
     category: ${JSON.stringify(post.category)},
-    image: ${JSON.stringify(post.image)},
+    image: ${JSON.stringify(post.image)}${schemaJsonLd},
     content: \`${contentEscaped}\`
   }`;
 }

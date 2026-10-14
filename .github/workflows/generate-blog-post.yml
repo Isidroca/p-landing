@@ -41,12 +41,18 @@ jobs:
         run: |
           git diff --quiet src/data/posts.js scripts/topic-index.json && echo "changed=false" >> $GITHUB_OUTPUT || echo "changed=true" >> $GITHUB_OUTPUT
 
-      - name: Commit and push new post
+      - name: Build project
+        if: steps.changes.outputs.changed == 'true'
+        run: npm run build
+        env:
+          CI: false
+
+      - name: Commit and push new post and sitemap
         if: steps.changes.outputs.changed == 'true'
         run: |
           git config user.name "GitHub Action"
           git config user.email "action@github.com"
-          git add src/data/posts.js scripts/topic-index.json
+          git add src/data/posts.js scripts/topic-index.json public/sitemap.xml
           POST_TITLE=$(node --input-type=module <<'EOF'
           import { posts } from './src/data/posts.js';
           process.stdout.write(posts[0].title);
@@ -54,12 +60,6 @@ jobs:
           )
           git commit -m "📝 Auto-post: $POST_TITLE"
           git push
-
-      - name: Build project
-        if: steps.changes.outputs.changed == 'true'
-        run: npm run build
-        env:
-          CI: false
 
       - name: Deploy to GitHub Pages
         if: steps.changes.outputs.changed == 'true'
