@@ -58,6 +58,8 @@ jobs:
       - name: Build project
         if: steps.changes.outputs.changed == 'true'
         run: npm run build
+        env:
+          CI: false
 
       - name: Deploy to GitHub Pages
         if: steps.changes.outputs.changed == 'true'
