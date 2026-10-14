@@ -81,9 +81,15 @@ async function getSupportedModels(apiKey) {
     if (res.ok) {
       const data = await res.json();
       const supported = (data.models || [])
-        .filter(m => m.supportedGenerationMethods && m.supportedGenerationMethods.includes('generateContent'))
+        .filter(m => {
+          const isGenerateContent = m.supportedGenerationMethods && m.supportedGenerationMethods.includes('generateContent');
+          const name = m.name.toLowerCase();
+          // Excluir modelos de voz (tts), embeddings, o imagen
+          const isText = !name.includes('tts') && !name.includes('embedding') && !name.includes('imagen');
+          return isGenerateContent && isText;
+        })
         .map(m => m.name.replace(/^models\//, ''));
-      console.log(`📋 Modelos encontrados en tu cuenta (${supported.length}):\n`, supported.join(', '));
+      console.log(`📋 Modelos de texto encontrados (${supported.length}):\n`, supported.join(', '));
       return supported;
     }
   } catch (e) {
@@ -105,7 +111,12 @@ async function generateContentWithRetry(prompt, apiKey) {
           {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ contents: [{ parts: [{ text: prompt }] }] })
+            body: JSON.stringify({
+              contents: [{ parts: [{ text: prompt }] }],
+              generationConfig: {
+                response_mime_type: "application/json"
+              }
+            })
           }
         );
 
@@ -117,18 +128,18 @@ async function generateContentWithRetry(prompt, apiKey) {
         const errText = await res.text();
         console.warn(`⚠️ Modelo ${model} respondió con status ${res.status}`);
 
-        // Si es 503 o 429, probamos una vez más o pasamos rápido al siguiente modelo de la lista
+        // Si es 503 o 429, probamos una vez más o pasamos rápido al siguiente modelo
         if (res.status === 503 || res.status === 429) {
           if (attempt === 1) {
-            console.log(`⏳ Alta demanda momentánea en ${model}. Esperando 4s antes de probar otro modelo...`);
+            console.log(`⏳ Esperando 4s antes de probar otro modelo...`);
             await new Promise((r) => setTimeout(r, 4000));
             continue;
           }
-          break; // Pasar al siguiente modelo de la lista
+          break;
         }
 
-        if (res.status === 404) {
-          break; // Modelo no disponible para este endpoint, pasar al siguiente
+        if (res.status === 404 || res.status === 400) {
+          break; // Incompatible o no disponible, probar el siguiente modelo
         }
 
         throw new Error(`Gemini API error ${res.status}: ${errText}`);
@@ -144,10 +155,13 @@ async function generateContentWithRetry(prompt, apiKey) {
 const data = await generateContentWithRetry(prompt, apiKey);
 let text = data.candidates[0].content.parts[0].text.trim();
 
-// Limpiar posibles markdown code fences
-text = text.replace(/^```json\n?/, '').replace(/^```\n?/, '').replace(/\n?```$/, '').trim();
+// Extraer el objeto JSON delimitado por llaves { ... }
+const jsonMatch = text.match(/\{[\s\S]*\}/);
+if (!jsonMatch) {
+  throw new Error(`No se encontró un bloque JSON válido en la respuesta del modelo:\n${text}`);
+}
 
-const newPost = JSON.parse(text);
+const newPost = JSON.parse(jsonMatch[0]);
 
 // 5. Función para serializar un post al formato del archivo posts.js
 function serializePost(post) {
