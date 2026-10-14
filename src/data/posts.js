@@ -89,19 +89,75 @@ export const posts = [
   {
     slug: "importancia-inventario-tiempo-real",
     title: "Por qué el inventario en tiempo real es el mejor amigo de tu negocio",
+    metaTitle: "Inventario en Tiempo Real: Clave para tu Negocio en RD",
+    metaDescription: "Evita ventas perdidas y faltantes en tu comercio. Descubre cómo controlar tu inventario en tiempo real con ProVenta POS en República Dominicana.",
+    keywords: ["inventario en tiempo real", "control de stock RD", "sistema POS inventario", "gestion de mercancia", "punto de venta dominicano"],
     excerpt: "No pierdas ventas por falta de stock. Aprende cómo la sincronización automática te ayuda a mantener tus estantes siempre llenos.",
     date: "1 de Marzo, 2026",
     category: "Finanzas",
     image: "/assets/img/blog/default-finanzas.jpg",
-    content: `<p>Contenido próximamente...</p>`
+    schemaJsonLd: {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://www.proventa.app/blog/importancia-inventario-tiempo-real/"
+      },
+      "headline": "Por qué el inventario en tiempo real es el mejor amigo de tu negocio",
+      "description": "Evita ventas perdidas y faltantes en tu comercio. Descubre cómo controlar tu inventario en tiempo real con ProVenta POS en República Dominicana.",
+      "image": ["https://www.proventa.app/assets/img/blog/default-finanzas.jpg"],
+      "datePublished": "1 de Marzo, 2026",
+      "author": {
+        "@type": "Organization",
+        "name": "Equipo ProVenta",
+        "url": "https://www.proventa.app"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "ProVenta",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.proventa.app/assets/img/logo-bg-black.png"
+        }
+      }
+    },
+    content: `<p>¿Cuántas veces ha llegado un cliente a tu mostrador pidiendo un artículo específico, le dices con toda seguridad «sí, de eso tenemos», vas al almacén a buscarlo y resulta que no queda ni uno solo? En el comercio minorista dominicano, esa escena es el pan de cada día de quienes todavía gestionan su stock en libretas o esperando al cierre de mes para cuadrar.</p><p>Ese cliente que se va con las manos vacías no solo representa una venta perdida hoy: es un cliente que probablemente cruzará la calle para comprarle a tu competencia. Por esta razón, el control de inventario en tiempo real no es una moda tecnológica, sino la columna vertebral de cualquier negocio rentable.</p><h3>¿Qué significa realmente tener inventario en tiempo real?</h3><p>Tener un inventario sincronizado al instante significa que cada vez que tu cajero pasa un código de barras o marca un producto en la pantalla de cobro, el sistema descuenta automáticamente esa unidad de la existencia física disponible. Al mismo tiempo, si recibes un pedido de un suplidor y lo registras en el sistema, los números suben inmediatamente.</p><p>Las principales ventajas operativas para tu negocio son:</p><ul><li><strong>Cero ventas a ciegas:</strong> Tanto tú como tus cajeros y vendedores móviles saben exactamente qué mercancía tienen en tramos y qué queda en almacén.</li><li><strong>Alertas de stock mínimo:</strong> El sistema te avisa antes de que un producto de alta rotación se agote, dándote tiempo para hacer órdenes de compra sin quedarte en cero.</li><li><strong>Control estricto contra mermas y robos:</strong> Al saber con precisión matemática qué entró y qué se vendió, las «desapariciones misteriosas» de mercancía se detectan de inmediato.</li><li><strong>Ahorro en capital estancado:</strong> Dejas de comprar productos que no rotan y concentras tus cuartos en la mercancía que genera rentabilidad todos los días.</li></ul><h3>El impacto directo en las finanzas de tu comercio</h3><p>Tener mercancía de más acumulando polvo en un almacén equivale a tener fajos de billetes engavetados que pierden valor por vencimiento o deterioro. Por el contrario, quedarte sin producto estrella un viernes por la tarde en plena quincena te deja fuera de juego.</p><p>Con <strong>ProVenta</strong>, disponible tanto en computadoras Windows como en terminales Android para cajeros y despachadores, el flujo de entrada y salida queda registrado de forma transparente. Puedes generar reportes de rotación de inventario con un solo clic y saber exactamente cuánto dinero tienes invertido en mercancía en cualquier momento.</p><h3>Consejos para implementar un control de inventario efectivo</h3><p>Para que la tecnología haga su magia, es clave acompañarla de buenas prácticas en tu equipo:</p><ul><li><strong>Registra toda entrada formalmente:</strong> Nunca coloques mercancía en anaqueles sin haber ingresado previamente la orden de recepción al sistema.</li><li><strong>Utiliza códigos de barras:</strong> Escanear el código elimina por completo la equivocación de marcar un producto por otro de precio similar.</li><li><strong>Realiza conteos cíclicos sorpresa:</strong> En vez de cerrar la tienda un fin de semana entero para hacer inventario general, cuenta dos o tres categorías por semana para verificar que lo físico coincida con el sistema.</li></ul><p>Mantener tus estantes abastecidos y tus cuentas claras es el secreto para que tu negocio crezca con bases sólidas. Con <strong>ProVenta</strong>, el control de inventario deja de ser un dolor de cabeza y se convierte en tu mayor ventaja competitiva en el mercado dominicano.</p>`
   },
   {
     slug: "ventajas-facturacion-ncf",
     title: "Ventajas de automatizar tus comprobantes fiscales (NCF)",
+    metaTitle: "Ventajas de Automatizar Comprobantes NCF con la DGII",
+    metaDescription: "Evita multas y simplifica tu contabilidad fiscal en RD. Descubre por qué automatizar tus comprobantes NCF con ProVenta protege tu negocio.",
+    keywords: ["comprobantes fiscales NCF", "DGII República Dominicana", "facturacion fiscal POS", "secuencias NCF", "software fiscal RD"],
     excerpt: "Evita multas y simplifica tu contabilidad. La integración con la DGII es más fácil de lo que piensas con las herramientas adecuadas.",
     date: "25 de Febrero, 2026",
     category: "En RD",
     image: "/assets/img/blog/default-en-rd.jpg",
-    content: `<p>Contenido próximamente...</p>`
+    schemaJsonLd: {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://www.proventa.app/blog/ventajas-facturacion-ncf/"
+      },
+      "headline": "Ventajas de automatizar tus comprobantes fiscales (NCF)",
+      "description": "Evita multas y simplifica tu contabilidad fiscal en RD. Descubre por qué automatizar tus comprobantes NCF con ProVenta protege tu negocio.",
+      "image": ["https://www.proventa.app/assets/img/blog/default-en-rd.jpg"],
+      "datePublished": "25 de Febrero, 2026",
+      "author": {
+        "@type": "Organization",
+        "name": "Equipo ProVenta",
+        "url": "https://www.proventa.app"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "ProVenta",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.proventa.app/assets/img/logo-bg-black.png"
+        }
+      }
+    },
+    content: `<p>Manejar comprobantes fiscales en República Dominicana solía ser un dolor de cabeza para cualquier comerciante: talonarios de papel que se mojaban, errores anotando los números de secuencia a mano, comprobantes B01 asignados por equivocación a quien no tenía RNC válido y el susto de llegar a final de mes con números descuadrados frente al contador o la DGII.</p><p>Afortunadamente, los tiempos cambiaron. Automatizar la emisión y control de los Números de Comprobante Fiscal (NCF) mediante un software de punto de venta moderno es la decisión más inteligente para proteger tu negocio contra sanciones y agilizar tus cobros diarios.</p><h3>¿Qué riesgos corres al manejar NCF manualmente?</h3><p>Los errores tributarios en RD salen caros. Entre las fallas más frecuentes cuando no se cuenta con un sistema automatizado se encuentran:</p><ul><li><strong>Secuencias duplicadas o saltadas:</strong> La DGII exige correlatividad estricta en las secuencias emitidas. Un número saltado puede acarrear observaciones e inconsistencias fiscales.</li><li><strong>Uso de comprobantes vencidos:</strong> Las autorizaciones de secuencias tienen fecha de caducidad. Emitir facturas con NCF vencidos invalida el crédito fiscal para tu cliente y te expone a penalidades.</li><li><strong>Errores en el cálculo del ITBIS:</strong> Calcular el 18% o las exenciones con una calculadora de bolsillo durante horas pico es una invitación directa a equivocarse en contra de tu bolsillo.</li><li><strong>Pérdida de tiempo al preparar el 606 y 607:</strong> Tu contador pierde horas descifrando papeles arrugados en lugar de enfocarse en asesorarte financieramente.</li></ul><h3>Beneficios de automatizar tus NCF con ProVenta</h3><p>Al implementar <strong>ProVenta</strong> en tu negocio, el control fiscal trabaja en segundo plano sin estorbar la agilidad de tus cajeros:</p><p>El sistema valida automáticamente que el RNC del cliente exista y sea válido antes de emitir un crédito fiscal (B01) o gubernamental (B15). Además, gestiona las secuencias de consumidor final (B02) y notas de crédito (B04) de forma correlativa e ininterrumpida. Cuando una secuencia está próxima a agotarse, ProVenta te avisa con anticipación para solicitar nuevas autorizaciones en la oficina virtual de la DGII sin interrumpir tus ventas.</p><h3>Preparado para la Facturación Electrónica (e-CF)</h3><p>La República Dominicana se encuentra en plena transición obligatoria hacia la facturación electrónica bajo la Ley 32-23. Quienes ya tienen sus NCF automatizados dan el paso a los comprobantes fiscales electrónicos (e-CF) de forma natural y sin traumas técnicos.</p><p>Con <strong>ProVenta</strong>, tu comercio emite comprobantes digitales con código QR, firma digital y validación en tiempo real ante la DGII, ahorrando costos de impresión y brindándole a tus clientes una experiencia moderna y profesional.</p><h3>Conclusión: Tranquilidad fiscal para crecer</h3><p>Tu energía como dueño de negocio debe estar en vender, atender clientes y expandirte, no en preocuparte por si un cajero puso mal un dígito en una factura. Automatiza tus comprobantes fiscales con <strong>ProVenta</strong> y dale a tu comercio la formalidad, seguridad y eficiencia que exige el mercado dominicano de hoy.</p>`
   }
 ];
