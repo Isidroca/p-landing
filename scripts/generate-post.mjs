@@ -75,21 +75,56 @@ El contenido HTML debe:
 
 console.log(`🔄 Generando post sobre: "${topic}" (${category})`);
 
-const response = await fetch(
-  `https://generativelanguage.googleapis.com/v1beta/models/gemini-3.8-flash:generateContent?key=${apiKey}`,
-  {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ contents: [{ parts: [{ text: prompt }] }] })
-  }
-);
+// Lista de modelos a intentar en orden de preferencia
+const MODELS = ['gemini-3.8-flash', 'gemini-2.5-flash', 'gemini-1.5-flash'];
 
-if (!response.ok) {
-  const errText = await response.text();
-  throw new Error(`Gemini API error ${response.status}: ${errText}`);
+async function generateContentWithRetry(prompt, apiKey) {
+  for (const model of MODELS) {
+    for (let attempt = 1; attempt <= 3; attempt++) {
+      try {
+        console.log(`📡 Intentando con modelo: ${model} (intento ${attempt}/3)...`);
+        const res = await fetch(
+          `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${apiKey}`,
+          {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ contents: [{ parts: [{ text: prompt }] }] })
+          }
+        );
+
+        if (res.ok) {
+          return await res.json();
+        }
+
+        const errText = await res.text();
+        console.warn(`⚠️ Error ${res.status} con ${model}: ${errText}`);
+        
+        // Si es 503 o 429, esperamos unos segundos antes de reintentar
+        if (res.status === 503 || res.status === 429) {
+          console.log(`⏳ Esperando 5 segundos antes de reintentar...`);
+          await new Promise((r) => setTimeout(r, 5000));
+          continue;
+        }
+        
+        // Si el modelo no existe (404), pasar de inmediato al siguiente modelo
+        if (res.status === 404) {
+          break;
+        }
+        
+        throw new Error(`Gemini API error ${res.status}: ${errText}`);
+      } catch (err) {
+        if (attempt === 3) {
+          console.warn(`❌ Agotados los intentos con ${model}: ${err.message}`);
+        } else {
+          await new Promise((r) => setTimeout(r, 3000));
+        }
+      }
+    }
+  }
+  throw new Error("No fue posible generar el post con ninguno de los modelos disponibles.");
 }
 
-const data = await response.json();
+const data = await generateContentWithRetry(prompt, apiKey);
 let text = data.candidates[0].content.parts[0].text.trim();
 
 // Limpiar posibles markdown code fences
