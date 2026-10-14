@@ -1,5 +1,14 @@
 export const posts = [
   {
+    slug: "como-crear-una-factura-en-dolares-en-proventa",
+    title: "Cómo crear una factura en dólares en ProVenta",
+    excerpt: "Aprende paso a paso cómo facturar en moneda extranjera desde tu sistema POS ProVenta en la República Dominicana y mantén tu contabilidad al día.",
+    date: "14 de octubre, 2026",
+    category: "Cómo lo hago",
+    image: "/assets/img/blog/default-como-lo-hago.jpg",
+    content: `<p>¡Mi gente! Sabemos que en el mercado dominicano de hoy en día, cada vez es más común tener clientes que te pagan en dólares. Ya sea que tengas un negocio enfocado en turistas en la zona norte, que ofrezcas servicios digitales o que simplemente traigas mercancía y vendas en moneda extranjera, manejar estas transacciones sin enredarte con la tasa del día puede ser un dolor de cabeza.</p><p>Afortunadamente, si usas <strong>ProVenta</strong>, nuestro sistema POS hecho a la medida para los negocios dominicanos, este proceso es más rápido que pedir un mofongo a domicilio. Hoy te vamos a explicar el paso a paso para que emitas tus facturas en dólares sin cometer errores y cumpliendo con lo que pide la DGII.</p><h3>1. Configura la tasa del dólar en tu sistema</h3><p>Lo primero que debemos hacer antes de emitir cualquier factura es asegurarnos de que la tasa de cambio esté al día. No podemos arriesgarnos a perder chelitos por usar una tarifa vieja. Para lograr esto en ProVenta, solo tienes que seguir estos pasos sencillos:</p><ul><li>Entra al módulo de configuración general de tu software.</li><li>Busca la sección de monedas o tipos de cambio.</li><li>Ingresa la tasa oficial del día (puedes guiarte por el Banco Central).</li><li>Guarda los cambios y listo, el sistema ya sabe a cómo estamos hoy.</li></ul><h3>2. Selecciona la moneda al momento de facturar</h3><p>Una vez que tu cliente llega al mostrador o le vas a enviar su factura digital, el proceso de venta es casi idéntico al que ya conoces. Sin embargo, hay un pequeño detalle que marca la diferencia. Al iniciar la venta en la interfaz de <strong>ProVenta</strong>:</p><ul><li>Agrega los productos o servicios como de costumbre.</li><li>En la pantalla de cobro o selección de pago, busca el selector de moneda.</li><li>Cambia de pesos dominicanos (DOP) a dólares estadounidenses (USD).</li><li>El sistema hará la conversión automática o te permitirá fijar el monto exacto en dólares, según lo prefieras.</li></ul><p>Esto te ahorra tener que sacar la calculadora del celular a cada rato, evitando errores humanos que después descuadran el cierre de caja de la noche.</p><h3>3. Cierra la venta y entrega el comprobante</h3><p>Cuando ya el cliente te confirme el pago, ya sea en efectivo, con tarjeta internacional o transferencia, solo te queda finalizar la transacción. <strong>ProVenta</strong> imprime o envía el comprobante reflejando claramente el monto en dólares y su equivalente en pesos para que todo quede transparente para ti y para tu contabilidad.</p><p>Además, recuerda que mantener tus registros claros te facilita la vida a la hora de hacer tus declaraciones juradas ante la DGII, reportando correctamente tus operaciones en moneda extranjera.</p><h3>Consejos clave para dueños de negocios en RD</h3><p>Manejar dólares en un negocio local requiere de un par de precauciones adicionales para que tu caja siempre cuadre:</p><ul><li><strong>Revisa la tasa diariamente:</strong> Acostúmbrate a actualizar la tasa en el sistema a primera hora de la mañana.</li><li><strong>Separa el efectivo:</strong> Si te pagan en efectivo verde, ten una gaveta o sobre seguro para evitar confundirlo con los pesos dominicanos.</li><li><strong>Capacita a tu personal:</strong> Asegúrate de que tus cajeros sepan usar esta función para que no se atranquen cuando llegue un cliente extranjero.</li></ul><p>Como ves, facturar en moneda extranjera no tiene por qué ser un proceso complicado ni requerir hojas de cálculo externas. Con las herramientas adecuadas y un buen sistema POS, tu negocio fluye mejor y tú te ganas una paz mental grandísima. ¡Anímate a probar esta función hoy mismo y lleva tu PYME al siguiente nivel!</p>`
+  },
+  {
     slug: "como-vender-mas-con-teclas-rapidas",
     title: "Cómo duplicar tus ventas usando Teclas Rápidas en tu POS",
     excerpt: "La velocidad en el punto de venta es crucial. Descubre cómo las teclas rápidas de ProVenta para Windows y pantallas Touch pueden transformar tu negocio.",
@@ -57,7 +66,7 @@ export const posts = [
     date: "1 de Marzo, 2026",
     category: "Finanzas",
     image: "/assets/img/blog/default-finanzas.jpg",
-    content: "<p>Contenido próximamente...</p>"
+    content: `<p>Contenido próximamente...</p>`
   },
   {
     slug: "ventajas-facturacion-ncf",
@@ -66,6 +75,6 @@ export const posts = [
     date: "25 de Febrero, 2026",
     category: "En RD",
     image: "/assets/img/blog/default-en-rd.jpg",
-    content: "<p>Contenido próximamente...</p>"
+    content: `<p>Contenido próximamente...</p>`
   }
 ];
