@@ -75,7 +75,7 @@ El contenido HTML debe:
 
 console.log(`🔄 Generando post sobre: "${topic}" (${category})`);
 
-async function getAvailableModel(apiKey) {
+async function getSupportedModels(apiKey) {
   try {
     const res = await fetch(`https://generativelanguage.googleapis.com/v1beta/models?key=${apiKey}`);
     if (res.ok) {
@@ -83,59 +83,62 @@ async function getAvailableModel(apiKey) {
       const supported = (data.models || [])
         .filter(m => m.supportedGenerationMethods && m.supportedGenerationMethods.includes('generateContent'))
         .map(m => m.name.replace(/^models\//, ''));
-      console.log(`📋 Modelos disponibles para tu API key:`, supported.slice(0, 5).join(', '));
-      // Priorizar gemini-3.8-flash o el primer modelo flash o gemini disponible
-      const preferred = supported.find(m => m.includes('3.8-flash')) ||
-                        supported.find(m => m.includes('flash')) ||
-                        supported.find(m => m.startsWith('gemini')) ||
-                        supported[0];
-      return preferred || 'gemini-3.8-flash';
+      console.log(`📋 Modelos encontrados en tu cuenta (${supported.length}):\n`, supported.join(', '));
+      return supported;
     }
   } catch (e) {
     console.warn(`No se pudo listar modelos: ${e.message}`);
   }
-  return 'gemini-3.8-flash';
+  return ['gemini-3.8-flash'];
 }
 
 async function generateContentWithRetry(prompt, apiKey) {
-  const chosenModel = await getAvailableModel(apiKey);
-  console.log(`🎯 Modelo seleccionado dinámicamente: ${chosenModel}`);
+  const models = await getSupportedModels(apiKey);
 
-  for (let attempt = 1; attempt <= 6; attempt++) {
-    try {
-      console.log(`📡 Solicitando a ${chosenModel} (intento ${attempt}/6)...`);
-      const res = await fetch(
-        `https://generativelanguage.googleapis.com/v1beta/models/${chosenModel}:generateContent?key=${apiKey}`,
-        {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ contents: [{ parts: [{ text: prompt }] }] })
+  for (const model of models) {
+    console.log(`\n🎯 Probando con modelo: ${model}...`);
+    for (let attempt = 1; attempt <= 2; attempt++) {
+      try {
+        console.log(`📡 Solicitando a ${model} (intento ${attempt}/2)...`);
+        const res = await fetch(
+          `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${apiKey}`,
+          {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ contents: [{ parts: [{ text: prompt }] }] })
+          }
+        );
+
+        if (res.ok) {
+          console.log(`✨ ¡Éxito con el modelo ${model}!`);
+          return await res.json();
         }
-      );
 
-      if (res.ok) {
-        return await res.json();
-      }
+        const errText = await res.text();
+        console.warn(`⚠️ Modelo ${model} respondió con status ${res.status}`);
 
-      const errText = await res.text();
-      console.warn(`⚠️ Respuesta ${res.status}: ${errText}`);
-      
-      // Si hay alta demanda (503) o rate limit (429), usamos backoff progresivo (6s, 12s, 18s...)
-      if (res.status === 503 || res.status === 429) {
-        const waitSec = attempt * 6;
-        console.log(`⏳ Alta demanda momentánea en Google. Esperando ${waitSec}s antes de reintentar...`);
-        await new Promise((r) => setTimeout(r, waitSec * 1000));
-        continue;
+        // Si es 503 o 429, probamos una vez más o pasamos rápido al siguiente modelo de la lista
+        if (res.status === 503 || res.status === 429) {
+          if (attempt === 1) {
+            console.log(`⏳ Alta demanda momentánea en ${model}. Esperando 4s antes de probar otro modelo...`);
+            await new Promise((r) => setTimeout(r, 4000));
+            continue;
+          }
+          break; // Pasar al siguiente modelo de la lista
+        }
+
+        if (res.status === 404) {
+          break; // Modelo no disponible para este endpoint, pasar al siguiente
+        }
+
+        throw new Error(`Gemini API error ${res.status}: ${errText}`);
+      } catch (err) {
+        console.warn(`Aviso con ${model}: ${err.message}`);
+        break;
       }
-      
-      throw new Error(`Gemini API error ${res.status}: ${errText}`);
-    } catch (err) {
-      if (attempt === 6) throw err;
-      const waitSec = attempt * 4;
-      await new Promise((r) => setTimeout(r, waitSec * 1000));
     }
   }
-  throw new Error("No fue posible generar el post tras varios intentos.");
+  throw new Error("No fue posible generar el post con ninguno de los modelos devueltos por Google.");
 }
 
 const data = await generateContentWithRetry(prompt, apiKey);
