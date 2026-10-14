@@ -34,12 +34,17 @@ jobs:
       - name: Generate blog post
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          UNSPLASH_ACCESS_KEY: ${{ secrets.UNSPLASH_ACCESS_KEY }}
         run: node scripts/generate-post.mjs
 
       - name: Check for changes
         id: changes
         run: |
-          git diff --quiet src/data/posts.js scripts/topic-index.json && echo "changed=false" >> $GITHUB_OUTPUT || echo "changed=true" >> $GITHUB_OUTPUT
+          if git status --porcelain | grep -q .; then
+            echo "changed=true" >> $GITHUB_OUTPUT
+          else
+            echo "changed=false" >> $GITHUB_OUTPUT
+          fi
 
       - name: Build project
         if: steps.changes.outputs.changed == 'true'
@@ -47,12 +52,12 @@ jobs:
         env:
           CI: false
 
-      - name: Commit and push new post and sitemap
+      - name: Commit and push new post, images, and sitemap
         if: steps.changes.outputs.changed == 'true'
         run: |
           git config user.name "GitHub Action"
           git config user.email "action@github.com"
-          git add src/data/posts.js scripts/topic-index.json public/sitemap.xml
+          git add src/data/posts.js scripts/topic-index.json public/sitemap.xml public/assets/img/blog/
           POST_TITLE=$(node --input-type=module <<'EOF'
           import { posts } from './src/data/posts.js';
           process.stdout.write(posts[0].title);

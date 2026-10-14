@@ -62,6 +62,7 @@ Devuelve ÚNICAMENTE un JSON válido con este formato exacto (sin markdown, sin 
   "metaTitle": "Título SEO impactante con ProVenta (máx 60 caracteres)",
   "metaDescription": "Meta descripción atractiva con llamado a la acción (máx 155 caracteres)",
   "keywords": ["palabra clave 1", "palabra clave 2", "palabra clave 3", "palabra clave 4"],
+  "imageKeywords": "2 to 4 english search terms describing a professional photo for this article",
   "excerpt": "Resumen claro de 1-2 oraciones del artículo",
   "date": "${dateStr}",
   "category": "${category}",
@@ -99,6 +100,7 @@ Requisitos del contenido:
 - metaTitle no debe superar los 60 caracteres.
 - metaDescription no debe superar los 155 caracteres e incluir una llamada a la acción.
 - keywords debe contener entre 3 y 5 palabras clave relevantes para búsquedas en RD.
+- imageKeywords debe ser una cadena breve en INGLÉS (2 a 4 palabras clave visuales, ej. 'retail point of sale store', 'financial accounting money', 'inventory warehouse shelves') adecuada para buscar una fotografía en Unsplash.
 - schemaJsonLd debe ser un objeto válido BlogPosting con los datos reales completados.
 - El contenido HTML debe tener entre 600-900 palabras con etiquetas h3, p, ul/li, mencionando ProVenta naturalmente 2-3 veces.
 - NO incluir h1 ni h2 en content.`;
@@ -217,7 +219,102 @@ if (!jsonMatch) {
 
 const newPost = JSON.parse(jsonMatch[0]);
 
-// 5. Función para serializar un post al formato del archivo posts.js
+// 5. Resolución Dinámica de Imágenes (Manuales vs Unsplash vs Fallback)
+async function resolvePostImage(post) {
+  const isManual = post.category === "Cómo lo hago" || post.title.toLowerCase().includes("cómo") || post.slug.startsWith("como-");
+
+  // Estrategia A: Si es un Manual de Uso / Cómo lo hago -> Usar capturas reales de ProVenta
+  if (isManual) {
+    const manualScreenshotsDir = path.join(ROOT, 'public/assets/img/blog/manuales');
+    if (fs.existsSync(manualScreenshotsDir)) {
+      const files = fs.readdirSync(manualScreenshotsDir).filter(f => /\.(png|jpe?g|webp)$/i.test(f));
+      if (files.length > 0) {
+        // Seleccionar una captura del folder según el slug/índice
+        const chosen = files[Math.abs(post.slug.split('').reduce((acc, c) => acc + c.charCodeAt(0), 0)) % files.length];
+        console.log(`📸 Manual detectado: usando captura local dedicada: /assets/img/blog/manuales/${chosen}`);
+        return `/assets/img/blog/manuales/${chosen}`;
+      }
+    }
+
+    // Si aún no hay imágenes en manuales/, usar capturas oficiales de la app Android/POS existentes
+    const appScreenshots = [
+      '/assets/img/blog/configuracion-productos-teclas-rapidas.png',
+      '/assets/img/android/pantalla_generar_nueva_factura_android.jpeg',
+      '/assets/img/android/factura_detalle_android.jpeg',
+      '/assets/img/android/listado_productos_con_imagenes.jpeg',
+      '/assets/img/android/dashboard_android_kpis.jpeg',
+      '/assets/img/android/opciones_imprimir_android_pdf_impresora_compartir.jpeg'
+    ];
+    const availableAppShots = appScreenshots.filter(p => fs.existsSync(path.join(ROOT, 'public', p.replace(/^\//, ''))));
+    if (availableAppShots.length > 0) {
+      const selectedShot = availableAppShots[Math.abs(post.slug.split('').reduce((acc, c) => acc + c.charCodeAt(0), 0)) % availableAppShots.length];
+      console.log(`📸 Manual detectado: usando captura de interfaz de ProVenta: ${selectedShot}`);
+      return selectedShot;
+    }
+  }
+
+  // Estrategia B: Artículos generales (Finanzas, En RD, etc.) -> Buscar en Unsplash API y descargar localmente
+  const unsplashAccessKey = process.env.UNSPLASH_ACCESS_KEY;
+  const searchTerms = post.imageKeywords || (post.category === "Finanzas" ? "finance business accounting money" : "business retail store commerce");
+
+  if (unsplashAccessKey) {
+    try {
+      console.log(`🔍 Buscando imagen en Unsplash para términos: "${searchTerms}"...`);
+      const unsplashUrl = `https://api.unsplash.com/search/photos?page=1&per_page=1&orientation=landscape&query=${encodeURIComponent(searchTerms)}&client_id=${unsplashAccessKey}`;
+      const unsplashRes = await fetch(unsplashUrl);
+
+      if (unsplashRes.ok) {
+        const unsplashData = await unsplashRes.json();
+        const photo = unsplashData.results && unsplashData.results[0];
+        if (photo && photo.urls && (photo.urls.regular || photo.urls.small)) {
+          const downloadUrl = photo.urls.regular || photo.urls.small;
+          const imageFileName = `${post.slug}-${Date.now()}.jpg`;
+          const localDestDir = path.join(ROOT, 'public/assets/img/blog/generated');
+          fs.mkdirSync(localDestDir, { recursive: true });
+          const localFilePath = path.join(localDestDir, imageFileName);
+
+          console.log(`⬇️ Descargando imagen de Unsplash a almacenamiento local: ${imageFileName}...`);
+          const imgBlobRes = await fetch(downloadUrl);
+          if (imgBlobRes.ok) {
+            const buffer = Buffer.from(await imgBlobRes.arrayBuffer());
+            fs.writeFileSync(localFilePath, buffer);
+            const publicPath = `/assets/img/blog/generated/${imageFileName}`;
+            console.log(`✅ Imagen descargada y guardada con éxito: ${publicPath}`);
+            return publicPath;
+          }
+        }
+      } else {
+        console.warn(`⚠️ Unsplash API respondió con error ${unsplashRes.status}`);
+      }
+    } catch (unsplashErr) {
+      console.warn(`⚠️ Error conectando con Unsplash API: ${unsplashErr.message}`);
+    }
+  } else {
+    console.log(`ℹ️ UNSPLASH_ACCESS_KEY no configurada. Usando fallback local para ${post.category}.`);
+  }
+
+  // Estrategia C: Fallback por categoría garantizado (evita imágenes rotas)
+  const categoryFallbacks = {
+    "Cómo lo hago": "/assets/img/blog/default-como-lo-hago.jpg",
+    "Finanzas": "/assets/img/blog/default-finanzas.jpg",
+    "En RD": "/assets/img/blog/default-en-rd.jpg"
+  };
+  const fallback = categoryFallbacks[post.category] || "/assets/img/blog/default-como-lo-hago.jpg";
+  console.log(`🛡️ Usando imagen de respaldo por categoría: ${fallback}`);
+  return fallback;
+}
+
+// Asignar imagen resuelta al nuevo post
+newPost.image = await resolvePostImage(newPost);
+
+// Actualizar imagen dentro de schemaJsonLd para concordancia SEO
+if (newPost.schemaJsonLd) {
+  newPost.schemaJsonLd.image = [
+    newPost.image.startsWith('http') ? newPost.image : `https://www.proventa.app${newPost.image}`
+  ];
+}
+
+// 6. Función para serializar un post al formato del archivo posts.js
 function serializePost(post) {
   const contentEscaped = post.content
     .replace(/\\/g, '\\\\')
