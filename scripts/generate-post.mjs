@@ -75,14 +75,14 @@ El contenido HTML debe:
 
 console.log(`🔄 Generando post sobre: "${topic}" (${category})`);
 
-// Lista de modelos a intentar en orden de preferencia
-const MODELS = ['gemini-3.8-flash', 'gemini-2.5-flash', 'gemini-1.5-flash'];
+// Modelos activos de la generación 3.8
+const MODELS = ['gemini-3.8-flash', 'gemini-3.8-flash-lite'];
 
 async function generateContentWithRetry(prompt, apiKey) {
   for (const model of MODELS) {
-    for (let attempt = 1; attempt <= 3; attempt++) {
+    for (let attempt = 1; attempt <= 5; attempt++) {
       try {
-        console.log(`📡 Intentando con modelo: ${model} (intento ${attempt}/3)...`);
+        console.log(`📡 Intentando con modelo: ${model} (intento ${attempt}/5)...`);
         const res = await fetch(
           `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${apiKey}`,
           {
