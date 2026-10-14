@@ -88,7 +88,15 @@ async function getSupportedModels(apiKey) {
           const isText = !name.includes('tts') && !name.includes('embedding') && !name.includes('imagen');
           return isGenerateContent && isText;
         })
-        .map(m => m.name.replace(/^models\//, ''));
+        .map(m => m.name.replace(/^models\//, ''))
+        .sort((a, b) => {
+          // Priorizar modelos gemini oficiales sobre gemma
+          const aIsGemini = a.startsWith('gemini');
+          const bIsGemini = b.startsWith('gemini');
+          if (aIsGemini && !bIsGemini) return -1;
+          if (!aIsGemini && bIsGemini) return 1;
+          return 0;
+        });
       console.log(`📋 Modelos de texto encontrados (${supported.length}):\n`, supported.join(', '));
       return supported;
     }
@@ -153,12 +161,28 @@ async function generateContentWithRetry(prompt, apiKey) {
 }
 
 const data = await generateContentWithRetry(prompt, apiKey);
-let text = data.candidates[0].content.parts[0].text.trim();
 
-// Extraer el objeto JSON delimitado por llaves { ... }
-const jsonMatch = text.match(/\{[\s\S]*\}/);
+// Unir todas las partes de texto devueltas
+const candidate = data.candidates && data.candidates[0];
+if (!candidate || !candidate.content || !candidate.content.parts) {
+  throw new Error(`Respuesta inválida de la API: ${JSON.stringify(data)}`);
+}
+
+let fullText = candidate.content.parts
+  .map(p => p.text || '')
+  .join('\n')
+  .trim();
+
+// Extraer el bloque JSON más externo
+let jsonMatch = fullText.match(/\{[\s\S]*\}/);
 if (!jsonMatch) {
-  throw new Error(`No se encontró un bloque JSON válido en la respuesta del modelo:\n${text}`);
+  // Limpiar posibles code blocks
+  fullText = fullText.replace(/^```json\n?/, '').replace(/^```\n?/, '').replace(/\n?```$/, '').trim();
+  jsonMatch = fullText.match(/\{[\s\S]*\}/);
+}
+
+if (!jsonMatch) {
+  throw new Error(`No se encontró un bloque JSON válido en la respuesta del modelo:\n${fullText}`);
 }
 
 const newPost = JSON.parse(jsonMatch[0]);
