@@ -9,6 +9,8 @@ const source = fs.readFileSync(path.join(buildDir, "index.html"), "utf8");
 const baseRoutes = [
   ["android", "ProVenta Mobile - POS para Android en República Dominicana", "Descarga ProVenta para Android. Factura, controla inventario, imprime recibos y gestiona tu negocio desde tu celular.", "monthly", "0.8"],
   ["como-instalar-proventa", "Cómo descargar e instalar ProVenta para Windows", "Aprende cómo descargar e instalar ProVenta para Windows y comienza a gestionar la facturación y el inventario de tu negocio.", "monthly", "0.8"],
+  ["pos", "Punto de Venta POS - Rápido, Silencioso y Seguro | ProVenta", "Software Punto de Venta (POS) en República Dominicana: impresión silenciosa de tickets, integración con Verifones Azul y CardNET, autorización por PIN, arqueo ciego y Modo Caja.", "weekly", "0.9"],
+  ["funcionalidades/pos", "Punto de Venta POS - Rápido, Silencioso y Seguro | ProVenta", "Software Punto de Venta (POS) en República Dominicana: impresión silenciosa de tickets, integración con Verifones Azul y CardNET, autorización por PIN, arqueo ciego y Modo Caja.", "monthly", "0.8"],
   ["funcionalidades/teclas-rapidas", "Teclas Rápidas para Facturación POS | ProVenta", "Agiliza las ventas de tu negocio con teclas rápidas para productos y facturación POS en ProVenta.", "monthly", "0.8"],
   ["funcionalidades/facturacion-electronica", "Facturación Electrónica e-CF con la DGII | ProVenta", "Emite comprobantes fiscales electrónicos e-CF integrados con la DGII desde ProVenta.", "monthly", "0.8"],
   ["funcionalidades/ordenes-de-compra", "Órdenes de Compra y Control de Proveedores | ProVenta", "Crea órdenes de compra multimoneda, genera PDF, registra recepciones, actualiza inventario y controla cuentas por pagar con ProVenta.", "monthly", "0.8"],

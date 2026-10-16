@@ -476,7 +476,7 @@ function Index() {
                 </div>
 
                 <div className="col-md-6">
-                  <article className="proventa-feature-card pos-card h-100 rounded-4 overflow-hidden position-relative" role="link" tabIndex="0" aria-label="Conocer el Punto de Venta POS" onClick={(event) => { if (!event.target.closest("a")) document.getElementById("pos-inteligente")?.scrollIntoView({ behavior: "smooth" }); }} onKeyDown={(event) => { if (event.key === "Enter" || event.key === " ") { event.preventDefault(); document.getElementById("pos-inteligente")?.scrollIntoView({ behavior: "smooth" }); } }}>
+                  <article className="proventa-feature-card pos-card h-100 rounded-4 overflow-hidden position-relative" role="link" tabIndex="0" aria-label="Conocer el Punto de Venta POS" onClick={(event) => { if (!event.target.closest("a")) navigate("/pos/"); }} onKeyDown={(event) => { if (event.key === "Enter" || event.key === " ") { event.preventDefault(); navigate("/pos/"); } }}>
                     <div className="proventa-feature-glow"></div>
                     <div className="position-relative h-100 p-4 p-xl-5 d-flex flex-column" style={{ zIndex: 2 }}>
                       <div className="d-flex justify-content-between align-items-start mb-4">

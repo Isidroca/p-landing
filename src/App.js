@@ -17,6 +17,7 @@ import ProventaAuto from "./pages/ProventaAuto";
 import FuerzaVenta from "./pages/FuerzaVenta";
 import ProventaReparaciones from "./pages/ProventaReparaciones";
 import ProventaKiosko from "./pages/ProventaKiosko";
+import ProventaPos from "./pages/ProventaPos";
 import ScrollToTop from "./hooks/ScrollToTop";
 function App() {
 
@@ -47,6 +48,8 @@ function App() {
           <Route path="/proventa-kiosko" element={<ProventaKiosko />} />
           <Route path="/por-que-proventa" element={<PorqueProventa />} />
           <Route path="/kiosko" element={<ProventaKiosko />} />
+          <Route path="/pos" element={<ProventaPos />} />
+          <Route path="/funcionalidades/pos" element={<ProventaPos />} />
         </Route>
       </Routes>
     </BrowserRouter>
