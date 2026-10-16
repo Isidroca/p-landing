@@ -7,157 +7,169 @@
 
 <url>
   <loc>https://www.proventa.app/</loc>
-  <lastmod>2026-10-15</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>1.0</priority>
-</url>
-<url>
-  <loc>https://www.proventa.app/pos/</loc>
-  <lastmod>2026-10-15</lastmod>
+  <lastmod>2026-10-16</lastmod>
   <changefreq>weekly</changefreq>
   <priority>1.0</priority>
 </url>
 <url>
   <loc>https://www.proventa.app/android/</loc>
-  <lastmod>2026-10-15</lastmod>
+  <lastmod>2026-10-16</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.8</priority>
 </url>
 <url>
   <loc>https://www.proventa.app/como-instalar-proventa/</loc>
-  <lastmod>2026-10-15</lastmod>
+  <lastmod>2026-10-16</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>https://www.proventa.app/pos/</loc>
+  <lastmod>2026-10-16</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.9</priority>
+</url>
+<url>
+  <loc>https://www.proventa.app/funcionalidades/pos/</loc>
+  <lastmod>2026-10-16</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.8</priority>
 </url>
 <url>
   <loc>https://www.proventa.app/funcionalidades/teclas-rapidas/</loc>
-  <lastmod>2026-10-15</lastmod>
+  <lastmod>2026-10-16</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.8</priority>
 </url>
 <url>
   <loc>https://www.proventa.app/funcionalidades/facturacion-electronica/</loc>
-  <lastmod>2026-10-15</lastmod>
+  <lastmod>2026-10-16</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.8</priority>
 </url>
 <url>
   <loc>https://www.proventa.app/funcionalidades/ordenes-de-compra/</loc>
-  <lastmod>2026-10-15</lastmod>
+  <lastmod>2026-10-16</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.8</priority>
 </url>
 <url>
   <loc>https://www.proventa.app/proventa-auto/</loc>
-  <lastmod>2026-10-15</lastmod>
+  <lastmod>2026-10-16</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.8</priority>
 </url>
 <url>
   <loc>https://www.proventa.app/por-que-proventa/</loc>
-  <lastmod>2026-10-15</lastmod>
+  <lastmod>2026-10-16</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.9</priority>
 </url>
 <url>
   <loc>https://www.proventa.app/fuerza-de-venta/</loc>
-  <lastmod>2026-10-15</lastmod>
+  <lastmod>2026-10-16</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.8</priority>
 </url>
 <url>
   <loc>https://www.proventa.app/proventa-reparaciones/</loc>
-  <lastmod>2026-10-15</lastmod>
+  <lastmod>2026-10-16</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.8</priority>
 </url>
 <url>
   <loc>https://www.proventa.app/reparaciones/</loc>
-  <lastmod>2026-10-15</lastmod>
+  <lastmod>2026-10-16</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.8</priority>
 </url>
 <url>
   <loc>https://www.proventa.app/proventa-kiosko/</loc>
-  <lastmod>2026-10-15</lastmod>
+  <lastmod>2026-10-16</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.9</priority>
 </url>
 <url>
   <loc>https://www.proventa.app/kiosko/</loc>
-  <lastmod>2026-10-15</lastmod>
+  <lastmod>2026-10-16</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.9</priority>
 </url>
 <url>
   <loc>https://www.proventa.app/planes/</loc>
-  <lastmod>2026-10-15</lastmod>
+  <lastmod>2026-10-16</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.9</priority>
 </url>
 <url>
   <loc>https://www.proventa.app/blog/</loc>
-  <lastmod>2026-10-15</lastmod>
+  <lastmod>2026-10-16</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.8</priority>
 </url>
 <url>
   <loc>https://www.proventa.app/registro/</loc>
-  <lastmod>2026-10-15</lastmod>
+  <lastmod>2026-10-16</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.8</priority>
 </url>
 <url>
   <loc>https://www.proventa.app/privacidad/</loc>
-  <lastmod>2026-10-15</lastmod>
+  <lastmod>2026-10-16</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.5</priority>
 </url>
 <url>
   <loc>https://www.proventa.app/privacidad-meta/</loc>
-  <lastmod>2026-10-15</lastmod>
+  <lastmod>2026-10-16</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.5</priority>
 </url>
 <url>
+  <loc>https://www.proventa.app/blog/controlar-gastos-operativos-negocio-pos/</loc>
+  <lastmod>2026-10-16</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.7</priority>
+</url>
+<url>
   <loc>https://www.proventa.app/blog/como-configurar-multiples-cajas-en-proventa/</loc>
-  <lastmod>2026-10-15</lastmod>
+  <lastmod>2026-10-16</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.7</priority>
 </url>
 <url>
   <loc>https://www.proventa.app/blog/como-funciona-la-facturacion-electronica-ecf-republica-dominicana/</loc>
-  <lastmod>2026-10-15</lastmod>
+  <lastmod>2026-10-16</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.7</priority>
 </url>
 <url>
   <loc>https://www.proventa.app/blog/como-calcular-margen-ganancia-negocio-rd/</loc>
-  <lastmod>2026-10-15</lastmod>
+  <lastmod>2026-10-16</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.7</priority>
 </url>
 <url>
   <loc>https://www.proventa.app/blog/como-crear-una-factura-en-dolares-en-proventa/</loc>
-  <lastmod>2026-10-15</lastmod>
+  <lastmod>2026-10-16</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.7</priority>
 </url>
 <url>
   <loc>https://www.proventa.app/blog/como-vender-mas-con-teclas-rapidas/</loc>
-  <lastmod>2026-10-15</lastmod>
+  <lastmod>2026-10-16</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.7</priority>
 </url>
 <url>
   <loc>https://www.proventa.app/blog/importancia-inventario-tiempo-real/</loc>
-  <lastmod>2026-10-15</lastmod>
+  <lastmod>2026-10-16</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.7</priority>
 </url>
 <url>
   <loc>https://www.proventa.app/blog/ventajas-facturacion-ncf/</loc>
-  <lastmod>2026-10-15</lastmod>
+  <lastmod>2026-10-16</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.7</priority>
 </url>
