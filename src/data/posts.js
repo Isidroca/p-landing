@@ -1,5 +1,44 @@
 export const posts = [
   {
+    slug: "que-es-el-itbis-y-como-aplicarlo-en-tu-pos",
+    title: "Qué es el ITBIS y cómo aplicarlo correctamente en tu POS",
+    metaTitle: "Qué es el ITBIS y cómo aplicarlo en tu POS | ProVenta",
+    metaDescription: "Aprende qué es el ITBIS en RD y cómo configurarlo en tu sistema POS sin errores. ¡Optimiza tu negocio hoy mismo con ProVenta!",
+    keywords: ["ITBIS Republica Dominicana","que es el ITBIS","sistema POS Republica Dominicana","software POS Windows Android"],
+    excerpt: "Descubre todo sobre el cálculo y la aplicación del ITBIS en tu negocio dominicano utilizando un sistema POS moderno.",
+    date: "16 de octubre, 2026",
+    category: "En RD",
+    image: "/assets/img/blog/configuracion-productos-teclas-rapidas.png",
+    schemaJsonLd: {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://www.proventa.app/blog/que-es-el-itbis-y-como-aplicarlo-en-tu-pos/"
+      },
+      "headline": "Qué es el ITBIS y cómo aplicarlo correctamente en tu POS",
+      "description": "Aprende qué es el ITBIS en RD y cómo configurarlo en tu sistema POS sin errores. ¡Optimiza tu negocio hoy mismo con ProVenta!",
+      "image": [
+            "https://www.proventa.app/assets/img/blog/configuracion-productos-teclas-rapidas.png"
+      ],
+      "datePublished": "16 de octubre, 2026",
+      "author": {
+            "@type": "Organization",
+            "name": "Equipo ProVenta",
+            "url": "https://www.proventa.app"
+      },
+      "publisher": {
+            "@type": "Organization",
+            "name": "ProVenta",
+            "logo": {
+                  "@type": "ImageObject",
+                  "url": "https://www.proventa.app/assets/img/logo-bg-black.png"
+            }
+      }
+},
+    content: `<p>Manejar un negocio en la República Dominicana trae consigo una serie de responsabilidades fiscales que todo emprendedor y comerciante debe conocer al dedillo. Entre las obligaciones más importantes se encuentra el manejo del Impuesto sobre la Transferencia de Bienes Industrializados y Servicios, mejor conocido por todos como el ITBIS. Si tienes un colmado, una tienda de ropa, una ferretería o cualquier comercio, sabes que calcular este impuesto de forma manual puede convertirse en un verdadero dolor de cabeza y en una fuente segura de errores.</p><p>Por suerte, la tecnología está de nuestro lado y hoy en día contar con una herramienta automatizada facilita enormemente la vida comercial. A lo largo de este artículo, te explicaremos de forma sencilla qué es este impuesto y cómo puedes configurarlo sin complicaciones en tu sistema POS para mantener tus finanzas al día y cumplir con la Dirección General de Impuestos Internos (DGII).</p><h3>¿Qué es exactamente el ITBIS y a quiénes aplica?</h3><p>El ITBIS es el tributo de naturaleza indirecta que grava la transferencia y importación de bienes industrializados, así como la prestación de servicios en territorio dominicano. La tasa general establecida es del 18%, aunque existen ciertos productos de la canasta familiar básica que cuentan con tasas diferenciadas (como el 16%) o se encuentran totalmente exentos de este cobro.</p><p>Para los negocios locales, estar al tanto de qué productos llevan ITBIS y cuáles no es fundamental para evitar sanciones con la DGII. Sin embargo, memorizar la clasificación de cada artículo del inventario es prácticamente una misión imposible. Es aquí donde el uso de un software de facturación y punto de venta se vuelve indispensable para cualquier PYME dominicana que busque eficiencia y control total.</p><h3>Los peligros de calcular el impuesto de forma manual</h3><p>Cuando los comerciantes calculan el impuesto a pulso o utilizando calculadoras corrientes al momento de cobrar, se exponen a situaciones complejas:</p><ul><li>Errores frecuentes en el vuelto o cambio devuelto al cliente.</li><li>Diferencias notables al final del día al realizar el cuadre de caja.</li><li>Pérdida de tiempo valioso en horas pico cuando hay fila de clientes esperando pagar.</li><li>Problemas graves al momento de reportar las ventas y los impuestos correspondientes a la administración tributaria.</li></ul><p>Un buen negocio necesita agilidad y precisión, dos cualidades que simplemente no se llevan bien con los procesos manuales.</p><h3>Cómo simplificar el cobro de impuestos con ProVenta</h3><p>La mejor manera de evitar dolores de cabeza fiscales es automatizar el proceso directamente en el punto de venta. Con una solución tecnológica adaptada al mercado dominicano, este procedimiento se reduce a un par de clics:</p><p>Al utilizar un software como <strong>ProVenta</strong>, diseñado específicamente para funcionar tanto en dispositivos Windows como en Android, puedes configurar tu catálogo de productos asignando de manera personalizada cuáles llevan la tasa general del 18% y cuáles están exentos. De esta forma, cada vez que escaneas un código de barras en la caja, el sistema calcula de forma automática y transparente el monto exacto del impuesto.</p><p>Además, <strong>ProVenta</strong> te permite llevar un registro claro y detallado de las transacciones diarias, facilitando enormemente la elaboración de tus reportes fiscales y evitando descuadres molestos al cerrar tu jornada comercial. No importa si operas desde una tablet en un food truck o desde una computadora de escritorio en un local comercial, la sincronización y la precisión están garantizadas.</p><h3>Consejos finales para una gestión fiscal exitosa</h3><p>Mantener tu negocio en regla no solo te evita multas y recargos con la DGII, sino que también transmite una imagen de profesionalismo y transparencia frente a tus clientes. Aquí te dejamos un par de recomendaciones prácticas:</p><ul><li>Revisa periódicamente tu inventario y asegúrate de que los precios de compra y venta reflejen correctamente la situación fiscal de cada artículo.</li><li>Capacita a tu personal de caja para que entiendan la importancia de registrar cada venta a través del POS, evitando transacciones informales.</li><li>Apóyate en herramientas tecnológicas locales que entiendan la realidad de las empresas dominicanas.</li></ul><p>Implementar el ITBIS correctamente ya no tiene por qué ser un proceso tedioso ni complicado. Da el salto hacia la digitalización y optimiza la administración de tu negocio hoy mismo incorporando una herramienta diseñada para hacerte la vida más fácil. ¡Haz que tu PYME crezca con el respaldo de un sistema eficiente y adaptado a tus necesidades!</p>`
+  },
+  {
     slug: "controlar-gastos-operativos-negocio-pos",
     title: "Cómo controlar los gastos operativos de tu negocio con un sistema POS",
     metaTitle: "Controla gastos de tu negocio con ProVenta POS",
