@@ -525,6 +525,124 @@ const FacturacionElectronica = () => {
                 </div>
               </div>
             </div>
+
+            {/* Capturas del proceso de certificación DGII */}
+            <div className="mt-5 pt-4" style={{ borderTop: "1px solid rgba(129,140,248,0.12)" }}>
+              <div className="text-center mb-4">
+                <span
+                  className="badge px-3 py-2 rounded-pill mb-2 fw-bold"
+                  style={{ fontSize: "0.75rem", background: "rgba(99,102,241,0.15)", color: "#a5b4fc", border: "1px solid rgba(99,102,241,0.25)" }}
+                >
+                  TRANSPARENCIA EN CADA PASO
+                </span>
+                <h3 className="h4 text-white fw-bold mb-2">Así visualizas tu avance dentro de ProVenta</h3>
+                <p className="fs-sm text-light opacity-60 mb-0" style={{ maxWidth: 560, margin: "0 auto" }}>
+                  Monitorea el progreso de las pruebas y la aprobación final emitida por la DGII directamente desde tu plataforma.
+                </p>
+              </div>
+
+              <div className="row g-4 justify-content-center">
+                {/* Screenshot 1: En progreso */}
+                <div className="col-md-6 col-lg-5">
+                  <div
+                    className="rounded-4 p-3 p-sm-4 h-100 d-flex flex-column"
+                    style={{
+                      background: "rgba(11,15,25,0.72)",
+                      border: "1px solid rgba(255,255,255,0.08)",
+                      boxShadow: "0 18px 45px rgba(0,0,0,0.25)",
+                    }}
+                  >
+                    <div className="d-flex align-items-center justify-content-between mb-3 px-1">
+                      <div className="d-flex align-items-center gap-2">
+                        <span
+                          style={{
+                            width: 10,
+                            height: 10,
+                            borderRadius: "50%",
+                            background: "#fbbf24",
+                            boxShadow: "0 0 8px #fbbf24",
+                            display: "inline-block",
+                          }}
+                        />
+                        <span className="text-white fw-semibold fs-sm">1. Certificación en progreso</span>
+                      </div>
+                      <span
+                        className="badge px-2 py-1 rounded-pill"
+                        style={{ background: "rgba(251,191,36,0.15)", color: "#fbbf24", border: "1px solid rgba(251,191,36,0.3)", fontSize: "0.68rem" }}
+                      >
+                        Pruebas activas
+                      </span>
+                    </div>
+
+                    <div
+                      className="rounded-3 overflow-hidden position-relative flex-grow-1 d-flex align-items-center justify-content-center"
+                      style={{ background: "rgba(0,0,0,0.35)", border: "1px solid rgba(255,255,255,0.06)", padding: "8px" }}
+                    >
+                      <img
+                        src="/assets/img/encf/certificacion_en_progreso.png"
+                        alt="Proceso de certificación de facturación electrónica en progreso ante la DGII"
+                        className="img-fluid rounded"
+                        loading="lazy"
+                        style={{ maxHeight: 420, width: "auto", objectFit: "contain" }}
+                      />
+                    </div>
+                    <p className="fs-xs text-light opacity-50 mt-3 mb-0 px-1 text-center">
+                      Vista en tiempo real del conjunto de pruebas y validaciones que realizamos ante el ambiente de certificación.
+                    </p>
+                  </div>
+                </div>
+
+                {/* Screenshot 2: Aprobada */}
+                <div className="col-md-6 col-lg-5">
+                  <div
+                    className="rounded-4 p-3 p-sm-4 h-100 d-flex flex-column"
+                    style={{
+                      background: "rgba(11,15,25,0.72)",
+                      border: "1px solid rgba(255,255,255,0.08)",
+                      boxShadow: "0 18px 45px rgba(0,0,0,0.25)",
+                    }}
+                  >
+                    <div className="d-flex align-items-center justify-content-between mb-3 px-1">
+                      <div className="d-flex align-items-center gap-2">
+                        <span
+                          style={{
+                            width: 10,
+                            height: 10,
+                            borderRadius: "50%",
+                            background: "#34d399",
+                            boxShadow: "0 0 8px #34d399",
+                            display: "inline-block",
+                          }}
+                        />
+                        <span className="text-white fw-semibold fs-sm">2. Certificación aprobada</span>
+                      </div>
+                      <span
+                        className="badge px-2 py-1 rounded-pill"
+                        style={{ background: "rgba(52,211,153,0.15)", color: "#34d399", border: "1px solid rgba(52,211,153,0.3)", fontSize: "0.68rem" }}
+                      >
+                        ✓ Aprobado DGII
+                      </span>
+                    </div>
+
+                    <div
+                      className="rounded-3 overflow-hidden position-relative flex-grow-1 d-flex align-items-center justify-content-center"
+                      style={{ background: "rgba(0,0,0,0.35)", border: "1px solid rgba(255,255,255,0.06)", padding: "8px" }}
+                    >
+                      <img
+                        src="/assets/img/encf/certificacion-31-aprobada.png"
+                        alt="Certificación de factura electrónica aprobada con éxito ante la DGII"
+                        className="img-fluid rounded"
+                        loading="lazy"
+                        style={{ maxHeight: 420, width: "auto", objectFit: "contain" }}
+                      />
+                    </div>
+                    <p className="fs-xs text-light opacity-50 mt-3 mb-0 px-1 text-center">
+                      Confirmación oficial tras superar con éxito la etapa de pruebas para emitir comprobantes e-CF válidos.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
 

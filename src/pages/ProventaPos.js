@@ -543,6 +543,143 @@ const ProventaPos = () => {
           </div>
         </section>
 
+        {/* BANNER DESCUBRE KIOSKO & MÓVIL */}
+        <section
+          className="py-5 position-relative overflow-hidden text-white"
+          style={{
+            background: "radial-gradient(ellipse at 80% 20%, rgba(139, 92, 246, 0.28) 0%, transparent 55%), radial-gradient(ellipse at 15% 85%, rgba(6, 182, 212, 0.2) 0%, transparent 60%), #0b0f19",
+            borderTop: "1px solid rgba(255, 255, 255, 0.08)",
+            borderBottom: "1px solid rgba(255, 255, 255, 0.08)",
+          }}
+        >
+          <div className="container py-lg-4 position-relative" style={{ zIndex: 2 }}>
+            <div className="row align-items-center g-5">
+              <div className="col-lg-7 text-center text-lg-start">
+                <div className="d-inline-flex align-items-center gap-2 mb-3">
+                  <span
+                    className="badge px-3 py-2 rounded-pill fw-bold text-uppercase"
+                    style={{
+                      background: "linear-gradient(135deg, #8b5cf6, #d946ef)",
+                      color: "#fff",
+                      fontSize: "0.72rem",
+                      letterSpacing: "0.08em",
+                    }}
+                  >
+                    <i className="bx bx-tab me-1"></i> ¿Buscas algo 100% móvil y táctil?
+                  </span>
+                  <span className="text-light opacity-75 small d-none d-sm-inline">
+                    Ideal para tablets y mostradores compactos
+                  </span>
+                </div>
+
+                <h2 className="display-6 fw-bold text-white mb-3" style={{ lineHeight: 1.2 }}>
+                  Conoce{" "}
+                  <span
+                    style={{
+                      background: "linear-gradient(135deg, #a78bfa, #38bdf8)",
+                      WebkitBackgroundClip: "text",
+                      WebkitTextFillColor: "transparent",
+                    }}
+                  >
+                    ProVenta Kiosko
+                  </span>
+                  : la experiencia POS en Tablet
+                </h2>
+
+                <p className="fs-6 text-light opacity-80 mb-4" style={{ maxWidth: 580 }}>
+                  Si tu negocio opera en espacios ágiles como cafeterías, food trucks, bares o restaurantes pequeños, lleva tus ventas a otro nivel sin cables ni computadoras pesadas.
+                </p>
+
+                <div className="row g-3 mb-4 text-start justify-content-center justify-content-lg-start">
+                  {[
+                    { icon: "bx-touch", title: "Órdenes Táctiles", desc: "Comandas y cobros con toques rápidos" },
+                    { icon: "bx-restaurant", title: "Cuentas y Mesas", desc: "Manejo de órdenes abiertas y comandas" },
+                    { icon: "bx-sync", title: "100% Conectado", desc: "Mismo inventario y reportes que tu POS" },
+                  ].map((feat, i) => (
+                    <div className="col-sm-4" key={i}>
+                      <div
+                        className="p-3 rounded-3 h-100"
+                        style={{
+                          background: "rgba(255, 255, 255, 0.04)",
+                          border: "1px solid rgba(255, 255, 255, 0.08)",
+                        }}
+                      >
+                        <i className={`bx ${feat.icon} fs-4 mb-2 d-block`} style={{ color: "#a78bfa" }}></i>
+                        <strong className="text-white d-block small mb-1">{feat.title}</strong>
+                        <small className="text-light opacity-60 d-block" style={{ fontSize: "0.78rem" }}>
+                          {feat.desc}
+                        </small>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+
+                <div className="d-flex flex-wrap gap-3 justify-content-center justify-content-lg-start">
+                  <Link
+                    to="/proventa-kiosko/"
+                    className="btn btn-lg px-4 py-3 fw-bold rounded-pill text-white shadow"
+                    style={{
+                      background: "linear-gradient(135deg, #7c3aed, #4f46e5)",
+                      boxShadow: "0 8px 24px rgba(124, 58, 237, 0.4)",
+                    }}
+                  >
+                    <i className="bx bx-tab me-2 fs-5"></i>
+                    Explorar ProVenta Kiosko
+                  </Link>
+
+                  <Link
+                    to="/android/"
+                    className="btn btn-lg btn-outline-light border-opacity-25 px-4 py-3 rounded-pill"
+                  >
+                    <i className="bx bxl-android me-2 fs-5 text-success"></i>
+                    Ver Versión Móvil Android
+                  </Link>
+                </div>
+              </div>
+
+              <div className="col-lg-5 text-center">
+                <div className="position-relative mx-auto" style={{ maxWidth: 440 }}>
+                  <div
+                    className="position-absolute rounded-circle"
+                    style={{
+                      width: 280,
+                      height: 280,
+                      top: "50%",
+                      left: "50%",
+                      transform: "translate(-50%, -50%)",
+                      background: "rgba(139, 92, 246, 0.22)",
+                      filter: "blur(60px)",
+                      zIndex: 0,
+                    }}
+                  />
+                  <div
+                    className="p-2 rounded-4 position-relative"
+                    style={{
+                      background: "rgba(255, 255, 255, 0.04)",
+                      border: "1px solid rgba(255, 255, 255, 0.12)",
+                      backdropFilter: "blur(12px)",
+                      boxShadow: "0 25px 60px rgba(0, 0, 0, 0.4)",
+                      zIndex: 1,
+                    }}
+                  >
+                    <img
+                      src="/assets/img/kiosko/kiosko-pos-tablet.png"
+                      alt="Interfaz táctil de ProVenta Kiosko en Tablet"
+                      className="img-fluid rounded-3"
+                      loading="lazy"
+                    />
+                    <div className="p-3 text-center">
+                      <span className="badge px-3 py-1 rounded-pill" style={{ background: "rgba(16, 185, 129, 0.2)", color: "#34d399", border: "1px solid rgba(16, 185, 129, 0.3)" }}>
+                        <i className="bx bx-check-double me-1"></i> Compatible con Tablets Android de 8" a 15"
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* PREGUNTAS FRECUENTES */}
         <section className="py-5 bg-light">
           <div className="container py-lg-4">

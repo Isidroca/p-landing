@@ -1249,37 +1249,75 @@ const ProventaKiosko = () => {
 
                 <div className="row g-3 justify-content-center mb-4">
                   <div className="col-md-4">
-                    <div className="p-3 rounded-3 border" style={{ background: "rgba(255, 255, 255, 0.08)", borderColor: "rgba(255, 255, 255, 0.15)" }}>
+                    <Link
+                      to="/pos/"
+                      className="p-3 rounded-3 border d-block text-decoration-none h-100 transition-all"
+                      style={{
+                        background: "rgba(255, 255, 255, 0.08)",
+                        borderColor: "rgba(255, 255, 255, 0.15)",
+                        transition: "all 0.25s ease",
+                      }}
+                      onMouseEnter={(e) => {
+                        e.currentTarget.style.background = "rgba(255, 255, 255, 0.14)";
+                        e.currentTarget.style.transform = "translateY(-3px)";
+                      }}
+                      onMouseLeave={(e) => {
+                        e.currentTarget.style.background = "rgba(255, 255, 255, 0.08)";
+                        e.currentTarget.style.transform = "translateY(0)";
+                      }}
+                    >
                       <i className="bx bx-desktop fs-3 text-warning mb-2 d-block"></i>
-                      <strong className="text-white d-block">Desktop</strong>
-                      <small className="text-light opacity-75">
+                      <div className="d-flex align-items-center justify-content-center gap-1">
+                        <strong className="text-white d-block">Desktop</strong>
+                        <i className="bx bx-right-arrow-alt text-warning fs-5"></i>
+                      </div>
+                      <small className="text-light opacity-75 d-block mt-1">
                         Windows POS y Administración
                       </small>
-                    </div>
+                    </Link>
                   </div>
                   <div className="col-md-4">
                     <div
-                      className="p-3 rounded-3 border"
+                      className="p-3 rounded-3 border h-100"
                       style={{
-                        background: "rgba(92, 52, 219, 0.35)",
-                        borderColor: "rgba(167, 139, 250, 0.4)",
+                        background: "rgba(92, 52, 219, 0.4)",
+                        borderColor: "rgba(167, 139, 250, 0.5)",
                       }}
                     >
                       <i className="bx bx-tab fs-3 text-white mb-2 d-block"></i>
                       <strong className="text-white d-block">Kiosko</strong>
-                      <small className="text-light opacity-75">
+                      <small className="text-light opacity-75 d-block mt-1">
                         Tablets Android Táctiles
                       </small>
                     </div>
                   </div>
                   <div className="col-md-4">
-                    <div className="p-3 rounded-3 border" style={{ background: "rgba(255, 255, 255, 0.08)", borderColor: "rgba(255, 255, 255, 0.15)" }}>
+                    <Link
+                      to="/android/"
+                      className="p-3 rounded-3 border d-block text-decoration-none h-100 transition-all"
+                      style={{
+                        background: "rgba(255, 255, 255, 0.08)",
+                        borderColor: "rgba(255, 255, 255, 0.15)",
+                        transition: "all 0.25s ease",
+                      }}
+                      onMouseEnter={(e) => {
+                        e.currentTarget.style.background = "rgba(255, 255, 255, 0.14)";
+                        e.currentTarget.style.transform = "translateY(-3px)";
+                      }}
+                      onMouseLeave={(e) => {
+                        e.currentTarget.style.background = "rgba(255, 255, 255, 0.08)";
+                        e.currentTarget.style.transform = "translateY(0)";
+                      }}
+                    >
                       <i className="bx bx-mobile-alt fs-3 text-info mb-2 d-block"></i>
-                      <strong className="text-white d-block">Móvil</strong>
-                      <small className="text-light opacity-75">
+                      <div className="d-flex align-items-center justify-content-center gap-1">
+                        <strong className="text-white d-block">Móvil</strong>
+                        <i className="bx bx-right-arrow-alt text-info fs-5"></i>
+                      </div>
+                      <small className="text-light opacity-75 d-block mt-1">
                         Smartphones Android
                       </small>
-                    </div>
+                    </Link>
                   </div>
                 </div>
 
