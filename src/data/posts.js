@@ -1,5 +1,44 @@
 export const posts = [
   {
+    slug: "registro-mercantil-y-rnc-formalizar-negocio-rd",
+    title: "Registro Mercantil y RNC: qué necesitas para formalizar tu negocio en RD",
+    metaTitle: "Registro Mercantil y RNC en RD: Guía para tu Negocio",
+    metaDescription: "Aprende cómo sacar tu Registro Mercantil y RNC en República Dominicana paso a paso. ¡Formaliza tu emprendimiento hoy mismo!",
+    keywords: ["registro mercantil rd","rnc dgii","formalizar negocio republica dominicana","crear empresa rd"],
+    excerpt: "Descubre los pasos esenciales para sacar tu Registro Mercantil y RNC en la República Dominicana y llevar tu emprendimiento al siguiente nivel.",
+    date: "27 de octubre, 2026",
+    category: "En RD",
+    image: "/assets/img/blog/default-en-rd.jpg",
+    schemaJsonLd: {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://www.proventa.app/blog/registro-mercantil-y-rnc-formalizar-negocio-rd/"
+      },
+      "headline": "Registro Mercantil y RNC: qué necesitas para formalizar tu negocio en RD",
+      "description": "Aprende cómo sacar tu Registro Mercantil y RNC en República Dominicana paso a paso. ¡Formaliza tu emprendimiento hoy mismo!",
+      "image": [
+            "https://www.proventa.app/assets/img/blog/default-en-rd.jpg"
+      ],
+      "datePublished": "27 de octubre, 2026",
+      "author": {
+            "@type": "Organization",
+            "name": "Equipo ProVenta",
+            "url": "https://www.proventa.app"
+      },
+      "publisher": {
+            "@type": "Organization",
+            "name": "ProVenta",
+            "logo": {
+                  "@type": "ImageObject",
+                  "url": "https://www.proventa.app/assets/img/logo-bg-black.png"
+            }
+      }
+},
+    content: `<p>¡Mi gente! Si estás bregando con un emprendimiento en la República Dominicana y ya sientes que pasó la etapa de venderle solo a los familiares y amigos cercanos, es momento de dar el gran salto. Montar un negocio formal en nuestro país trae muchísimas ventajas, pero para eso hay que ponerse las pilas con dos documentos fundamentales: el Registro Mercantil y el RNC. Tranquilo, que aquí te vamos a explicar todo esto de una forma bien clara y sin complicaciones.</p><p>Dar el paso hacia la formalización no es solo cumplir con la ley, es también abrirle las puertas a clientes más grandes, solicitar créditos bancarios con mejores tasas y operar con total tranquilidad frente a la Dirección General de Impuestos Internos (DGII). Vamos a desglosar qué es cada cosa y qué necesitas para tenerlos al día.</p><h3>¿Qué es el Registro Mercantil y por qué lo necesitas?</h3><p>El Registro Mercantil es, básicamente, el acta de nacimiento oficial de tu empresa. Es emitido por la Cámara de Comercio y Producción correspondiente a tu localidad. Este documento certifica legalmente la existencia de tu negocio y protege el nombre comercial que con tanto sacrificio has construido.</p><p>Para solicitarlo, debes cumplir con una serie de requisitos básicos:</p><ul><li>Tener un Nombre Comercial aprobado por la ONAPI (Oficina Nacional de la Propiedad Industrial).</li><li>Estatutos sociales o documento constitutivo (si es una SRL o EIRL).</li><li>Cédula de identidad y electoral de los socios o del propietario.</li><li>Formulario de solicitud debidamente completado y pago de la tasa correspondiente en la Cámara de Comercio.</li></ul><p>Tener este papelito en la pared de tu local no solo da profesionalismo, sino que te otorga seguridad jurídica ante cualquier situación comercial.</p><h3>El RNC: Tu llave maestra ante la DGII</h3><p>El Registro Nacional de Contribuyentes (RNC) es el número único con el que la DGII te identifica para fines fiscales. Ya sea que te registres como Persona Física o como una Persona Jurídica (como una SRL), este número es obligatorio para poder emitir facturas con valor fiscal, comprar mercancía a suplidores locales e internacionales, y llevar la contabilidad al día.</p><p>Tramitar el RNC hoy en día es mucho más rápido gracias a la plataforma virtual de la DGII (Oficina Virtual). Necesitarás:</p><ul><li>Completar el formulario RC-01 (para personas físicas) o RC-02 (para sociedades).</li><li>Adjuntar el Registro Mercantil y los documentos societarios.</li><li>Copia de la cédula del representante.</li><li>Comprobante de dirección del local comercial (como un recibo de luz o contrato de alquiler).</li></ul><p>Una vez que obtienes tu RNC, entras formalmente al sistema tributario dominicano, lo que significa que deberás reportar tus operaciones mes a mes. Pero no te asustes, que para eso existen herramientas tecnológicas que te facilitan la vida.</p><h3>La tecnología de tu lado al formalizarte</h3><p>Una vez que tienes tu RNC y tu Registro Mercantil, el volumen de operaciones comienza a subir y la administración se vuelve más exigente. Es aquí donde contar con un aliado como <strong>ProVenta</strong> marca la diferencia. Nuestro software POS para Windows y Android está diseñado pensando en las necesidades reales del comercio dominicano.</p><p>Con <strong>ProVenta</strong> puedes gestionar tu inventario, controlar las ventas diarias de manera ágil y mantener todo en orden para cuando tengas que cumplir con tus compromisos fiscales. Al fin y al cabo, un negocio formal merece herramientas profesionales que le permitan crecer sin dolores de cabeza.</p><h3>Consejos finales para dar el gran paso</h3><p>Formalizarse en la República Dominicana es una inversión en el futuro de tu negocio. No dejes que el miedo al proceso te detenga. Organiza tus documentos con tiempo, asesórate bien con un contador de confianza y digitaliza tu operación desde el primer día con <strong>ProVenta</strong>. ¡Tu emprendimiento se merece lo mejor!</p>`
+  },
+  {
     slug: "como-leer-los-reportes-de-ventas-para-tomar-mejores-decisiones",
     title: "Cómo leer los reportes de ventas para tomar mejores decisiones en tu negocio",
     metaTitle: "Cómo leer tus reportes de ventas | ProVenta POS",
