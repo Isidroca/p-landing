@@ -1,5 +1,44 @@
 export const posts = [
   {
+    slug: "como-agregar-productos-con-variantes-en-proventa",
+    title: "Cómo agregar productos con variantes en ProVenta: Guía paso a paso",
+    metaTitle: "Productos con variantes en ProVenta | Guía POS",
+    metaDescription: "Aprende a registrar productos con variantes (tallas, colores) en ProVenta y simplifica el inventario de tu negocio en RD. ¡Pruébalo gratis hoy!",
+    keywords: ["productos con variantes","sistema pos republica dominicana","control de inventario rd","software punto de venta"],
+    excerpt: "Descubre cómo configurar variantes de productos por talla, color o presentación en ProVenta para mantener un inventario ordenado y vender más rápido en tu negocio.",
+    date: "30 de octubre, 2026",
+    category: "Cómo lo hago",
+    image: "/assets/img/blog/manuales/registro_impuestos.png",
+    schemaJsonLd: {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://www.proventa.app/blog/como-agregar-productos-con-variantes-en-proventa/"
+      },
+      "headline": "Cómo agregar productos con variantes en ProVenta: Guía paso a paso",
+      "description": "Aprende a registrar productos con variantes (tallas, colores) en ProVenta y simplifica el inventario de tu negocio en RD. ¡Pruébalo gratis hoy!",
+      "image": [
+            "https://www.proventa.app/assets/img/blog/manuales/registro_impuestos.png"
+      ],
+      "datePublished": "30 de octubre, 2026",
+      "author": {
+            "@type": "Organization",
+            "name": "Equipo ProVenta",
+            "url": "https://www.proventa.app"
+      },
+      "publisher": {
+            "@type": "Organization",
+            "name": "ProVenta",
+            "logo": {
+                  "@type": "ImageObject",
+                  "url": "https://www.proventa.app/assets/img/logo-bg-black.png"
+            }
+      }
+},
+    content: `<p>Tener una tienda de ropa, zapatería, cosméticos o repostería en República Dominicana tiene sus retos diarios. Uno de los dolores de cabeza más comunes para los comerciantes locales es organizar artículos que comparten el mismo modelo pero vienen en diferentes presentaciones. ¿Te ha pasado que creas cinco productos distintos para una misma camiseta solo porque cambia de tamaño o color? Esto satura tu catálogo y vuelve loco el conteo de existencias.</p><p>Afortunadamente, con <strong>ProVenta</strong> puedes agrupar todas esas opciones bajo un solo artículo matriz utilizando la función de variantes. En esta guía te explicamos cómo configurarlas de forma rápida y sencilla para que tu inventario trabaje a tu favor y no en tu contra.</p><h3>¿Por qué conviene usar productos con variantes?</h3><p>Un producto con variantes es aquel artículo base que posee múltiples atributos, tales como talla, color, sabor o volumen. En lugar de registrar "Camisa Polo Roja S", "Camisa Polo Azul S" y "Camisa Polo Roja M" como productos separados, creas "Camisa Polo" y defines las opciones disponibles.</p><ul><li><strong>Catálogo limpio:</strong> Tu cajero no tiene que buscar entre cientos de líneas idénticas en la pantalla de cobro.</li><li><strong>Control de stock preciso:</strong> Sabrás exactamente si te quedan dos unidades de la talla L o si se agotó el color negro, evitando vender mercancía que no tienes en almacén.</li><li><strong>Códigos de barra independientes:</strong> Cada combinación puede tener su propio código de barras para pistolera o escáner.</li><li><strong>Reportes más claros:</strong> Podrás ver qué combinación específica es la que más se mueve en tu negocio.</li></ul><h3>Paso 1: Accede al módulo de Inventario</h3><p>Para comenzar, abre tu sistema <strong>ProVenta</strong> desde tu computadora con Windows o tableta Android. Dirígete al menú principal ubicado en el lateral izquierdo y selecciona la opción <strong>Inventario</strong> o <strong>Productos</strong>. Luego, haz clic en el botón <strong>Nuevo Producto</strong> para abrir el formulario de registro.</p><h3>Paso 2: Completa los datos generales del producto base</h3><p>Antes de generar las combinaciones, llena los datos principales del producto:</p><ul><li><strong>Nombre del producto:</strong> Escribe el nombre general (por ejemplo: <em>Pantalón Jean Clásico</em> o <em>Bebida Energizante</em>).</li><li><strong>Categoría:</strong> Asigna la categoría correspondiente (por ejemplo: Ropa de Hombre o Bebidas).</li><li><strong>Impuestos y descripción:</strong> Configura el ITBIS correspondiente según aplique.</li></ul><p>En la parte inferior de la ficha de creación, verás la casilla de verificación <strong>"Este producto tiene variantes"</strong>. Al marcarla, se desplegarán las opciones avanzadas para configurar los atributos.</p><h3>Paso 3: Crea y combina los atributos</h3><p>Aquí es donde ocurre la magia. Define los nombres de los atributos que aplican a tu artículo:</p><ul><li><strong>Atributo 1:</strong> Por ejemplo, "Talla". En los valores agrega: S, M, L, XL.</li><li><strong>Atributo 2:</strong> Por ejemplo, "Color". En los valores agrega: Negro, Azul, Blanco.</li></ul><p>El sistema generará automáticamente la matriz con todas las combinaciones posibles (por ejemplo: Talla S / Negro, Talla S / Azul, Talla M / Negro, etc.). Si hay alguna combinación que no comercializas, simplemente puedes desactivarla con un solo clic.</p><h3>Paso 4: Asigna existencias, precios y códigos de barra</h3><p>Una vez generadas las variantes en <strong>ProVenta</strong>, verás una tabla donde podrás personalizar cada fila:</p><ul><li><strong>Stock inicial:</strong> Ingresa cuántas unidades físicas tienes disponibles en tu almacén o tramo para cada combinación.</li><li><strong>Precio de venta:</strong> Si todas las tallas cuestan lo mismo, puedes aplicar el precio en lote. Pero si una talla especial o un sabor gourmet tiene un costo mayor, puedes asignarle un precio de venta diferente a esa variante específica.</li><li><strong>Código de barra o SKU:</strong> Escanea el código que trae la etiqueta del fabricante directamente en el campo correspondiente, o deja que el sistema le asigne un identificador único.</li></ul><h3>Paso 5: Guarda y comprueba en el punto de cobro</h3><p>Presiona <strong>Guardar</strong> para finalizar el proceso. Ahora dirígete a la pantalla de ventas (POS). Cuando busques el artículo por nombre, el sistema te mostrará una ventana emergente limpia para que selecciones la talla y el color solicitados por el cliente antes de enviarlo a la factura. Si utilizas un lector de código de barras, al escanear la etiqueta de la prenda, la variante exacta se agregará directamente al carrito sin pasos extra.</p><h3>Consejos para mantener tu inventario al día</h3><p>Aprovecha al máximo esta herramienta implementando buenas prácticas en tu negocio dominicano:</p><ul><li><strong>Estandariza los nombres:</strong> Si usas abreviaturas como "Pza" o "Und", mantén el mismo formato en todas las variantes para evitar confusiones entre tus colaboradores.</li><li><strong>Realiza conteos periódicos:</strong> Es común que en negocios de ropa los clientes muevan prendas de lugar. Hacer cuadres de inventario rápidos por variante cada quince días te ayudará a detectar mermas a tiempo.</li><li><strong>Etiqueta tu mercancía:</strong> Imprime etiquetas con código de barras para las variantes que no traigan código de fábrica; esto agiliza el cobro en horas pico.</li></ul><p>Administrar tus productos con variantes no tiene por qué ser complicado ni quitarte horas de descanso. Con una configuración inicial ordenada, tu negocio ganará agilidad, tus empleados trabajarán más cómodos y tus clientes recibirán un servicio rápido y profesional.</p>`
+  },
+  {
     slug: "registro-mercantil-y-rnc-formalizar-negocio-rd",
     title: "Registro Mercantil y RNC: qué necesitas para formalizar tu negocio en RD",
     metaTitle: "Registro Mercantil y RNC en RD: Guía para tu Negocio",
