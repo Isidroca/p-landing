@@ -113,19 +113,42 @@ function Index() {
             <div className="home-hero-container container-fluid position-relative zindex-2">
               <div className="row align-items-center g-xl-5">
                 <div className="col-xl-5 col-lg-5 text-center text-lg-start mb-5 mb-lg-0">
-                  <div className="d-flex align-items-center justify-content-center justify-content-lg-start mb-4 mb-sm-5 animate__animated animate__fadeInDown">
-                    <div className="badge bg-primary bg-opacity-10 text-primary border border-primary border-opacity-20 px-3 py-2 rounded-pill me-3">
-                      <span className="fw-bold">NUEVO:</span> Facturación Electrónica DGII 🧾
+                  <div className="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start gap-2 mb-4 animate__animated animate__fadeInDown">
+                    <a
+                      href="https://app.proventa.do"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="badge bg-primary bg-opacity-20 text-white border border-primary border-opacity-30 px-3 py-2 rounded-pill text-decoration-none d-inline-flex align-items-center hero-badge-pulse"
+                      style={{ backdropFilter: "blur(10px)" }}
+                    >
+                      <span className="badge bg-primary text-white rounded-pill px-2 py-0-5 me-2 fw-bold" style={{ fontSize: "0.75rem" }}>¡NUEVO!</span>
+                      <span>Versión Web ya disponible · Usar en el navegador</span>
+                      <i className="bx bx-right-arrow-alt ms-1 fs-6"></i>
+                    </a>
+                    <div
+                      className="badge rounded-pill d-none d-sm-inline-flex align-items-center px-3 py-2 text-white"
+                      style={{
+                        background: "rgba(34, 197, 94, 0.18)",
+                        border: "1px solid rgba(74, 222, 128, 0.4)",
+                        backdropFilter: "blur(10px)",
+                        color: "#4ade80",
+                        fontSize: "0.82rem",
+                        fontWeight: 600
+                      }}
+                    >
+                      <i className="bx bx-check-shield me-1" style={{ color: "#4ade80", fontSize: "1rem" }}></i>
+                      <span>Facturación DGII</span>
                     </div>
-                    <ShareButton floating={false} title="ProVenta" text="ProVenta: Software de Facturación y POS Inteligente en República Dominicana" url="https://www.proventa.app/" />
+                    <ShareButton floating={false} title="ProVenta" text="ProVenta: Software de Facturación y POS Inteligente en República Dominicana (Windows, Web y Android)" url="https://www.proventa.app/" />
                   </div>
                   <h1 className="display-2 fw-extra-bold pb-2 pb-sm-3 mb-4 animate__animated animate__fadeInUp" style={{ lineHeight: "1.1" }}>
-                    Facturación y POS <span className="text-primary text-gradient-blue">Inteligente</span> para tu Negocio
+                    Facturación y POS <span className="text-primary text-gradient-blue">Inteligente</span> en Web, Windows y Android
                   </h1>
-                  <p className="fs-xl text-light opacity-80 mb-5 animate__animated animate__fadeInUp animate__delay-1s" style={{ maxWidth: "540px" }}>
-                    Toma el control total de tu inventario, ventas y clientes con el software más rápido y confiable de República Dominicana. Diseñado para crecer contigo.
+                  <p className="fs-xl text-light opacity-80 mb-4 animate__animated animate__fadeInUp animate__delay-1s" style={{ maxWidth: "560px" }}>
+                    Vende desde cualquier lugar y en cualquier dispositivo. Accede a ProVenta directo en tu navegador web o descarga nuestras aplicaciones nativas para tu negocio.
                   </p>
 
+                  {/* CTAs con jerarquía premium */}
                   <div className="d-flex flex-column flex-sm-row flex-wrap justify-content-center justify-content-lg-start gap-3 animate__animated animate__fadeInUp animate__delay-1s">
                     <a
                       id="my_download"
@@ -135,45 +158,52 @@ function Index() {
                     >
                       x
                     </a>
+                    {/* Botón Principal: registro directo en la App Web */}
+                    <a
+                      href="https://app.proventa.do/#/register"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="btn btn-lg btn-primary shadow-primary px-4 py-3 d-inline-flex align-items-center justify-content-center fw-bold"
+                      style={{ borderRadius: "12px", minWidth: "220px", background: "linear-gradient(135deg, #0d6efd 0%, #4338ca 100%)", border: "none" }}
+                    >
+                      <i className="bx bx-globe fs-4 me-2"></i>
+                      <span>Registra tu empresa ahora</span>
+                      <i className="bx bx-chevron-right fs-4 ms-1 opacity-75"></i>
+                    </a>
+                    {/* Botón Windows Desktop */}
                     <a
                       href={"/"}
                       onClick={async (e) => download(e)}
-                      className="btn btn-lg btn-primary shadow-primary px-4 py-3"
-                      style={{ borderRadius: "12px", minWidth: "200px" }}
+                      className="btn btn-lg btn-outline-light border-opacity-25 px-4 py-3 d-inline-flex align-items-center justify-content-center"
+                      style={{ borderRadius: "12px", minWidth: "190px", backdropFilter: "blur(10px)" }}
                     >
-                      <i className="bx bxl-windows fs-4 me-2"></i>
+                      <i className="bx bxl-windows fs-4 me-2 text-info"></i>
                       Descargar Windows
                     </a>
+                    {/* Botón Android */}
                     <Link
                       to="/android"
-                      className="btn btn-lg btn-outline-light border-opacity-25 px-4 py-3"
-                      style={{ borderRadius: "12px", minWidth: "200px", backdropFilter: "blur(10px)" }}
+                      className="btn btn-lg btn-outline-light border-opacity-25 px-3 py-3 d-inline-flex align-items-center justify-content-center"
+                      style={{ borderRadius: "12px", minWidth: "160px", backdropFilter: "blur(10px)" }}
                     >
                       <i className="bx bxl-android fs-4 me-2 text-success"></i>
-                      Versión Android
-                    </Link>
-                    <Link
-                      to="/por-que-proventa"
-                      className="btn btn-lg btn-outline-light border-opacity-25 px-4 py-3"
-                      style={{ borderRadius: "12px", minWidth: "200px", backdropFilter: "blur(10px)" }}
-                    >
-                      <i className="bx bx-star fs-4 me-2 text-info"></i>
-                      Por qué elegirnos
+                      Android
                     </Link>
                   </div>
 
-                  <div className="mt-4 pt-1 d-flex flex-wrap justify-content-center justify-content-lg-start gap-4 opacity-70">
-                    <div className="d-flex align-items-center fs-sm">
-                      <i className="bx bx-check-circle text-success me-2 fs-5"></i>
-                      <span>Prueba Gratis (15 días)</span>
+                  {/* Barra de confianza y compatibilidad */}
+                  <div className="mt-4 pt-2 d-flex flex-wrap justify-content-center justify-content-lg-start gap-3 opacity-80">
+                    <div className="d-flex align-items-center fs-sm text-light">
+                      <i className="bx bx-laptop text-primary me-2 fs-5"></i>
+                      <span>Sin instalación obligatoria</span>
                     </div>
-                    <div className="d-flex align-items-center fs-sm">
-                      <i className="bx bx-check-circle text-success me-2 fs-5"></i>
-                      <span>Listo para la DGII</span>
+                    <div className="d-flex align-items-center fs-sm text-light">
+                      <i className="bx bx-cloud-check text-info me-2 fs-5"></i>
+                      <span>Sincronizado en la nube</span>
                     </div>
-                    <div className="d-flex d-lg-none align-items-center fs-sm">
+                    <div className="d-flex align-items-center fs-sm text-light">
                       <i className="bx bx-check-circle text-success me-2 fs-5"></i>
-                      <span>Soporte local en español</span>
+                      <span>15 días de prueba gratis</span>
                     </div>
                   </div>
                   <div className="mt-3">

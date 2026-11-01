@@ -78,6 +78,14 @@ const Header = ({ dark = true }) => {
                         </ul>
 
                         <div className="d-lg-none mt-3">
+                            <a
+                                href="https://app.proventa.do"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="btn btn-primary w-100 mb-2 d-flex align-items-center justify-content-center shadow-primary"
+                            >
+                                <i className="bx bx-globe fs-4 me-2"></i> Iniciar Sesión / App Web
+                            </a>
                             <a href="https://wa.me/18097874963" className="btn btn-primary w-100 mb-2">
                                 <i className="bx bxl-whatsapp fs-4 me-2"></i> (809) 787-4963
                             </a>
@@ -102,6 +110,15 @@ const Header = ({ dark = true }) => {
 
                 {/* Desktop Buttons */}
                 <div className="d-none d-lg-flex align-items-center gap-2">
+                    <a
+                        href="https://app.proventa.do"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="btn btn-primary btn-sm fs-sm rounded d-inline-flex align-items-center fw-semibold px-3 shadow-primary"
+                    >
+                        <i className="bx bx-globe fs-5 me-1"></i>
+                        App Web
+                    </a>
                     <Link
                         to="/como-instalar-proventa/"
                         className="btn btn-outline-light btn-sm fs-sm rounded"

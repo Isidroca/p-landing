@@ -44,9 +44,36 @@ function LandingRedesign() {
               </article>
             ))}
           </div>
-          <div className="pv-product-stage">
-            <div className="pv-browser-bar"><span></span><span></span><span></span><small>ProVenta · Facturación</small></div>
-            <img loading="lazy" width="1079" height="680" src="/assets/img/pantalla_facturacion_claro.png" alt="Pantalla del software de facturación ProVenta" />
+          <div className="pv-product-stage position-relative">
+            <a
+              href="https://app.proventa.do"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="pv-product-link text-decoration-none d-block"
+              title="Abrir ProVenta en la Web (app.proventa.do)"
+            >
+              <div className="pv-browser-bar">
+                <span></span><span></span><span></span>
+                <span className="pv-browser-url d-inline-flex align-items-center">
+                  <i className="bx bx-lock-alt me-1 text-success fs-xs"></i>
+                  <small>app.proventa.do</small>
+                </span>
+                <span className="badge bg-primary text-white ms-auto d-none d-sm-inline-flex align-items-center rounded-pill px-2 py-1" style={{ fontSize: "0.72rem" }}>
+                  <span className="spinner-grow spinner-grow-sm me-1" style={{ width: "6px", height: "6px" }} role="status"></span>
+                  Versión Web Activa
+                </span>
+              </div>
+              <div className="pv-image-container position-relative overflow-hidden">
+                <img loading="lazy" width="1079" height="680" src="/assets/img/pantalla_facturacion_claro.png" alt="Pantalla del software de facturación ProVenta" />
+                <div className="pv-hover-cta">
+                  <span className="btn btn-primary btn-sm rounded-pill shadow-lg d-inline-flex align-items-center px-3 py-2">
+                    <i className="bx bx-globe me-2"></i>
+                    Probar la App Web en vivo
+                    <i className="bx bx-right-arrow-alt ms-1 fs-5"></i>
+                  </span>
+                </div>
+              </div>
+            </a>
             <div className="pv-floating-proof"><i className="bx bx-check-circle"></i><div><strong>Todo conectado</strong><small>Ventas · inventario · clientes</small></div></div>
           </div>
         </div>
