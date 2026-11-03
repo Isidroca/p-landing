@@ -1,5 +1,44 @@
 export const posts = [
   {
+    slug: "diferencia-entre-flujo-de-caja-y-ganancia-neta",
+    title: "Diferencia entre flujo de caja y ganancia neta en tu negocio dominicano",
+    metaTitle: "Flujo de Caja vs Ganancia Neta | ProVenta POS RD",
+    metaDescription: "¿Tu colmado o tienda vende pero no hay dinero? Conoce la diferencia entre flujo de caja y ganancia neta. ¡Optimiza tus finanzas con ProVenta!",
+    keywords: ["flujo de caja","ganancia neta","finanzas para pymes","software pos republica dominicana","proventa"],
+    excerpt: "Aprende por qué tener ganancias en el papel no significa que tengas efectivo en la caja registradora de tu negocio en República Dominicana.",
+    date: "3 de noviembre, 2026",
+    category: "Finanzas",
+    image: "/assets/img/blog/default-finanzas.jpg",
+    schemaJsonLd: {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://www.proventa.app/blog/diferencia-entre-flujo-de-caja-y-ganancia-neta/"
+      },
+      "headline": "Diferencia entre flujo de caja y ganancia neta en tu negocio dominicano",
+      "description": "¿Tu colmado o tienda vende pero no hay dinero? Conoce la diferencia entre flujo de caja y ganancia neta. ¡Optimiza tus finanzas con ProVenta!",
+      "image": [
+            "https://www.proventa.app/assets/img/blog/default-finanzas.jpg"
+      ],
+      "datePublished": "3 de noviembre, 2026",
+      "author": {
+            "@type": "Organization",
+            "name": "Equipo ProVenta",
+            "url": "https://www.proventa.app"
+      },
+      "publisher": {
+            "@type": "Organization",
+            "name": "ProVenta",
+            "logo": {
+                  "@type": "ImageObject",
+                  "url": "https://www.proventa.app/assets/img/logo-bg-black.png"
+            }
+      }
+},
+    content: `<p>Administrar un negocio en República Dominicana es una montaña rusa diaria. Entre surtir el inventario, pagarle a los empleados, lidiar con la TSS y cubrir los servicios, a veces nos sentamos a revisar los números y nos surge una gran duda: si los reportes dicen que estamos ganando dinero, ¿por qué la caja registradora está vacía?</p><p>Este es uno de los dolores de cabeza más comunes para los dueños de pequeños y medianos negocios. La respuesta radica en confundir dos conceptos financieros que parecen iguales, pero que actúan de forma muy distinta: la ganancia neta y el flujo de caja. Entender la diferencia entre ambos es vital para evitar que tu empresa quiebre a pesar de vender mucho.</p><h3>¿Qué es exactamente la ganancia neta?</h3><p>La ganancia neta es, en términos sencillos, lo que te queda después de restar todos tus gastos a todos tus ingresos, sin importar si el dinero ya entró físicamente a tus bolsillos o no. Por ejemplo, si en tu ferretería o tienda de repuestos vendes mercancía a crédito por un valor de 50,000 pesos este mes, esa venta cuenta para tu ganancia neta desde el momento en que se emite la factura.</p><p>La ganancia neta te indica si tu modelo de negocio es rentable a largo plazo. Sin embargo, no te dice si tienes dinero disponible hoy para pagar la luz o comprar más mercancía al proveedor que te cobra al contado.</p><h3>¿Qué es el flujo de caja?</h3><p>El flujo de caja (o cash flow) es el dinero real y efectivo que entra y sale de tu negocio día a día. Siguiendo con el ejemplo anterior: si vendiste 50,000 pesos a crédito, tu ganancia sube, pero tu flujo de caja se queda en cero hasta que el cliente venga a la tienda a pagarte en efectivo, transferencia o tarjeta.</p><p>Por el contrario, si hoy tuviste que pagar 20,000 pesos en efectivo para reponer mercancía o adelantar el alquiler, ese dinero sale de golpe de tu flujo de caja, aunque esa compra no se refleje totalmente como un gasto del día en tu contabilidad.</p><h3>Por qué mi negocio vende pero no tiene dinero</h3><p>En el mercado dominicano, es muy fácil caer en la trampa del "estoy vendiendo mucho pero no veo los chelitos". Esto suele pasar por varias razones cotidianas:</p><ul><li>Ventas excesivas a crédito a clientes que tardan semanas en pagar.</li><li>Tener demasiado capital atrapado en mercancía que se mueve lento en los estantes.</li><li>Gastos imprevistos que consumen el efectivo antes de que los clientes liquiden sus facturas.</li><li>Retirar dinero de la caja diaria para gastos personales sin llevar un control adecuado.</li></ul><h3>Cómo mantener el balance con la ayuda de la tecnología</h3><p>Para que tu negocio crezca sano y fuerte, necesitas controlar ambos frentes. No puedes descuidar tu rentabilidad ni tampoco puedes descuidar tu efectivo disponible. Aquí es donde contar con las herramientas correctas marca un antes y un después en la administración.</p><p>Utilizar un sistema automatizado como ProVenta te permite llevar el control exacto de cada venta, ya sea al contado o a crédito, identificando al instante qué productos te dejan mayor ganancia neta. Además, al funcionar como un completo software POS en Windows y Android, te ayuda a registrar cada entrada y salida de dinero en tiempo real, dándote una visión clara de tu flujo de caja diario sin complicaciones.</p><p>No dejes la salud financiera de tu pyme a la suerte. Empieza hoy mismo a separar tus cuentas, utiliza un sistema de punto de venta confiable y asegúrate de que tu negocio no solo sea rentable en los papeles, sino también sólido en efectivo.</p>`
+  },
+  {
     slug: "como-agregar-productos-con-variantes-en-proventa",
     title: "Cómo agregar productos con variantes en ProVenta: Guía paso a paso",
     metaTitle: "Productos con variantes en ProVenta | Guía POS",
