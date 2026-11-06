@@ -1,5 +1,44 @@
 export const posts = [
   {
+    slug: "como-gestionar-devoluciones-y-cambios-en-proventa",
+    title: "Cómo gestionar devoluciones y cambios en ProVenta paso a paso",
+    metaTitle: "Gestiona devoluciones y cambios en ProVenta | Guía fácil",
+    metaDescription: "Aprende a procesar devoluciones y cambios en tu negocio con ProVenta de forma rápida y sin cuadres descuadrados. ¡Haz clic y lee la guía!",
+    keywords: ["devoluciones en pos","software pos republica dominicana","cambios de mercancia proventa","sistema de facturacion dominicana"],
+    excerpt: "Descubre el método más sencillo y rápido para manejar devoluciones de mercancía y cambios en tu negocio dominicano usando ProVenta.",
+    date: "6 de noviembre, 2026",
+    category: "Cómo lo hago",
+    image: "/assets/img/blog/manuales/crear_factura_en_dolares.png",
+    schemaJsonLd: {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://www.proventa.app/blog/como-gestionar-devoluciones-y-cambios-en-proventa/"
+      },
+      "headline": "Cómo gestionar devoluciones y cambios en ProVenta paso a paso",
+      "description": "Aprende a procesar devoluciones y cambios en tu negocio con ProVenta de forma rápida y sin cuadres descuadrados. ¡Haz clic y lee la guía!",
+      "image": [
+            "https://www.proventa.app/assets/img/blog/manuales/crear_factura_en_dolares.png"
+      ],
+      "datePublished": "6 de noviembre, 2026",
+      "author": {
+            "@type": "Organization",
+            "name": "Equipo ProVenta",
+            "url": "https://www.proventa.app"
+      },
+      "publisher": {
+            "@type": "Organization",
+            "name": "ProVenta",
+            "logo": {
+                  "@type": "ImageObject",
+                  "url": "https://www.proventa.app/assets/img/logo-bg-black.png"
+            }
+      }
+},
+    content: `<p>¡Saludos, emprendedor dominicano! Sabemos que el día a día en un negocio local es bien movido. Entre atender clientes, despachar mercancía y coordinar entregas, lo último que uno quiere es que se arme un lío cuando un cliente regresa a la tienda a devolver un artículo o hacer un cambio. En el comercio detallista de nuestra amigable República Dominicana, las devoluciones son el pan de cada día, pero no tienen por qué convertirse en un dolor de cabeza para tu cuadre de caja.</p><p>Hacer este proceso de manera manual o en un sistema anticuado suele dejar baches en el inventario y descuadres misteriosos al final del turno. Por suerte, si ya cuentas con nuestro <strong>software POS ProVenta</strong>, tienes una herramienta potente y súper intuitiva tanto para Windows como para tus dispositivos Android. Hoy te vamos a explicar el paso a paso exacto para manejar devoluciones y cambios como todo un profesional, manteniendo tus números al día y a tus clientes felices.</p><h3>Identifica la venta original</h3><p>El primer paso para hacer una devolución limpia y sin enredos es ubicar la factura original. En ProVenta, esto es sumamente fácil. No importa si tu cajero emitió el ticket hace unas horas o hace un par de días, puedes buscar el comprobante directamente en el historial de ventas del sistema.</p><p>Tener el número de factura o el documento a mano agiliza el proceso y garantiza que el artículo devuelto se le acredite al cliente correcto. Al seleccionar la venta original, el software te mostrará exactamente qué productos se llevaron, el precio al que se vendieron y los impuestos aplicados, evitando cualquier tipo de confusión con ofertas o descuentos que se hayan aplicado en ese momento.</p><h3>Procesa la devolución en el sistema</h3><p>Una vez localizada la factura, el siguiente paso dentro de la interfaz de ProVenta es seleccionar la opción de devolución o anulación parcial. Aquí solo tienes que marcar el producto específico que el cliente está devolviendo y la cantidad exacta.</p><p>El sistema te preguntará el motivo de la devolución (por ejemplo: defecto de fábrica, talla incorrecta, o simplemente cambio de opinión). Es muy importante registrar este dato correctamente porque te ayudará a llevar un control de calidad de tus productos en el inventario. Al confirmar esta acción, ProVenta realiza dos cosas mágicas de forma automática:</p><ul><li>Reintegra el artículo devuelto al stock de tu inventario físico y digital.</li><li>Calcula el monto exacto que debes devolver al cliente o retener para un cambio.</li></ul><h3>Maneja el cambio de mercancía o la nota de crédito</h3><p>En el comercio dominicano, lo más común es que el cliente no quiera que le devuelvan el efectivo, sino que prefiera llevarse otro artículo de la tienda, ya sea porque cambió de parecer o por un tema de tallas. Si vas a hacer un cambio, simplemente escanea el nuevo producto que el cliente desea llevarse en la misma pantalla de transacción.</p><p>ProVenta hará el cálculo matemático por ti:</p><ul><li>Si el nuevo producto cuesta exactamente lo mismo, la transacción se cierra a cero y queda registrada para el cuadre.</li><li>Si el nuevo artículo es más caro, el sistema te indicará la diferencia exacta que el cliente debe pagar (en efectivo, tarjeta o transferencia).</li><li>Si el nuevo artículo es más barato, podrás entregar la diferencia en efectivo o generar una nota de crédito para futuras compras.</li></ul><p>Esta flexibilidad es clave para mantener una excelente relación con tus compradores, ofreciéndoles un servicio rápido, transparente y confiable.</p><h3>Cuadra tu caja sin sorpresas al final del día</h3><p>Uno de los mayores temores de los dueños de negocios y cajeros es que las devoluciones descuadren el dinero físico al cierre de turno. Con <strong>ProVenta</strong>, este problema desaparece por completo. Como cada devolución, cambio o nota de crédito queda debidamente documentada y asociada a un usuario, los reportes de fin de día reflejarán de manera clara el flujo real de dinero y mercancía.</p><p>Al finalizar tu jornada laboral en tu computadora con Windows o tu tablet Android, podrás imprimir o revisar el reporte Z y verás reflejadas las salidas por devoluciones y los ingresos por diferencias de precio de manera perfectamente organizada. Esto le da una paz mental increíble al administrador o dueño del negocio, sabiendo que el inventario y el dinero físico cuadran al centavo.</p><p>Implementar este proceso con disciplina no solo mejora la eficiencia operativa de tu PyME, sino que proyecta una imagen de profesionalismo y seriedad ante tus clientes. ¡Sácale el máximo provecho a tu software y sigue creciendo con nosotros!</p>`
+  },
+  {
     slug: "como-evitar-multas-de-la-dgii-con-gestion-fiscal",
     title: "Cómo evitar multas de la DGII con una buena gestión fiscal",
     metaTitle: "Evita multas de la DGII con ProVenta | POS en RD",
