@@ -1,5 +1,44 @@
 export const posts = [
   {
+    slug: "como-crear-una-factura-en-dolares-en-proventa",
+    title: "Cómo crear una factura en dólares en ProVenta",
+    metaTitle: "Cómo facturar en dólares en ProVenta | Guía Rápida",
+    metaDescription: "Aprende a emitir facturas en dólares fácilmente en República Dominicana con ProVenta POS. ¡Optimiza tus cobros internacionales hoy mismo!",
+    keywords: ["factura en dolares Republica Dominicana","software POS ProVenta","facturacion en moneda extranjera RD","sistema punto de venta Windows Android"],
+    excerpt: "Descubre el paso a paso para emitir facturas en moneda extranjera utilizando tu software POS ProVenta de forma rápida y sin complicaciones.",
+    date: "20 de noviembre, 2026",
+    category: "Cómo lo hago",
+    image: "/assets/img/blog/manuales/registro_impuestos.png",
+    schemaJsonLd: {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://www.proventa.app/blog/como-crear-una-factura-en-dolares-en-proventa/"
+      },
+      "headline": "Cómo crear una factura en dólares en ProVenta",
+      "description": "Aprende a emitir facturas en dólares fácilmente en República Dominicana con ProVenta POS. ¡Optimiza tus cobros internacionales hoy mismo!",
+      "image": [
+            "https://www.proventa.app/assets/img/blog/manuales/registro_impuestos.png"
+      ],
+      "datePublished": "20 de noviembre, 2026",
+      "author": {
+            "@type": "Organization",
+            "name": "Equipo ProVenta",
+            "url": "https://www.proventa.app"
+      },
+      "publisher": {
+            "@type": "Organization",
+            "name": "ProVenta",
+            "logo": {
+                  "@type": "ImageObject",
+                  "url": "https://www.proventa.app/assets/img/logo-bg-black.png"
+            }
+      }
+},
+    content: `<p>En el mercado actual de la República Dominicana, cada vez es más común que los negocios locales presten servicios o vendan productos a clientes internacionales, turistas o empresas que prefieren realizar sus transacciones en moneda extranjera. Saber cómo gestionar esta moneda dentro de tu proceso diario de ventas es fundamental para mantener la contabilidad al día sin volverse loco con las tasas de cambio.</p><p>Si utilizas nuestro sistema, te alegrará saber que el proceso es sumamente intuitivo. Hoy te mostraremos el paso a paso para que puedas emitir comprobantes en moneda norteamericana sin tropiezos, optimizando el tiempo en tu caja registradora ya sea que operes desde Windows o desde una tablet con Android.</p><h3>¿Por qué necesitas facturar en moneda extranjera?</h3><p>Para muchos comercios, hoteles, tiendas de regalos y prestadores de servicios en zonas turísticas o tecnológicas, recibir pagos en moneda extranjera representa una ventaja competitiva. Sin embargo, para evitar descuadres en el corte de caja diario, es vital contar con una herramienta que registre correctamente la operación. Entre los beneficios principales de hacerlo de forma digital se encuentran:</p><ul><li>Control exacto de los ingresos por tipo de moneda.</li><li>Facilidad para aplicar la tasa de cambio del día de manera automática.</li><li>Mejor experiencia de compra para clientes extranjeros o corporativos.</li><li>Cumplimiento y orden en los reportes financieros internos del negocio.</li></ul><h3>Paso a paso para emitir tu comprobante en dólares</h3><p>El proceso dentro de la plataforma está diseñado para que cualquier cajero o administrador pueda completarlo en cuestión de segundos, sin necesidad de ser un experto en finanzas. Sigue estas sencillas instrucciones:</p><p>Primero, abre tu aplicación e inicia sesión con tu usuario habitual. Dirígete al módulo de ventas o punto de venta, tal como lo haces normalmente para cualquier transacción en pesos dominicanos (DOP). Selecciona los productos o servicios que el cliente va a adquirir y añádelos al carrito de compras.</p><p>Segundo, antes de proceder al pago final, verifica la configuración de la moneda en la pantalla de cobro. <strong>ProVenta</strong> te permite cambiar el tipo de moneda de forma rápida si tu perfil de negocio tiene habilitada esta opción multimoneda. Al seleccionar la opción de dólares estadounidenses (USD), el sistema tomará de referencia la tasa de cambio configurada previamente o te permitirá ajustarla si el procedimiento de tu empresa así lo requiere.</p><p>Tercero, ingresa el monto recibido por parte del comprador. La interfaz te indicará claramente el equivalente y el cambio correspondiente, asegurando que no existan errores humanos al momento de devolver el dinero o procesar la tarjeta internacional. Haz clic en finalizar venta y procede a imprimir el comprobante o enviarlo de manera digital por correo electrónico a tu cliente.</p><h3>Consejos útiles para una gestión eficiente</h3><p>Para aprovechar al máximo esta funcionalidad en tu negocio, te recomendamos revisar periódicamente la tasa de cambio en la configuración general de tu software. Mantener este dato actualizado evitará diferencias en tus cierres de caja y te garantizará reportes contables mucho más precisos a fin de mes.</p><p>Recuerda que contar con herramientas tecnológicas versátiles marca la diferencia entre un negocio estancado y uno listo para escalar. Si aún no explotas todas las funciones de tu sistema, te invitamos a explorar nuestra plataforma y descubrir por qué somos el aliado preferido de las pymes dominicanas. ¿Tienes dudas sobre cómo configurar alguna otra función? Visita nuestro centro de ayuda o ponte en contacto con nuestro equipo de soporte técnico hoy mismo.</p>`
+  },
+  {
     slug: "ventajas-de-los-comprobantes-fiscales-electronicos-pymes-rd",
     title: "Ventajas de los comprobantes fiscales electrónicos para PyMEs dominicanas",
     metaTitle: "Comprobantes Fiscales Electrónicos PyMEs RD | ProVenta",
