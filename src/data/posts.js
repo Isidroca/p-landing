@@ -1,5 +1,44 @@
 export const posts = [
   {
+    slug: "como-calcular-margen-ganancia-negocio",
+    title: "Cómo calcular el margen de ganancia en tu negocio: Guía práctica para emprendedores dominicanos",
+    metaTitle: "Cómo calcular el margen de ganancia con ProVenta",
+    metaDescription: "Aprende a calcular el margen de ganancia de tu negocio en RD y mejora tu rentabilidad hoy. ¡Optimiza tus finanzas con ProVenta!",
+    keywords: ["margen de ganancia","finanzas pymes rd","rentabilidad negocio","software pos dominicano","contabilidad para pymes"],
+    excerpt: "Aprende la diferencia entre margen bruto y neto y descubre la fórmula exacta para saber cuánto dinero realmente te queda en el bolsillo después de cada venta.",
+    date: "24 de noviembre, 2026",
+    category: "Finanzas",
+    image: "/assets/img/blog/manuales/crear_factura_en_dolares.png",
+    schemaJsonLd: {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://www.proventa.app/blog/como-calcular-margen-ganancia-negocio/"
+      },
+      "headline": "Cómo calcular el margen de ganancia en tu negocio: Guía práctica para emprendedores dominicanos",
+      "description": "Aprende a calcular el margen de ganancia de tu negocio en RD y mejora tu rentabilidad hoy. ¡Optimiza tus finanzas con ProVenta!",
+      "image": [
+            "https://www.proventa.app/assets/img/blog/manuales/crear_factura_en_dolares.png"
+      ],
+      "datePublished": "2026-11-24",
+      "author": {
+            "@type": "Organization",
+            "name": "Equipo ProVenta",
+            "url": "https://www.proventa.app"
+      },
+      "publisher": {
+            "@type": "Organization",
+            "name": "ProVenta",
+            "logo": {
+                  "@type": "ImageObject",
+                  "url": "https://www.proventa.app/assets/img/logo-bg-black.png"
+            }
+      }
+},
+    content: `<p>Muchos dueños de negocios en República Dominicana cometen el mismo error: piensan que vender mucho es lo mismo que ganar mucho. Pero, ¡ojo aquí! Si vendes un artículo en RD$1,000 y te costó RD$800, no te ganaste mil pesos; tu realidad es otra. Entender el <strong>margen de ganancia</strong> es la diferencia entre tener un negocio que crece o uno que simplemente está "dando vueltas" sin dejar beneficios reales.</p><h3>¿Qué es exactamente el margen de ganancia?</h3><p>En buen dominicano, el margen de ganancia es el porcentaje que te queda de cada venta después de haber pagado lo que te costó el producto o el servicio. No es solo dinero en la caja, es la rentabilidad de tu esfuerzo. Si no conoces este número, podrías estar vendiendo a pérdida sin darte cuenta, especialmente con la inflación y los costos operativos que siempre están variando.</p><h3>Diferencia entre Margen Bruto y Margen Neto</h3><p>Para manejar las finanzas de tu pyme como un profesional, debes distinguir estos dos conceptos:</p><ul><li><strong>Margen Bruto:</strong> Es lo que queda después de restar únicamente el costo directo del producto. Por ejemplo, si tienes un repuesto y compras una pieza en RD$500 para venderla en RD$800, tu beneficio bruto son RD$300.</li><li><strong>Margen Neto:</strong> Este es el número real, el que manda. Aquí restas no solo el costo del producto, sino también la luz, el alquiler, los sueldos, el internet y los impuestos. Es lo que realmente puedes decir que es tuyo al final del mes.</li></ul><h3>La fórmula para calcular el Margen de Ganancia</h3><p>No te asustes, que no necesitas ser un genio de las matemáticas. La fórmula básica es la siguiente:</p><p><strong>Margen de Ganancia = ((Ingresos Totales - Costos) / Ingresos Totales) * 100</strong></p><p>Vamos a poner un ejemplo real: Imagina que en tu tienda manejada con <strong>ProVenta</strong> vendiste RD$100,000 en un mes. Tus costos de mercancía fueron RD$60,000. El cálculo sería: ((100,000 - 60,000) / 100,000) * 100 = 40%. Tu margen bruto es del 40%. De ahí, te toca restar los gastos fijos para sacar el neto.</p><h3>¿Por qué es difícil calcular esto manualmente?</h3><p>El problema viene cuando tienes cientos de productos con precios diferentes. Llevar esto en un cuaderno o en una hoja de Excel que se queda vieja es una receta para el desastre. Aquí es donde la tecnología entra a jugar a tu favor. Con un software POS como <strong>ProVenta</strong>, disponible para Windows y Android, cada vez que registras una venta, el sistema ya sabe cuánto te costó ese artículo y te da el margen de beneficio de forma automática.</p><h3>Consejos para mejorar tu rentabilidad en RD</h3><p>Si al sacar tus cuentas ves que el margen está muy bajito, aquí te dejo algunas estrategias que funcionan en nuestro mercado:</p><ul><li><strong>Negocia con proveedores:</strong> No te conformes con el primer precio. Si compras por volumen, pide un descuentico.</li><li><strong>Revisa tus gastos hormiga:</strong> Esos RD$500 que se van en cafecitos o mensajería innecesaria suman mucho al final del mes.</li><li><strong>Ajusta tus precios:</strong> Si el costo de la vida sube, tus precios también deben ajustarse de manera estratégica para no perder rentabilidad.</li><li><strong>Usa reportes inteligentes:</strong> No adivines. Mira cuáles productos te dejan más margen y enfócate en vender esos.</li></ul><h3>Optimiza tus finanzas con ProVenta</h3><p>Calcular el margen de ganancia no debería ser un dolor de cabeza diario. La ventaja de usar <strong>ProVenta</strong> es que centralizas toda tu operación. Desde el inventario hasta la facturación rápida en tu tablet Android o tu computadora Windows, el sistema te ofrece reportes claros sobre qué tan saludable está tu negocio financieramente. En lugar de pasar horas con una calculadora, puedes dedicar ese tiempo a pensar en cómo abrir una segunda sucursal o traer nueva mercancía.</p><p>Recuerda que lo que no se mide, no se puede mejorar. Empieza hoy mismo a auditar tus márgenes y verás cómo tu negocio empieza a rendir mucho más. ¡A sacar cuentas y a seguir creciendo!</p>`
+  },
+  {
     slug: "como-crear-una-factura-en-dolares-en-proventa",
     title: "Cómo crear una factura en dólares en ProVenta",
     metaTitle: "Cómo facturar en dólares en ProVenta | Guía Rápida",
