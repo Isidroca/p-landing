@@ -1,5 +1,44 @@
 export const posts = [
   {
+    slug: "como-funciona-la-facturacion-electronica-ecf-republica-dominicana",
+    title: "Cómo funciona la facturación electrónica (e-CF) en República Dominicana",
+    metaTitle: "Facturación Electrónica en RD: Guía Práctica | ProVenta",
+    metaDescription: "Entiende cómo funciona la facturación electrónica e-CF en la DGII y cómo adaptarte fácil con ProVenta. ¡Lee nuestra guía para tu negocio hoy!",
+    keywords: ["facturacion electronica rd","ecf dgii","sistema pos republica dominicana","proventa"],
+    excerpt: "Todo lo que necesitas saber sobre los e-CF de la DGII en República Dominicana y cómo preparar tu negocio sin complicaciones.",
+    date: "27 de noviembre, 2026",
+    category: "En RD",
+    image: "/assets/img/blog/manuales/crear_factura_en_dolares.png",
+    schemaJsonLd: {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://www.proventa.app/blog/como-funciona-la-facturacion-electronica-ecf-republica-dominicana/"
+      },
+      "headline": "Cómo funciona la facturación electrónica (e-CF) en República Dominicana",
+      "description": "Entiende cómo funciona la facturación electrónica e-CF en la DGII y cómo adaptarte fácil con ProVenta. ¡Lee nuestra guía para tu negocio hoy!",
+      "image": [
+            "https://www.proventa.app/assets/img/blog/manuales/crear_factura_en_dolares.png"
+      ],
+      "datePublished": "27 de noviembre, 2026",
+      "author": {
+            "@type": "Organization",
+            "name": "Equipo ProVenta",
+            "url": "https://www.proventa.app"
+      },
+      "publisher": {
+            "@type": "Organization",
+            "name": "ProVenta",
+            "logo": {
+                  "@type": "ImageObject",
+                  "url": "https://www.proventa.app/assets/img/logo-bg-black.png"
+            }
+      }
+},
+    content: `<p>La República Dominicana está viviendo una transformación digital gigante en el área comercial. Si tienes un colmado, una tienda de ropa, unminimarket o cualquier otro tipo de negocio, de seguro ya has escuchado hablar de los famosos e-CF. La Dirección General de Impuestos Internos (DGII) está implementando la facturación electrónica en todo el país, y entender cómo funciona ya no es opcional, sino una necesidad para mantenernos al día y evitar dolores de cabeza con el fisco.</p><p>Pero, ¿qué es exactamente un e-CF? En palabras sencillas, un Comprobante Fiscal Electrónico (e-CF) es una factura comercial que se emite, firma y almacena de forma digital. A diferencia de las facturas de toda la vida en papel, estas llevan una firma digital que garantiza su autenticidad y viajan en tiempo real a los servidores de la DGII. Es un proceso rápido, seguro y que, aunque al principio puede asustar, le ahorra un montón de tiempo administrativo a los emprendedores dominicanos.</p><h3>El paso a paso de una venta con factura electrónica</h3><p>Para entender mejor el proceso, imagina que un cliente llega a tu mostrador a comprar mercancía. Con un software moderno, todo el trámite de la facturación electrónica ocurre en cuestión de segundos, sin que tengas que volverte loco haciendo cálculos manuales o llenando formularios complejos. El ciclo básico funciona de la siguiente manera:</p><ul><li><strong>Generación:</strong> El cajero registra los productos vendidos en el sistema POS, tal y como lo ha hecho siempre.</li><li><strong>Firma digital:</strong> El sistema aplica automáticamente la firma electrónica autorizada que valida la identidad de tu empresa ante la DGII.</li><li><strong>Transmisión:</strong> El documento digital se envía de manera instantánea a la DGII para su validación y autorización.</li><li><strong>Respuesta y entrega:</strong> La DGII devuelve el e-CF aprobado con su código de seguridad (que incluye el famoso código QR), y se lo entregas al cliente impreso o se lo envías por correo electrónico o WhatsApp.</li></ul><p>Todo este proceso ocurre en segundos gracias a la conexión a internet, permitiendo que tu negocio cumpla con las normativas fiscales sin detener las filas ni hacer esperar a los compradores.</p><h3>Ventajas reales para los negocios dominicanos</h3><p>Muchos comerciantes se preguntan si vale la pena cambiar el viejo sistema de impresoras fiscales por la nueva modalidad electrónica. La respuesta corta es un rotundo sí. Entre los beneficios más destacados que verás en tu día a día se encuentran:</p><ul><li><strong>Ahorro en papelería:</strong> Ya no tendrás que gastar tanto dinero comprando rollos de papel especial o archivando miles de facturas físicas por años.</li><li><strong>Menos errores humanos:</strong> Al estar integrado a tu sistema de ventas, el cálculo de impuestos como el ITBIS se hace de forma automática.</li><li><strong>Procesos más rápidos:</strong> Agilizas el servicio al cliente y reduces los tiempos de cuadre de caja al final de la jornada.</li><li><strong>Cumplimiento fiscal sin estrés:</strong> Te olvidas de las retenciones y tienes la tranquilidad de estar al día con los requerimientos de la DGII.</li></ul><p>Además, el uso de la facturación electrónica mejora la imagen de tu empresa frente a proveedores y clientes corporativos, quienes cada vez exigen más este tipo de comprobantes para su propia contabilidad.</p><h3>Cómo te ayuda ProVenta a dar el salto sin complicaciones</h3><p>Adaptarse a los cambios de la DGII puede parecer un desafío, sobre todo cuando estás enfocado en atender tu negocio y vender más. Por suerte, no tienes que hacerlo solo. Contar con una herramienta tecnológica adecuada hace toda la diferencia en este proceso de transición.</p><p>Aquí es donde entra <strong>ProVenta</strong>, el sistema POS y de facturación diseñado específicamente pensando en las necesidades de las pequeñas y medianas empresas en la República Dominicana. Con ProVenta instalado en tu computadora con Windows o en tu tablet o celular Android, puedes gestionar tu inventario, tus ventas y emitir tus comprobantes electrónicos de forma sumamente sencilla.</p><p>Nuestra plataforma está preparada para integrarse con los requerimientos de la DGII, facilitando que cada tiquete o factura cumpla con la ley de manera automática. No necesitas ser un experto en informática para empezar a facturar electrónicamente; la interfaz es amigable, intuitiva y está pensada para el ritmo rápido del comercio dominicano.</p><p>Si quieres llevar tu negocio al siguiente nivel, ahorrar tiempo y cumplir con la ley sin estrés, es momento de modernizarte. Visita hoy mismo <strong>https://www.proventa.app</strong>, conoce todas las funciones que tenemos disponibles para tu empresa y descubre lo fácil que es sumarse a la era de la facturación electrónica en RD.</p>`
+  },
+  {
     slug: "como-calcular-margen-ganancia-negocio",
     title: "Cómo calcular el margen de ganancia en tu negocio: Guía práctica para emprendedores dominicanos",
     metaTitle: "Cómo calcular el margen de ganancia con ProVenta",
